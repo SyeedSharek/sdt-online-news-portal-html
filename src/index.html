@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online News Portal</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+
+    <!-- SwiperJS -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Your Tailwind Config Script -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        white: '#FFFFFF',
+                        red: '#FF0000',
+                        primary: {
+                            DEFAULT: '#0068B5',
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        },
+                        secondary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                            950: '#2e1065',
+                        },
+                        'yellow-bg': '#FAB115',
+                        'yellow-clr': '#E29A01',
+                        'text-title-clr': '#1F2937',
+                    },
+                    // fontFamily: {
+                    //     kalpurush: ['Kalpurush', 'Noto Sans Bengali', 'sans-serif'],
+                    //     noto: ['Noto Sans', 'sans-serif'],
+                    // },
+                    fontSize: {
+                        xs: '0.75rem',
+                        sm: '0.875rem',
+                        base: '0.875rem',
+                        lg: '1rem',
+                        xl: '1rem',
+                        '2xl': '1.125rem',
+                        '3xl': '1.5rem',
+                        h1: '35px',
+                        h2: '30px',
+                        h3: '26px',
+                        h4: '22px',
+                        h5: '20px',
+                        h6: '16px',
+                    },
+                    lineHeight: {
+                        normal: '1.6',
+                        tight: '1.3',
+                        relaxed: '1.7',
+                        '1-5': '1.5',
+                    },
+                    borderColor: {
+                        DEFAULT: '#E5E7EB',
+                        glass: 'rgba(255, 255, 255, 0.3)',
+                    },
+                    backgroundColor: {
+                        'yellow-bg': '#FAB115',
+                    },
+                    maxWidth: {
+                        container: '1280px',
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    }
+                },
+            },
+        }
+    </script>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://yourdomain.com/fonts/siyam-rupali.css" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body class="bg-[#FFFFFF]">
+    <!-- Preloader -->
+    <!-- <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-white">
+        <div class="flex flex-col items-center">
+            <img src="./img/logo/logo.png" class="animate-pulse mb-2" alt="Loading" />
+            <p class="text-sm text-gray-500">লোড হচ্ছে...</p>
+        </div>
+    </div> -->
+    <!-- Header -->
+    <header>
+        <!-- Top Menu Section -->
+        <div class=" mb-3 bg-[#EAF2FF]">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between py-2 items-center gap-4 sm:gap-4">
+                    <!-- Navigation Menu -->
+                    <div class="w-full md:w-auto">
+                        <ul
+                            class="flex flex-wrap justify-center md:justify-start items-center gap-3 sm:gap-5 text-[#1F2937]">
+                            <li><a href="bangladesh.html"
+                                    class="text-sm sm:text-base md:text-lg hover-effect">বাংলাদেশ</a></li>
+                            <li><a href="cricket.html"
+                                    class="text-sm sm:text-base md:text-lg hover-effect">খেলাধুলা</a></li>
+                            <li><a href="technology.html"
+                                    class="text-sm sm:text-base md:text-lg hover-effect">প্রযুক্তি</a></li>
+                            <li><a href="opinion.html"
+                                    class="text-sm sm:text-base md:text-lg hover-effect">মতামত</a></li>
+                            <li><a href="politics.html"
+                                    class="text-sm sm:text-base md:text-lg hover-effect">রাজনীতি</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Icons (Hidden on Mobile) -->
+                    <div class="hidden sm:flex flex-wrap justify-center md:justify-end items-center gap-2">
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#1877F2] text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-facebook-f text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#FF0000] text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-youtube text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-x-twitter text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#C13584] text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-instagram text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#25D366] text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-whatsapp text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Middle Logo/Date/Weather/Live -->
+        <div>
+            <div class="container mx-auto">
+                <div class="flex justify-between items-center gap-3">
+                    <!-- Logo -->
+                    <div>
+                        <a href="index.html">
+                            <img src="img/logo/logo.png" alt="" class="w-[55px]">
+                        </a>
+                    </div>
+
+                    <!-- Right Info -->
+                    <div class="flex flex-wrap items-center justify-center sm:justify-end gap-3">
+                        <!-- Date -->
+                        <div class="text-[#666] flex items-center space-x-1 text-sm sm:text-base md:text-lg">
+                            <span>জুলাই</span>
+                            <span>03, 2025</span>
+                        </div>
+
+                        <!-- Weather -->
+                        <div class="flex items-center space-x-2 text-gray-600 text-sm sm:text-base md:text-lg">
+                            <i class="fas fa-cloud-bolt text-base sm:text-xl text-yellow-500"></i>
+                            <div class="flex flex-col leading-none">
+                                <span>24<i class="font-sans">°</i></span>
+                                <span class="text-gray-400">16<i class="font-sans">°</i></span>
+                            </div>
+                        </div>
+
+                        <!-- Live -->
+                        <a href="live-video.html">
+                            <div
+                                class="flex items-center space-x-1 text-white bg-red px-4 py-2 rounded-full text-xs sm:text-sm font-semibold">
+                                <span class="h-4 w-4 bg-white rounded-full animate-pulse"></span>
+                                <span class="mb-0 text-white text-xs">লাইভ</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <div>
+            <div class="container mx-auto border-b">
+                <div class="grid grid-cols-12 items-center gap-4 py-4 justify-between">
+                    <!-- Left Side -->
+                    <div class="col-span-10 lg:col-span-10 flex gap-4 items-center">
+                        <!-- Toggle Button -->
+                        <div class="text-xl">
+                            <div class="relative inline-block">
+                                <button id="menuToggle" class="text-base sm:text-xl p-2">
+                                    <i id="toggleIcon" class="fa-solid fa-bars"></i>
+                                </button>
+
+                                <!-- Mega Menu -->
+                                <div id="megaMenu"
+                                    class="absolute left-0 mt-2 w-screen max-w-7xl bg-white p-4 sm:p-6 md:p-8 shadow-lg z-50 transition-all duration-500 transform scale-95 opacity-0 hidden origin-top">
+
+                                    <!-- Responsive Grid: 2 columns on mobile, 3 on md, 4 on lg -->
+                                    <div
+                                        class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-x-6 gap-y-8">
+
+                                        <!-- Column 1 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                <a href="index.html">হোম</a>
+                                            </h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="bangladesh.html" class="hover:text-blue-600">সমগ্র
+                                                        বাংলাদেশ</a></li>
+                                                <li><a href="world.html" class="hover:text-blue-600">বিশ্ব</a>
+                                                </li>
+                                                <li><a href="politics.html" class="hover:text-blue-600">রাজনীতি</a>
+                                                </li>
+                                                <li><a href="kids.html" class="hover:text-blue-600">কিডজ</a>
+                                                </li>
+                                                <li><a href="abroad.html" class="hover:text-blue-600">প্রবাস</a>
+                                                </li>
+                                                <li><a href="bangladesh.html" class="hover:text-blue-600">বাংলাদেশ</a>
+                                                </li>
+                                                <li><a href="technology.html" class="hover:text-blue-600">বিজ্ঞান</a>
+                                                </li>
+                                                <li><a href="health.html"
+                                                        class="hover:text-blue-600">স্বাস্থ্য</a></li>
+                                                <li><a href="campus.html"
+                                                        class="hover:text-blue-600">ক্যাম্পাস</a></li>
+                                                <li><a href="women.html" class="hover:text-blue-600">নারীপক্ষ</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 2 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                <a href="sports.html">খেলা</a>
+                                            </h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="cricket.html" class="hover:text-blue-600">ক্রিকেট</a>
+                                                </li>
+                                                <li><a href="sports.html" class="hover:text-blue-600">খেলা</a>
+                                                </li>
+                                                <li><a href="cricket.html" class="hover:text-blue-600">চ্যাম্পিয়ন্স
+                                                        ট্রফি</a></li>
+                                                <li><a href="cricket.html" class="hover:text-blue-600">কাতার
+                                                        বিশ্বকাপ ২০২২</a></li>
+                                                <li><a href="cricket.html" class="hover:text-blue-600">টি-টোয়েন্টি
+                                                        বিশ্বকাপ</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 3 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                <a href="opinion.html">মতামত</a>
+                                            </h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="opinion.html" class="hover:text-blue-600">মতামত</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 4 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                <a href="sub-category.html">অর্থ-বাণিজ্য</a>
+                                            </h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">বাণিজ্য</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">অর্থনীতি</a>
+                                                </li>
+                                                <li><a href="sub-category.html"
+                                                        class="hover:text-blue-600">পুঁজিবাজার</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 5 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                <a href="sub-category.html">মাল্টিমিডিয়া</a>
+                                            </h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">ছবিঘর</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">ছবির
+                                                        গল্প</a></li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">টিউব</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">ইনসাইড
+                                                        আউট</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 6 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                <a href="sub-category.html">আরও</a>
+                                            </h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">বিশেষ</a>
+                                                </li>
+                                                <li><a href="sub-category.html"
+                                                        class="hover:text-blue-600">প্রতিবেশী</a></li>
+                                                <li><a href="sub-category.html"
+                                                        class="hover:text-blue-600">করোনাভাইরাস</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Scrollable Nav -->
+                        <div class="flex-1 overflow-x-auto py-3">
+                            <nav>
+                                <ul
+                                    class="flex gap-6 text-sm sm:text-base md:text-lg xl:text-xl whitespace-nowrap min-w-[610px]">
+                                    <li><a href="world.html" class="hover-effect">বিশ্ব</a></li>
+                                    <li><a href="opinion.html" class="hover-effect">মতামত</a></li>
+                                    <li><a href="entertainment.html" class="hover-effect">বিনোদন</a></li>
+                                    <li><a href="lifestyle.html" class="hover-effect">জীবনধারা</a></li>
+                                    <li><a href="economy.html" class="hover-effect">অর্থনীতি</a></li>
+                                    <li><a href="business.html" class="hover-effect">ব্যবসা</a></li>
+                                    <li><a href="cricket.html" class="hover-effect">ক্রিকেট</a></li>
+                                    <li><a href="recent.html" class="hover-effect">সাম্প্রতিক</a></li>
+                                    <li><a href="videos.html" class="hover-effect">ভিডিও</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Right Icons -->
+                    <div class="col-span-2 lg:col-span-2 flex gap-4 items-center justify-end pl-2">
+                        <a href="search-page.html" class="text-base sm:text-xl xl:text-2xl"><i
+                                class="fa-solid fa-magnifying-glass"></i></a>
+                        <button class="text-base sm:text-xl xl:text-2xl"><i
+                                class="fa-solid fa-circle-user"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+        <!-- Latest News Section -->
+        <section>
+            <div class="bg-gradient-to-b from-[#0069B5] to-[#044676] py-3">
+                <div class="container mx-auto">
+                    <div class="grid grid-cols-12 items-center gap-4">
+
+                        <!-- Section Title -->
+                        <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                            <h2 class="text-white text-sm sm:text-base md:text-xl lg:text-2xl font-bold">
+                                সর্বশেষ
+                            </h2>
+                        </div>
+
+                        <!-- Swiper Container -->
+                        <div class="col-span-9 sm:col-span-10 md:col-span-11 overflow-hidden">
+                            <div class="showcase relative">
+                                <div id="slider" class="slider flex items-center whitespace-nowrap">
+
+                                    <!-- Slide 1 -->
+                                    <div class="item min-w-[150px] sm:min-w-[180px] md:min-w-[200px] px-2 inline-block">
+                                        <div class="flex items-center gap-2 text-white">
+                                            <span class="inline-block h-2 w-2 rounded-full bg-white"></span>
+                                            <h3
+                                                class="text-[10px] sm:text-sm md:text-base lg:text-lg whitespace-nowrap white-clr">
+                                                ভারী বৃষ্টির কারণে টেকনাফ প্লাবিত হয়
+                                            </h3>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 2 -->
+                                    <div class="item min-w-[150px] sm:min-w-[180px] md:min-w-[200px] px-2 inline-block">
+                                        <div class="flex items-center gap-2 text-white">
+                                            <span class="inline-block h-2 w-2 rounded-full bg-white"></span>
+                                            <h3
+                                                class="text-[10px] sm:text-sm md:text-base lg:text-lg whitespace-nowrap white-clr">
+                                                সিইউ স্টুডেন্ট কক্সবাজার বিচে মৃত, অন্য ২টি নিখোঁজ
+                                            </h3>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 3 -->
+                                    <div class="item min-w-[150px] sm:min-w-[180px] md:min-w-[200px] px-2 inline-block">
+                                        <div class="flex items-center gap-2 text-white">
+                                            <span class="inline-block h-2 w-2 rounded-full bg-white"></span>
+                                            <h3
+                                                class="text-[10px] sm:text-sm md:text-base lg:text-lg whitespace-nowrap white-clr">
+                                                নতুন পার্টি রেজিস্ট্রেশন: ত্রুটি ঠিক করতে ১৫ দিন স্ক্রিনিং শুরু
+                                            </h3>
+                                        </div>
+                                    </div>
+
+                                    <!-- Duplicates -->
+                                    <div class="item min-w-[150px] sm:min-w-[180px] md:min-w-[200px] px-2 inline-block">
+                                        <div class="flex items-center gap-2 text-white">
+                                            <span class="inline-block h-2 w-2 rounded-full bg-white"></span>
+                                            <h3
+                                                class="text-[10px] sm:text-sm md:text-base lg:text-lg whitespace-nowrap white-clr">
+                                                ভারী বৃষ্টির কারণে টেকনাফ প্লাবিত হয়
+                                            </h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="item min-w-[150px] sm:min-w-[180px] md:min-w-[200px] px-2 inline-block">
+                                        <div class="flex items-center gap-2 text-white">
+                                            <span class="inline-block h-2 w-2 rounded-full bg-white"></span>
+                                            <h3
+                                                class="text-[10px] sm:text-sm md:text-base lg:text-lg whitespace-nowrap white-clr">
+                                                সিইউ স্টুডেন্ট কক্সবাজার বিচে মৃত, অন্য ২টি নিখোঁজ
+                                            </h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="item min-w-[150px] sm:min-w-[180px] md:min-w-[200px] px-2 inline-block">
+                                        <div class="flex items-center gap-2 text-white">
+                                            <span class="inline-block h-2 w-2 rounded-full bg-white"></span>
+                                            <h3
+                                                class="text-[10px] sm:text-sm md:text-base lg:text-lg whitespace-nowrap white-clr">
+                                                নতুন পার্টি রেজিস্ট্রেশন: ত্রুটি ঠিক করতে ১৫ দিন স্ক্রিনিং শুরু
+                                            </h3>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- সর্বশেষ খবর -->
+        <section class="pb-12 pt-9">
+            <div class="container mx-auto">
+                <div class="border-bottom pb-7 mb-7">
+                    <h1 class="text-2xl sm:text-3xl font-extrabold">সর্বশেষ খবর</h1>
+                    <div class="mt-2 w-16 h-1 rounded bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 xl:gap-[30px]">
+
+                    <!-- Left Sidebar -->
+                    <div class="col-span-12 lg:col-span-3">
+                        <div class="pr-0 lg:pr-2">
+                            <!-- Repeatable Items -->
+                            <div class="flex flex-col border-b pb-2 mb-3">
+                                <span class="text-xs sm:text-sm md:text-base mb-1 text-yellow-600">বিপণন</span>
+                                <a href="details-page.html"
+                                    class="text-sm sm:text-base md:text-lg hover-effect-underline transition-all pb-3">
+                                    সংস্কার নিয়ে বিএনপির অবস্থান কি জামায়াতকে শক্তিশালী করছে
+                                </a>
+                                <span class="text-[10px] sm:text-xs md:text-sm text-gray-400 flex items-center gap-1">০৯
+                                    জুলাই ২০২৫</span>
+                            </div>
+                            <div class="flex flex-col border-b pb-2 mb-3">
+                                <span class="text-xs sm:text-sm md:text-base mb-1 text-yellow-600">বিপণন</span>
+                                <a href="details-page.html"
+                                    class="text-sm sm:text-base md:text-lg hover-effect-underline transition-all pb-3">
+                                    শরীরে ক্যালসিয়ামের ঘাটতি থাকলে কী হয় জানেন?
+                                </a>
+                                <span class="text-[10px] sm:text-xs md:text-sm text-gray-400 flex items-center gap-1">০৯
+                                    জুলাই ২০২৫</span>
+                            </div>
+                            <div class="flex flex-col border-b pb-2 mb-3">
+                                <span class="text-xs sm:text-sm md:text-base mb-1 text-yellow-600">বিপণন</span>
+                                <a href="details-page.html"
+                                    class="text-sm sm:text-base md:text-lg hover-effect-underline transition-all pb-3">
+                                    এসএসসি: শতভাগ ফেল শিক্ষা প্রতিষ্ঠান বেড়েছে ৮৩টি
+                                </a>
+                                <span class="text-[10px] sm:text-xs md:text-sm text-gray-400 flex items-center gap-1">০৯
+                                    জুলাই ২০২৫</span>
+                            </div>
+                            <div class="flex flex-col border-b pb-2 mb-3">
+                                <span class="text-xs sm:text-sm md:text-base mb-1 text-yellow-600">বিপণন</span>
+                                <a href="details-page.html"
+                                    class="text-sm sm:text-base md:text-lg hover-effect-underline transition-all pb-3">
+                                    এসএসসি: শতভাগ ফেল শিক্ষা প্রতিষ্ঠান বেড়েছে ৮৩টি
+                                </a>
+                                <span class="text-[10px] sm:text-xs md:text-sm text-gray-400 flex items-center gap-1">০৯
+                                    জুলাই ২০২৫</span>
+                            </div>
+                            <div>
+                                <img src="./img/main/banner-01.png" alt="" class="w-full max-h-[242px] rounded-md">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main News -->
+                    <div class="col-span-12 lg:col-span-5">
+                        <div class="mb-7">
+                            <img src="img/news/milestone-2.webp" alt="Main News"
+                                class="w-full aspect-[4/2.5] rounded-md mb-6" />
+                            <a href="details-page.html"
+                                class="hover-effect-underline line-height-1-5 text-xl sm:text-2xl md:text-2xl lg:text-3xl">
+                                জুলাই ঘোষণাপত্রের সাংবিধানিক স্বীকৃতি চায় সরকার, বিবেচনা করছে বিএনপি
+                            </a>
+                        </div>
+
+                        <!-- Live Badge -->
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="h-4 w-4 bg-red-600 rounded-full animate-pulse"></span>
+                            <span class="text-red-600 mb-0 text-sm sm:text-base md:text-lg">লাইভ আপডেট</span>
+                        </div>
+
+                        <!-- Timeline -->
+                        <div>
+                            <!-- Item 1 -->
+                            <div class="relative">
+                                <div class="absolute left-3 top-6 bottom-0 w-0.5 bg-[#A5A5AB]"></div>
+                                <div class="relative flex items-start pb-4">
+                                    <div
+                                        class="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg z-10">
+                                        <div class="w-4 h-4 bg-yellow-500 rounded-full border-[2px] border-white"></div>
+                                    </div>
+                                    <div class="ml-6 flex-1">
+                                        <div class="flex items-start gap-3">
+                                            <span class="text-xs sm:text-sm md:text-base whitespace-nowrap">৪ দি
+                                                আগে:</span>
+                                            <p class="text-title-clr text-sm sm:text-base md:text-lg leading-relaxed">
+                                                রাজধানীর যাত্রাবাড়ীতে স্মার্ট কলেন ভুলতানোর সময় ভরে আড়কে লেগে
+                                                শিকার এক পরিবারের তিন সদসা নহু হয়েছে।
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="relative">
+                                <div class="absolute left-3 top-6 bottom-0 w-0.5 bg-[#A5A5AB]"></div>
+                                <div class="relative flex items-start pb-4">
+                                    <div
+                                        class="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg z-10">
+                                        <div class="w-4 h-4 bg-yellow-500 rounded-full border-[2px] border-white"></div>
+                                    </div>
+                                    <div class="ml-6 flex-1">
+                                        <div class="flex items-start gap-3">
+                                            <span class="text-xs sm:text-sm md:text-base whitespace-nowrap">৪ দি
+                                                আগে:</span>
+                                            <p class="text-title-clr text-sm sm:text-base md:text-lg leading-relaxed">
+                                                রাজধানীর যাত্রাবাড়ীতে স্মার্ট কলেন ভরে কারে গেলো আড়কে লেগে শিকার এক
+                                                পরিবারের তিন সদসা নহু হয়েছে।
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="relative">
+                                <div class="relative flex items-start pb-4">
+                                    <div
+                                        class="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg z-10">
+                                        <div class="w-4 h-4 bg-yellow-500 rounded-full border-[2px] border-white"></div>
+                                    </div>
+                                    <div class="ml-6 flex-1">
+                                        <div class="flex items-start gap-3">
+                                            <span class="text-xs sm:text-sm md:text-base whitespace-nowrap">৪ দি
+                                                আগে:</span>
+                                            <p class="text-title-clr text-sm sm:text-base md:text-lg leading-relaxed">
+                                                রাজধানীর যাত্রাবাড়ীতে স্মার্ট কলেন ভুলতানোর সময় ভরে কারে গেলো আড়কে
+                                                এক পরিবারের তিন সদসা নহু হয়েছে।
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Sidebar -->
+                    <div class="col-span-12 lg:col-span-4">
+                        <!-- News List -->
+                        <div class="flex flex-col gap-5">
+                            <!-- Each item -->
+                            <div class="flex gap-4 items-start overflow-hidden group pb-5 border-bottom">
+                                <div>
+                                    <div class="mb-3">
+                                        <a href="details-page.html"
+                                            class="hover-effect-underline text-sm sm:text-base md:text-lg">
+                                            নোয়াখালীতে বৃষ্টি কমেছে, জলাবদ্ধতায় এখনো ভোগান্তি
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center gap-5">
+                                        <h6 class="text-xs sm:text-sm md:text-base">নিজস্ব প্রতিবেদক</h6>
+                                        <h6 class="text-xs sm:text-sm md:text-base">০৯ জুলাই ২০২৫</h6>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden rounded-md">
+                                    <img src="./img/main/home-img-02.jpg" alt=""
+                                        class="rounded-md w-full aspect-[4/2.5] transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                            </div>
+                            <!-- Each item -->
+                            <div class="flex gap-4 items-start overflow-hidden group pb-5 border-bottom">
+                                <div>
+                                    <div class="mb-3">
+                                        <a href="details-page.html"
+                                            class="hover-effect-underline text-sm sm:text-base md:text-lg">
+                                            নোয়াখালীতে বৃষ্টি কমেছে, জলাবদ্ধতায় এখনো ভোগান্তি
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center gap-5">
+                                        <h6 class="text-xs sm:text-sm md:text-base">নিজস্ব প্রতিবেদক</h6>
+                                        <h6 class="text-xs sm:text-sm md:text-base">০৯ জুলাই ২০২৫</h6>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden rounded-md">
+                                    <img src="./img/main/home-img-02.jpg" alt=""
+                                        class="rounded-md w-full aspect-[4/2.5] transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                            </div>
+                            <!-- Each item -->
+                            <div class="flex gap-4 items-start overflow-hidden group pb-5 border-bottom">
+                                <div>
+                                    <div class="mb-3">
+                                        <a href="details-page.html"
+                                            class="hover-effect-underline text-sm sm:text-base md:text-lg">
+                                            নোয়াখালীতে বৃষ্টি কমেছে, জলাবদ্ধতায় এখনো ভোগান্তি
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center gap-5">
+                                        <h6 class="text-xs sm:text-sm md:text-base">নিজস্ব প্রতিবেদক</h6>
+                                        <h6 class="text-xs sm:text-sm md:text-base">০৯ জুলাই ২০২৫</h6>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden rounded-md">
+                                    <img src="./img/main/home-img-03.jpg" alt=""
+                                        class="rounded-md w-full aspect-[4/2.5] transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                            </div>
+                            <!-- Each item -->
+                            <div class="flex gap-4 items-start overflow-hidden group pb-5 border-bottom">
+                                <div>
+                                    <div class="mb-3">
+                                        <a href="details-page.html"
+                                            class="hover-effect-underline text-sm sm:text-base md:text-lg">
+                                            নোয়াখালীতে বৃষ্টি কমেছে, জলাবদ্ধতায় এখনো ভোগান্তি
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center gap-5">
+                                        <h6 class="text-xs sm:text-sm md:text-base">নিজস্ব প্রতিবেদক</h6>
+                                        <h6 class="text-xs sm:text-sm md:text-base">০৯ জুলাই ২০২৫</h6>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden rounded-md">
+                                    <img src="./img/main/home-img-04.jpg" alt=""
+                                        class="rounded-md w-full aspect-[4/2.5] transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                            </div>
+                            <!-- Each item -->
+                            <div class="flex gap-4 items-start overflow-hidden group pb-5 border-bottom">
+                                <div>
+                                    <div class="mb-3">
+                                        <a href="details-page.html"
+                                            class="hover-effect-underline text-sm sm:text-base md:text-lg">
+                                            নোয়াখালীতে বৃষ্টি কমেছে, জলাবদ্ধতায় এখনো ভোগান্তি
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center gap-5">
+                                        <h6 class="text-xs sm:text-sm md:text-base">নিজস্ব প্রতিবেদক</h6>
+                                        <h6 class="text-xs sm:text-sm md:text-base">০৯ জুলাই ২০২৫</h6>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden rounded-md">
+                                    <img src="./img/main/home-img-05.jpg" alt=""
+                                        class="rounded-md w-full aspect-[4/2.5] transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                            </div>
+
+                            <!-- Repeat more items as needed -->
+
+                            <!-- Banner Ad -->
+                            <div class="">
+                                <img src="./img/main/bd-ad-NWC 1.jpg" alt=""
+                                    class="max-h-[135px] aspect-[4/2.5] w-full rounded-md">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- রাজনীতি -->
+        <section class="pb-12">
+            <div class="container mx-auto">
+                <div class="border-bottom pb-7 mb-7 flex justify-between gap-4">
+                    <div>
+                        <h1 class="text-2xl sm:text-3xl font-extrabold">রাজনীতি</h1>
+                        <div class="mt-2 w-16 h-1 rounded bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
+                    </div>
+                    <div>
+                        <a href="#" class="text-2xl sm:text-3xl font-extrabold hover-effect-underline">সব দেখুন</a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="col-span-1">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/p-01.jpg" alt=""
+                                    class="w-full aspect-[4/2.5] overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="sub-category.html"
+                                    class="text-base sm:text-lg md:text-xl hover-effect-underline">
+                                    শিশুকে খাওয়াতে গিয়ে নিজেই হিমশিম খাচ্ছেন?
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-sm sm:text-base md:text-lg">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/p-02.jpg" alt=""
+                                    class="w-full aspect-[4/2.5] overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="details-page.html"
+                                    class="text-base sm:text-lg md:text-xl hover-effect-underline">
+                                    হবিগঞ্জে বৈষম্যবিরোধী ছাত্র আন্দোলনের অব্যাহতিপ্রাপ্ত নেতা গ্রেপ্তার
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-sm sm:text-base md:text-lg">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/p-03.jpg" alt=""
+                                    class="w-full aspect-[4/2.5] overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="details-page.html"
+                                    class="text-base sm:text-lg md:text-xl hover-effect-underline">
+                                    পুলিশ বলছে, নওশেদ শ্রমিক লীগের নেতা, স্ত্রীর দাবি তিনি জামায়াত করেন
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-sm sm:text-base md:text-lg">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/p-04.jpg" alt=""
+                                    class="max-h-[227px] w-full overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="details-page.html"
+                                    class="text-base sm:text-lg md:text-xl hover-effect-underline">
+                                    বিএনপি চেয়ারপারসনের উপদেষ্টা ফজলুর রহমানকে থামতে বললেন বিএনপি নেতা
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-sm sm:text-base md:text-lg">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- সলিড-ইমেজ -->
+        <section class="pb-12">
+            <div class="max-w-[1182px] mx-auto">
+                <img src="./img/main/bd-ad-NWC 2.jpg" alt="" class="w-full max-h-[297px]">
+            </div>
+        </section>
+
+        <!-- বানিজ্য -->
+        <section class="pb-12">
+            <div class="container mx-auto">
+                <div class="border-bottom pb-7 mb-7 flex justify-between gap-4">
+                    <div>
+                        <h1 class="text-2xl sm:text-3xl font-extrabold">বানিজ্য</h1>
+                        <div class="mt-2 w-16 h-1 rounded bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
+                    </div>
+                    <div>
+                        <a href="#" class="text-2xl sm:text-3xl font-extrabold hover-effect-underline">সব দেখুন</a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+                    <div class="col-span-1">
+                        <div class="relative group overflow-hidden rounded-md">
+                            <!-- Background Image -->
+                            <img src="./img/main/b-01.jpg" alt=""
+                                class="w-full aspect-[4/3.5] rounded-md object-cover transition-transform duration-500 group-hover:scale-105">
+
+                            <!-- Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+
+                            <!-- Text on Overlay -->
+                            <a href="details-page.html"
+                                class="absolute left-6 bottom-7 white-clr text-base sm:text-xl md:text-2xl lg:text-3xl hover-effect-underline p-4 z-10 line-height-1-5">
+                                ভারতের আমদানি বিধিনিষেধ: বেশি ক্ষতিগ্রস্ত হবে কারা
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-span-1">
+                        <div class="flex flex-col gap-5">
+                            <div class="flex gap-4 border-bottom pb-5 items-start flex-col sm:flex-row">
+                                <div class="flex-shrink-0 w-full max-w-[201px] overflow-hidden rounded-md">
+                                    <img src="./img/main/b-02.jpg" alt=""
+                                        class="w-full aspect-[4/2.5] h-full object-cover rounded-md">
+                                </div>
+                                <div>
+                                    <a href="details-page.html"
+                                        class="text-base sm:text-lg md:text-xl hover-effect-underline line-clamp-2">
+                                        সম্প্রতি দেশীয় ঋণমান যাচাইকারী প্রতিষ্ঠান ক্রেডিট রেটিং এজেন্সি অব বাংলাদেশ
+                                        ব্যাংকটিকে দীর্ঘমেয়াদি ঋণমানে সর্বোচ্চ শ্রেণিতে উন্নীত করেছে।
+                                    </a>
+                                    <div class="flex gap-5 mt-2 text-sm sm:text-base md:text-lg">
+                                        <span>ওয়েড ওয়ারেন</span>
+                                        <span>০৯ জুলাই ২০২৫</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 border-bottom pb-5 flex-col sm:flex-row">
+                                <div class="flex-shrink-0 w-full max-w-[201px] overflow-hidden rounded-md">
+                                    <img src="./img/main/b-03.jpg" alt=""
+                                        class="w-full aspect-[4/2.5] h-full object-cover rounded-md">
+                                </div>
+                                <div>
+                                    <a href="details-page.html"
+                                        class="text-base sm:text-lg md:text-xl hover-effect-underline line-clamp-2">
+                                        সম্প্রতি দেশীয় ঋণমান যাচাইকারী প্রতিষ্ঠান ক্রেডিট রেটিং এজেন্সি অব বাংলাদেশ
+                                        ব্যাংকটিকে দীর্ঘমেয়াদি ঋণমানে সর্বোচ্চ শ্রেণিতে উন্নীত করেছে।
+                                    </a>
+                                    <div class="flex gap-5 mt-2 text-sm sm:text-base md:text-lg">
+                                        <span>ওয়েড ওয়ারেন</span>
+                                        <span>০৯ জুলাই ২০২৫</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div class="bg-[#F3F4F6] rounded-xl p-6 shadow-md w-full">
+                                    <h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-3">দ্রুত জরিপ</h2>
+                                    <p class="text-sm sm:text-base md:text-lg text-gray-800 mb-4">
+                                        কত তাড়াতাড়ি কোয়ান্টাম কম্পিউটার বাণিজ্যিকভাবে কার্যকর হবে বলে আপনি মনে করেন?
+                                    </p>
+                                    <form class="space-y-2">
+                                        <label class="flex items-center gap-2 cursor-pointer">
+                                            <input type="radio" name="vote" class="accent-black" />
+                                            <span class="text-sm sm:text-base md:text-lg text-gray-800">৫ বছরের
+                                                মধ্যে</span>
+                                        </label>
+                                        <label class="flex items-center gap-2 cursor-pointer">
+                                            <input type="radio" name="vote" class="accent-black" />
+                                            <span class="text-sm sm:text-base md:text-lg text-gray-800">৫ থেকে ১০
+                                                বছর</span>
+                                        </label>
+                                        <label class="flex items-center gap-2 cursor-pointer">
+                                            <input type="radio" name="vote" class="accent-black" />
+                                            <span class="text-sm sm:text-base md:text-lg text-gray-800">১০ থেকে ২০
+                                                বছর</span>
+                                        </label>
+                                        <label class="flex items-center gap-2 cursor-pointer">
+                                            <input type="radio" name="vote" class="accent-black" />
+                                            <span class="text-sm sm:text-base md:text-lg text-gray-800">২০ বছরেরও বেশি
+                                                সময় ধরে</span>
+                                        </label>
+                                        <button type="submit"
+                                            class="w-full bg-gray-900 text-white py-2 px-4 rounded-md mt-4 hover:bg-gray-800 transition duration-200">
+                                            ভোট দিন
+                                        </button>
+                                    </form>
+                                    <p class="text-xs text-gray-500 mt-4">ফলাফল আগামী সপ্তাহে প্রকাশিত হবে</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ভিডিও -->
+        <section class="pb-12 pt-16 bg-[#282828]">
+            <div class="container mx-auto">
+                <div class="pb-7 mb-7 flex justify-between">
+                    <div>
+                        <h1 class="text-2xl sm:text-3xl font-extrabold text-white">ভিডিও</h1>
+                        <div class="mt-2 w-16 h-1 rounded bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
+                    </div>
+                    <div>
+                        <div class="flex gap-3 justify-end pb-4">
+                            <!-- Navigation Buttons (Custom Classes) -->
+                            <div
+                                class="custom-prev w-[41px] h-[41px] bg-[rgba(255,204,22,0.6)] flex items-center justify-center cursor-pointer">
+                                <svg class="w-5 h-5 white-clr" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </div>
+                            <div
+                                class="custom-next w-[41px] h-[41px] bg-[rgba(255,204,22,0.6)] flex items-center justify-center cursor-pointer">
+                                <svg class="w-5 h-5 white-clr" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Swiper Container -->
+                <div class="swiper videoSlider">
+
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide col-span-3 mb-5">
+                            <div class="relative w-full max-w-lg rounded-xl overflow-hidden shadow-2xl">
+                                <img src="./img/main/v-01.jpg" alt="" class="w-full aspect-[4/6] object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20">
+                                </div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <button>
+                                        <img src="img/vedio/Play.png" alt="">
+                                    </button>
+                                </div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <a href="details-page.html"
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl white-clr hover-effect-underline">
+                                        লোরেম ইপসাম ডলর সিট অ্যামেট কনসেকটিচার. লোরেম ইপসাম ডলর
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide col-span-3 mb-5">
+                            <div class="relative w-full max-w-lg rounded-xl overflow-hidden shadow-2xl">
+                                <img src="./img/main/v-01.jpg" alt="" class="w-full aspect-[4/6] object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20">
+                                </div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <button>
+                                        <img src="img/vedio/Play.png" alt="">
+                                    </button>
+                                </div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <a href="details-page.html"
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl white-clr hover-effect-underline">
+                                        লোরেম ইপসাম ডলর সিট অ্যামেট কনসেকটিচার. লোরেম ইপসাম ডলর
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide col-span-3 mb-5">
+                            <div class="relative w-full max-w-lg rounded-xl overflow-hidden shadow-2xl">
+                                <img src="./img/main/v-01.jpg" alt="" class="w-full aspect-[4/6] object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20">
+                                </div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <button>
+                                        <img src="img/vedio/Play.png" alt="">
+                                    </button>
+                                </div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <a href="details-page.html"
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl white-clr hover-effect-underline">
+                                        লোরেম ইপসাম ডলর সিট অ্যামেট কনসেকটিচার. লোরেম ইপসাম ডলর
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide col-span-3 mb-5">
+                            <div class="relative w-full max-w-lg rounded-xl overflow-hidden shadow-2xl">
+                                <img src="./img/main/v-01.jpg" alt="" class="w-full aspect-[4/6] object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20">
+                                </div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <button>
+                                        <img src="img/vedio/Play.png" alt="">
+                                    </button>
+                                </div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <a href="details-page.html"
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl white-clr hover-effect-underline">
+                                        লোরেম ইপসাম ডলর সিট অ্যামেট কনসেকটিচার. লোরেম ইপসাম ডলর
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide col-span-3 mb-5">
+                            <div class="relative w-full max-w-lg rounded-xl overflow-hidden shadow-2xl">
+                                <img src="./img/main/v-01.jpg" alt="" class="w-full aspect-[4/6] object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20">
+                                </div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <button>
+                                        <img src="img/vedio/Play.png" alt="">
+                                    </button>
+                                </div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <a href="details-page.html"
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl white-clr hover-effect-underline">
+                                        লোরেম ইপসাম ডলর সিট অ্যামেট কনসেকটিচার. লোরেম ইপসাম ডলর
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide col-span-3 mb-5">
+                            <div class="relative w-full max-w-lg rounded-xl overflow-hidden shadow-2xl">
+                                <img src="./img/main/v-01.jpg" alt="" class="w-full aspect-[4/6] object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20">
+                                </div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <button>
+                                        <img src="img/vedio/Play.png" alt="">
+                                    </button>
+                                </div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <a href="details-page.html"
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl white-clr hover-effect-underline">
+                                        লোরেম ইপসাম ডলর সিট অ্যামেট কনসেকটিচার. লোরেম ইপসাম ডলর
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Copy this slide for more -->
+                        <!-- <div class="swiper-slide col-span-3 mb-5"> ... </div> -->
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- খেলাধুলা -->
+        <section class="pb-12 pt-12">
+            <div class="container mx-auto">
+                <div class="border-bottom pb-7 mb-7 flex justify-between gap-4">
+                    <div>
+                        <h1 class="text-2xl sm:text-3xl font-extrabold">খেলাধুলা</h1>
+                        <div class="mt-2 w-16 h-1 rounded bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
+                    </div>
+                    <div>
+                        <a href="#" class="text-2xl sm:text-3xl font-extrabold hover-effect-underline">সব দেখুন</a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12">
+                    <div class="lg:col-span-6 space-y-5">
+                        <!-- Card 1 -->
+                        <div class="flex flex-col sm:flex-row gap-4 border-bottom pb-5 mb-5 items-start">
+                            <div class="flex-shrink-0 min-w-[201px] overflow-hidden rounded-md">
+                                <img src="./img/main/ply-02.jpg" alt=""
+                                    class="w-full aspect-[4/2.5] object-cover rounded-md">
+                            </div>
+                            <div>
+                                <a href="details-page.html"
+                                    class="text-lg sm:text-xl hover-effect-underline">সিঙ্গাপুরের কাছে হেরে ফিফা
+                                    র‍্যাঙ্কিংয়ে পেছালেন হামজারা</a>
+                                <div class="flex gap-5 mt-2 flex-wrap text-xs sm:text-sm">
+                                    <span>ওয়েড ওয়ারেন</span>
+                                    <span>০৯ জুলাই ২০২৫</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="flex flex-col sm:flex-row gap-4 border-bottom pb-5 mb-5 items-start">
+                            <div class="flex-shrink-0 min-w-[201px] overflow-hidden rounded-md">
+                                <img src="./img/main/ply-04.jpg" alt=""
+                                    class="w-full aspect-[4/2.5] object-cover rounded-md">
+                            </div>
+                            <div>
+                                <a href="details-page.html" class="text-lg sm:text-xl hover-effect-underline">বাংলাদেশের
+                                    সিরিজ জয়ের
+                                    লড়াইয়ে বৃষ্টির চোখরাঙানি</a>
+                                <div class="flex gap-5 mt-2 flex-wrap text-xs sm:text-sm">
+                                    <span>ওয়েড ওয়ারেন</span>
+                                    <span>০৯ জুলাই ২০২৫</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="flex flex-col sm:flex-row gap-4 border-bottom pb-5 mb-5 items-start">
+                            <div class="flex-shrink-0 min-w-[201px] overflow-hidden rounded-md">
+                                <img src="./img/main/ply-05.jpg" alt=""
+                                    class="w-full aspect-[4/2.5] object-cover rounded-md">
+                            </div>
+                            <div>
+                                <a href="details-page.html" class="text-lg sm:text-xl hover-effect-underline">সুযোগ দেন,
+                                    একদিন হয়তো তারা
+                                    ভালো খেলবে: মিরাজ</a>
+                                <div class="flex gap-5 mt-2 flex-wrap text-xs sm:text-sm">
+                                    <span>ওয়েড ওয়ারেন</span>
+                                    <span>০৯ জুলাই ২০২৫</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6">
+                        <div class="relative overflow-hidden rounded-md">
+                            <img src="./img/main/ply-01.jpg" alt=""
+                                class=" w-full aspect-[4/3.1] rounded-md object-cover transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 transition-opacity duration-500">
+                            </div>
+                            <a href="details-page.html"
+                                class="absolute left-4 bottom-4 line-height-1-5 sm:left-6 sm:bottom-7 white-clr text-base sm:text-xl md:text-2xl lg:text-3xl hover-effect-underline p-4 z-10">
+                                সিঙ্গাপুরের কাছে হেরে ফিফা র‍্যাঙ্কিংয়ে পেছালেন হামজারা
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- সলিড-ইমেজ -->
+        <div class="pb-12">
+            <div class="max-w-[1182px] mx-auto">
+                <img src="./img/main/bd-ad-NWC 3.jpg" alt="" class="w-full max-h-[130px]">
+            </div>
+        </div>
+
+        <!-- বিজ্ঞান -->
+        <section class="pb-12">
+            <div class="container mx-auto">
+                <div class="border-bottom pb-7 mb-7 flex justify-between gap-4">
+                    <div>
+                        <h1 class="text-2xl sm:text-3xl font-extrabold">বিজ্ঞান</h1>
+                        <div class="mt-2 w-16 h-1 rounded bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
+                    </div>
+                    <div>
+                        <a href="#" class="text-2xl sm:text-3xl font-extrabold hover-effect-underline">সব দেখুন</a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12">
+                    <!-- Left Big Image -->
+                    <div class="lg:col-span-6">
+                        <div class="relative overflow-hidden rounded-md">
+                            <img src="./img/main/sc-01.jpg" alt=""
+                                class="h-[380px] sm:h-[500px] lg:h-[620px] w-full rounded-md object-cover transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 transition-opacity duration-500">
+                            </div>
+                            <a href="details-page.html"
+                                class="absolute left-4 bottom-4 sm:left-6 sm:bottom-7 white-clr text-base sm:text-xl md:text-2xl lg:text-3xl hover-effect-underline p-4 z-10">
+                                বিজ্ঞানীরা নতুন কোভিড -19 ভেরিয়েন্টের জন্য ভ্যাকসিন আবিষ্কার করেছিলেন
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Grid Content -->
+                    <div class="lg:col-span-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Item 1 -->
+                            <div>
+                                <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                                    <div class="overflow-hidden mb-4 rounded-md">
+                                        <img src="./img/main/sc-02.jpg" alt=""
+                                            class="max-h-[196px] aspect-[4/2.5] w-full overflow-hidden transition-transform duration-300 group-hover:scale-105 object-cover">
+                                    </div>
+                                    <div class="mb-3">
+                                        <a href="details-page.html" class="text-lg sm:text-xl hover-effect-underline">
+                                            বিজ্ঞান মেলায় শিক্ষার্থীদের উদ্ভাবনী সব প্রকল্প
+                                        </a>
+                                    </div>
+                                    <div class="flex gap-5 text-xs sm:text-sm">
+                                        <span>০৯ জুলাই ২০২৫</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div>
+                                <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                                    <div class="overflow-hidden mb-4 rounded-md">
+                                        <img src="./img/main/sc-02.jpg" alt=""
+                                            class="max-h-[196px] aspect-[4/2.5] w-full overflow-hidden transition-transform duration-300 group-hover:scale-105 object-cover">
+                                    </div>
+                                    <div class="mb-3">
+                                        <a href="details-page.html" class="text-lg sm:text-xl hover-effect-underline">
+                                            বাংলাদেশ বিজ্ঞান একাডেমির ফেলো হলেন বুয়েটের উপাচার্য
+                                        </a>
+                                    </div>
+                                    <div class="flex gap-5 text-xs sm:text-sm">
+                                        <span>০৯ জুলাই ২০২৫</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div>
+                                <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                                    <div class="overflow-hidden mb-4 rounded-md">
+                                        <img src="./img/main/sc-03.jpg" alt=""
+                                            class="max-h-[196px] aspect-[4/2.5] w-full overflow-hidden transition-transform duration-300 group-hover:scale-105 object-cover">
+                                    </div>
+                                    <div class="mb-3">
+                                        <a href="details-page.html" class="text-lg sm:text-xl hover-effect-underline">
+                                            বাংলাদেশ বিজ্ঞান একাডেমির ফেলো হলেন বুয়েটের উপাচার্য
+                                        </a>
+                                    </div>
+                                    <div class="flex gap-5 text-xs sm:text-sm">
+                                        <span>০৯ জুলাই ২০২৫</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 4 (Only image) -->
+                            <div>
+                                <div class="flex flex-col h-full group overflow-hidden pb-5">
+                                    <div class="overflow-hidden rounded-md">
+                                        <img src="./img/main/wd-08.jpg" alt=""
+                                            class="w-full overflow-hidden aspect-[4/3.5] max-h-[410px] transition-transform duration-300 group-hover:scale-105 object-cover">
+                                    </div>
+                                    <!-- No text here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- সম্পাদকের বাছাই -->
+        <section class="pb-12">
+            <div class="container mx-auto">
+                <div class="border-bottom pb-7 mb-7 flex justify-between gap-4">
+                    <div>
+                        <h1 class="text-2xl sm:text-3xl font-extrabold">সম্পাদকের বাছাই</h1>
+                        <div class="mt-2 w-16 h-1 rounded bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
+                    </div>
+                    <div>
+                        <a href="#" class="text-2xl sm:text-3xl font-extrabold hover-effect-underline">সব দেখুন</a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="mb-4">
+                        <div class="relative w-full aspect-[4/4] rounded-xl shadow-2xl group overflow-hidden">
+                            <img src="./img/main/ep-01.jpg" alt=""
+                                class="w-full  object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20">
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <a href="#">
+                                    <span
+                                        class="inline-block white-clr border border-white/80 rounded-md px-6 py-2 text-sm sm:text-base bg-[rgba(118,117,117,0.4)]">
+                                        বিনোদন
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="absolute bottom-0 left-0 p-4">
+                                <a href="details-page.html" class="text-lg sm:text-xl white-clr hover-effect-underline">
+                                    বিশ্বব্যাপী বিনোদনের উপর স্ট্রিমিংয়ের প্রভাব প্ল্যাটফর্মগুলি
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="mb-4">
+                        <div class="relative w-full rounded-xl shadow-2xl group overflow-hidden">
+                            <img src="./img/main/ep-02.jpg" alt=""
+                                class="w-full aspect-[4/4]  object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20">
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <a href="#">
+                                    <span
+                                        class="inline-block white-clr border border-white/80 rounded-md px-6 py-2 text-sm sm:text-base bg-[rgba(118,117,117,0.4)]">
+                                        বিনোদন
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="absolute bottom-0 left-0 p-4">
+                                <a href="details-page.html" class="text-lg sm:text-xl white-clr hover-effect-underline">
+                                    বিশ্বব্যাপী বিনোদনের উপর স্ট্রিমিংয়ের প্রভাব প্ল্যাটফর্মগুলি
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="mb-4">
+                        <div class="relative w-full rounded-xl shadow-2xl group overflow-hidden">
+                            <img src="./img/main/ep-03.jpg" alt=""
+                                class="w-full aspect-[4/4] object-cover transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20">
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <a href="#">
+                                    <span
+                                        class="inline-block white-clr border border-white/80 rounded-md px-6 py-2 text-sm sm:text-base bg-[rgba(118,117,117,0.4)]">
+                                        বিনোদন
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="absolute bottom-0 left-0 p-4">
+                                <a href="details-page.html" class="text-lg sm:text-xl white-clr hover-effect-underline">
+                                    বিশ্বব্যাপী বিনোদনের উপর স্ট্রিমিংয়ের প্রভাব প্ল্যাটফর্মগুলি
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- বিশ্বজুড়ে -->
+        <section class="pb-12">
+            <div class="container mx-auto">
+                <div class="border-bottom pb-7 mb-7 flex justify-between gap-4">
+                    <div>
+                        <h1 class="text-2xl sm:text-3xl font-extrabold">বিশ্বজুড়ে</h1>
+                        <div class="mt-2 w-16 h-1 rounded bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
+                    </div>
+                    <div>
+                        <a href="#" class="text-2xl sm:text-3xl font-extrabold hover-effect-underline">সব দেখুন</a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- ৮টি কার্ড এক এক করে -->
+                    <div class="mb-3">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/wd-01.jpg" alt=""
+                                    class="aspect-[4/2.5] w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="details-page.html" class="text-lg sm:text-xl hover-effect-underline">
+                                    সন্তানকে বোঝার উপায় জানালেন মনোবিদ মোহিত কামাল
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-xs sm:text-sm text-gray-500">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- একই স্ট্রাকচারে পরবর্তী ৭টি কার্ড -->
+                    <!-- wd-02 -->
+                    <div class="mb-3">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/wd-02.jpg" alt=""
+                                    class="aspect-[4/2.5] w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="details-page.html" class="text-lg sm:text-xl hover-effect-underline">
+                                    হবিগঞ্জে বৈষম্যবিরোধী ছাত্র আন্দোলনের অব্যাহতিপ্রাপ্ত নেতা গ্রেপ্তার
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-xs sm:text-sm text-gray-500">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- wd-03 -->
+                    <div class="mb-3">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/wd-03.jpg" alt=""
+                                    class="aspect-[4/2.5] w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="details-page.html" class="text-lg sm:text-xl hover-effect-underline">
+                                    পুলিশ বলছে, নওশেদ শ্রমিক লীগের নেতা, স্ত্রীর দাবি তিনি জামায়াত করেন
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-xs sm:text-sm text-gray-500">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- wd-04 -->
+                    <div class="mb-3">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/wd-04.jpg" alt=""
+                                    class="aspect-[4/2.5] w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="details-page.html" class="text-lg sm:text-xl hover-effect-underline">
+                                    বিএনপি চেয়ারপারসনের উপদেষ্টা ফজলুর রহমানকে থামতে বললেন বিএনপি নেতা
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-xs sm:text-sm text-gray-500">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- wd-05 -->
+                    <div class="mb-3">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/wd-05.jpg" alt=""
+                                    class="aspect-[4/2.5] w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="details-page.html" class="text-lg sm:text-xl hover-effect-underline">
+                                    ডিসেম্বরের মধ্যে নির্বাচনের প্রস্তুতি শেষ করার নির্দেশ
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-xs sm:text-sm text-gray-500">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- wd-06 -->
+                    <div class="mb-3">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/wd-06.jpg" alt=""
+                                    class="aspect-[4/2.5] w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="details-page.html" class="text-lg sm:text-xl hover-effect-underline">
+                                    হবিগঞ্জে বৈষম্যবিরোধী ছাত্র আন্দোলনের অব্যাহতিপ্রাপ্ত নেতা গ্রেপ্তার
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-xs sm:text-sm text-gray-500">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- wd-07 -->
+                    <div class="mb-3">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/wd-07.jpg" alt=""
+                                    class="aspect-[4/2.5] w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="details-page.html" class="text-lg sm:text-xl hover-effect-underline">
+                                    পুলিশ বলছে, নওশেদ শ্রমিক লীগের নেতা, স্ত্রীর দাবি তিনি জামায়াত করেন
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-xs sm:text-sm text-gray-500">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- wd-08 -->
+                    <div class="mb-3">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/wd-08.jpg" alt=""
+                                    class="aspect-[4/2.5] w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="details-page.html" class="text-lg sm:text-xl hover-effect-underline">
+                                    বিএনপি চেয়ারপারসনের উপদেষ্টা ফজলুর রহমানকে থামতে বললেন বিএনপি নেতা
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-xs sm:text-sm text-gray-500">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- পডকাস্ট -->
+        <section class="pb-12">
+            <div class="container mx-auto">
+                <div class="border-bottom pb-7 mb-7 flex justify-between gap-4">
+                    <div>
+                        <h1 class="text-2xl sm:text-3xl font-extrabold">পডকাস্ট</h1>
+                        <div class="mt-2 w-16 h-1 rounded bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
+                    </div>
+                    <div>
+                        <a href="#" class="text-2xl sm:text-3xl font-extrabold hover-effect-underline">সব দেখুন</a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-3 gap-4">
+                    <!-- Repeat Cards -->
+                    <div class="mb-5">
+                        <div class="relative w-full rounded-xl overflow-hidden shadow-2xl">
+                            <img src="./img/main/pc-01.jpg" alt="" class="w-full aspect-[4/4.1] object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20">
+                            </div>
+                            <div class="absolute inset-0 top-0 flex items-center justify-center">
+                                <button
+                                    class="w-20 h-20 bg-white/25 backdrop-blur-sm rounded-full flex items-center justify-center transform -translate-y-3 transition-transform hover:scale-105">
+                                    <svg class="w-10 h-10 text-white ml-1" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-0 left-0 p-4">
+                                <a href="details-page.html"
+                                    class="text-base sm:text-lg md:text-xl lg:text-2xl white-clr hover-effect-underline">
+                                    বিশ্বব্যাপী বিনোদনের উপর স্ট্রিমিংয়ের প্রভাব প্ল্যাটফর্মগুলি
+                                </a>
+                                <p class="text-sm sm:text-base md:text-lg mt-3 opacity-95 white-clr">
+                                    ডঃ মারভিন ম্যাককিনি দ্বারা
+                                </p>
+                                <div class="mt-6">
+                                    <span
+                                        class="inline-block white-clr border border-white/80 rounded-[24.668px] px-6 py-2 text-xs sm:text-sm md:text-base bg-[rgba(118,117,117,0.4)]">
+                                        ০৪ মিনিট
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat Cards -->
+                    <div class="mb-5">
+                        <div class="relative w-full rounded-xl overflow-hidden shadow-2xl">
+                            <img src="./img/main/pc-01.jpg" alt="" class="w-full aspect-[4/4.1] object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20">
+                            </div>
+                            <div class="absolute inset-0 top-0 flex items-center justify-center">
+                                <button
+                                    class="w-20 h-20 bg-white/25 backdrop-blur-sm rounded-full flex items-center justify-center transform -translate-y-3 transition-transform hover:scale-105">
+                                    <svg class="w-10 h-10 text-white ml-1" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-0 left-0 p-4">
+                                <a href="details-page.html"
+                                    class="text-base sm:text-lg md:text-xl lg:text-2xl white-clr hover-effect-underline">
+                                    বিশ্বব্যাপী বিনোদনের উপর স্ট্রিমিংয়ের প্রভাব প্ল্যাটফর্মগুলি
+                                </a>
+                                <p class="text-sm sm:text-base md:text-lg mt-3 opacity-95 white-clr">
+                                    ডঃ মারভিন ম্যাককিনি দ্বারা
+                                </p>
+                                <div class="mt-6">
+                                    <span
+                                        class="inline-block white-clr border border-white/80 rounded-[24.668px] px-6 py-2 text-xs sm:text-sm md:text-base bg-[rgba(118,117,117,0.4)]">
+                                        ০৪ মিনিট
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat Cards -->
+                    <div class="mb-5">
+                        <div class="relative w-full rounded-xl overflow-hidden shadow-2xl">
+                            <img src="./img/main/pc-01.jpg" alt="" class="w-full aspect-[4/4.1] object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20">
+                            </div>
+                            <div class="absolute inset-0 top-0 flex items-center justify-center">
+                                <button
+                                    class="w-20 h-20 bg-white/25 backdrop-blur-sm rounded-full flex items-center justify-center transform -translate-y-3 transition-transform hover:scale-105">
+                                    <svg class="w-10 h-10 text-white ml-1" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-0 left-0 p-4">
+                                <a href="details-page.html"
+                                    class="text-base sm:text-lg md:text-xl lg:text-2xl white-clr hover-effect-underline">
+                                    বিশ্বব্যাপী বিনোদনের উপর স্ট্রিমিংয়ের প্রভাব প্ল্যাটফর্মগুলি
+                                </a>
+                                <p class="text-sm sm:text-base md:text-lg mt-3 opacity-95 white-clr">
+                                    ডঃ মারভিন ম্যাককিনি দ্বারা
+                                </p>
+                                <div class="mt-6">
+                                    <span
+                                        class="inline-block white-clr border border-white/80 rounded-[24.668px] px-6 py-2 text-xs sm:text-sm md:text-base bg-[rgba(118,117,117,0.4)]">
+                                        ০৪ মিনিট
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- সলিড-ইমেজ -->
+        <div class="pb-12">
+            <div class="max-w-[1182px] mx-auto">
+                <img src="./img/main/bd-ad-NWC 3.jpg" alt="" class="w-full max-h-[130px]">
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-black pt-10 pb-10">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div>
+                    <div>
+                        <img src="./img/logo/logo.png" alt="logo" />
+                        <p class="text-base sm:text-lg md:text-xl pt-3 text-[#DADADA]">
+                            লোরেম ইপসাম ডলর সিট অ্যামেট কনসেকটিচার. মালেসুয়াডা মরবি
+                            ইজেস্টাস ভিভেরার ভিটা ইরোস ভিটা কনসেকটুর এনআইএসএল এ {{ডট}}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="ml-0 lg:ml-5">
+                    <h3
+                        class="relative text-lg sm:text-xl md:text-2xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:text-red-600 after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+                        ফটো গ্যালারী
+                    </h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div>
+                            <img src="img/main/ft-01.jpg" alt="" class="w-full max-h-[100px] object-cover" />
+                        </div>
+                        <div>
+                            <img src="img/main/ft-02.jpg" alt="" class="w-full max-h-[100px] object-cover" />
+                        </div>
+                        <div>
+                            <img src="img/main/ft-03.jpg" alt="" class="w-full max-h-[100px] object-cover" />
+                        </div>
+                        <div>
+                            <img src="img/main/ft-04.jpg" alt="" class="w-full max-h-[100px] object-cover" />
+                        </div>
+                        <div>
+                            <img src="img/main/ft-05.jpg" alt="" class="w-full max-h-[100px] object-cover" />
+                        </div>
+                        <div>
+                            <img src="img/main/ft-06.jpg" alt="" class="w-full max-h-[100px] object-cover" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ml-0 lg:ml-5">
+                    <h3
+                        class="relative text-lg sm:text-xl md:text-2xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:text-red-600 after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+                        ফটো গ্যালারী
+                    </h3>
+                    <ul class="flex flex-wrap gap-2 mb-4">
+                        <li>
+                            <a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-sm sm:text-base md:text-[16px] rounded-[10px] white-clr">পডকাস্ট</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-sm sm:text-base md:text-[16px] rounded-[10px] white-clr">সর্বশেষ
+                                সংবাদ</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-sm sm:text-base md:text-[16px] rounded-[10px] white-clr">সম্পাদকের
+                                পছন্দ</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-sm sm:text-base md:text-[16px] rounded-[10px] white-clr">খেলাধুলা</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-sm sm:text-base md:text-[16px] rounded-[10px] white-clr">বিজ্ঞান</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-sm sm:text-base md:text-[16px] rounded-[10px] white-clr hover-effect">ফিচার</a>
+                        </li>
+                    </ul>
+                    <h3 class="white-clr text-base sm:text-lg md:text-xl mt-5">অন্যান্য খবর</h3>
+                    <ul class="flex flex-wrap gap-3">
+                        <li>
+                            <a href="#"
+                                class="px-6 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                                    src="./img/main/n-01.png" alt="nn" class="w-[87px] h-[19px] object-contain" /></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="px-6 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                                    src="./img/main/n-02.png" alt="nn" class="w-[87px] h-[19px] object-contain" /></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="px-6 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                                    src="./img/main/n-03.png" alt="nn" class="w-[87px] h-[19px] object-contain" /></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="px-6 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                                    src="./img/main/n-04.png" alt="nn" class="w-[87px] h-[19px] object-contain" /></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="ml-0 lg:ml-5">
+                    <h3
+                        class="relative text-lg sm:text-xl md:text-2xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:text-red-600 after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+                        ফটো গ্যালারী
+                    </h3>
+                    <p class="white-clr text-sm sm:text-base md:text-md pb-3">
+                        সমস্ত সর্বশেষ খবরের সাথে আপডেট হওয়ার জন্য এবং বিশেষ ঘোষণাগুলি
+                        জানার জন্য সাবস্ক্রাইব করুন
+                    </p>
+                    <div>
+                        <input type="text" placeholder="আপনার ইমেল ঠিকানা"
+                            class="w-full h-[51px] px-4 bg-white rounded-md border border-gray-300 placeholder:text-gray-500" />
+                        <button
+                            class="w-full h-[51px] mt-2 yellow-bg text-white font-medium rounded-md hover:bg-blue-700 transition">
+                            সাবস্ক্রাইব করুন
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+<script>
+    window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+        preloader.classList.add("opacity-0", "pointer-events-none");
+        setTimeout(() => preloader.remove(), 50);
+    });
+</script>
+<script>
+    const videoSlider = new Swiper('.videoSlider', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.custom-next',
+            prevEl: '.custom-prev',
+        },
+        breakpoints: {
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+        }
+    });
+</script>
+
+<script>
+    $(function () {
+        const $slider = $('.slider');
+        const itemWidth = 200;
+        let animationInterval;
+
+        function initSlider() {
+            const items = $slider.children().length;
+            const totalWidth = items * itemWidth;
+            $slider.css('width', totalWidth + 'px');
+
+            startAnimation();
+
+            $('.showcase').hover(
+                () => pauseAnimation(),
+                () => startAnimation()
+            );
+        }
+
+        function startAnimation() {
+            if (parseInt($slider.css('margin-left')) <= -($slider.width() / 2)) {
+                $slider.css('margin-left', '0');
+            }
+
+            animationInterval = setInterval(() => {
+                const currentMargin = parseInt($slider.css('margin-left')) || 0;
+                const newMargin = currentMargin - 10; // super fast speed
+
+                if (newMargin <= -($slider.width() / 2)) {
+                    $slider.css('margin-left', '0');
+                } else {
+                    $slider.css('margin-left', newMargin + 'px');
+                }
+            }, 20);
+        }
+
+        function pauseAnimation() {
+            clearInterval(animationInterval);
+        }
+
+        initSlider();
+    });
+</script>
+
+<script>
+    const toggleBtn = document.getElementById("menuToggle");
+    const toggleIcon = document.getElementById("toggleIcon");
+    const menu = document.getElementById("megaMenu");
+
+    let isOpen = false;
+
+    // Toggle Button Click
+    toggleBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent bubbling
+        if (!isOpen) {
+            // Show menu
+            menu.classList.remove("hidden");
+            setTimeout(() => {
+                menu.classList.remove("scale-95", "opacity-0");
+                menu.classList.add("scale-100", "opacity-100");
+            }, 10);
+
+            // Change icon to "X"
+            toggleIcon.classList.remove("fa-bars");
+            toggleIcon.classList.add("fa-xmark");
+            isOpen = true;
+        } else {
+            closeMenu();
+        }
+    });
+
+    // Close function
+    function closeMenu() {
+        menu.classList.remove("scale-100", "opacity-100");
+        menu.classList.add("scale-95", "opacity-0");
+        setTimeout(() => {
+            menu.classList.add("hidden");
+        }, 500);
+
+        // Change icon back to "Bars"
+        toggleIcon.classList.remove("fa-xmark");
+        toggleIcon.classList.add("fa-bars");
+        isOpen = false;
+    }
+
+    // Click outside menu => close
+    document.addEventListener("click", (e) => {
+        if (isOpen && !menu.contains(e.target) && !toggleBtn.contains(e.target)) {
+            closeMenu();
+        }
+    });
+</script>
+
+
+</html>

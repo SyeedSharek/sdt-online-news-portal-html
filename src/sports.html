@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video Page - Online News Portal</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+
+    <!-- SwiperJS -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Your Tailwind Config Script -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        white: '#FFFFFF',
+                        red: '#FF0000',
+                        primary: {
+                            DEFAULT: '#0068B5',
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        },
+                        secondary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                            950: '#2e1065',
+                        },
+                        'yellow-bg': '#FAB115',
+                        'yellow-clr': '#E29A01',
+                        'text-title-clr': '#1F2937',
+                    },
+                    // fontFamily: {
+                    //     kalpurush: ['Kalpurush', 'Noto Sans Bengali', 'sans-serif'],
+                    //     noto: ['Noto Sans', 'sans-serif'],
+                    // },
+                    fontSize: {
+                        xs: '0.75rem',
+                        sm: '0.875rem',
+                        base: '0.875rem',
+                        lg: '1rem',
+                        xl: '1rem',
+                        '2xl': '1.125rem',
+                        '3xl': '1.5rem',
+                        h1: '35px',
+                        h2: '30px',
+                        h3: '26px',
+                        h4: '22px',
+                        h5: '20px',
+                        h6: '16px',
+                    },
+                    lineHeight: {
+                        normal: '1.6',
+                        tight: '1.3',
+                        relaxed: '1.7',
+                        '1-5': '1.5',
+                    },
+                    borderColor: {
+                        DEFAULT: '#E5E7EB',
+                        glass: 'rgba(255, 255, 255, 0.3)',
+                    },
+                    backgroundColor: {
+                        'yellow-bg': '#FAB115',
+                    },
+                    maxWidth: {
+                        container: '1280px',
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+
+<body class="bg-[#FFFFFF] font-kalpurush">
+
+    <!-- Header -->
+    <header>
+        <!-- Top Menu Section -->
+        <div class=" mb-3 bg-[#EAF2FF]">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between py-2 items-center gap-4 sm:gap-4">
+                    <!-- Navigation Menu -->
+                    <div class="w-full md:w-auto">
+                        <ul
+                            class="flex flex-wrap justify-center md:justify-start items-center gap-3 sm:gap-5 text-[#1F2937]">
+                            <li><a href="bangladesh.html"
+                                    class="text-sm sm:text-base md:text-lg hover-effect">বাংলাদেশ</a></li>
+                            <li><a href="cricket.html" class="text-sm sm:text-base md:text-lg hover-effect">খেলাধুলা</a>
+                            </li>
+                            <li><a href="technology.html"
+                                    class="text-sm sm:text-base md:text-lg hover-effect">প্রযুক্তি</a></li>
+                            <li><a href="opinion.html" class="text-sm sm:text-base md:text-lg hover-effect">মতামত</a>
+                            </li>
+                            <li><a href="politics.html" class="text-sm sm:text-base md:text-lg hover-effect">রাজনীতি</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Icons (Hidden on Mobile) -->
+                    <div class="hidden sm:flex flex-wrap justify-center md:justify-end items-center gap-2">
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#1877F2] text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-facebook-f text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#FF0000] text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-youtube text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-x-twitter text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#C13584] text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-instagram text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#25D366] text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-whatsapp text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Middle Logo/Date/Weather/Live -->
+        <div>
+            <div class="container mx-auto">
+                <div class="flex justify-between items-center gap-3">
+                    <!-- Logo -->
+                    <div>
+                        <a href="index.html">
+                            <img src="img/logo/logo.png" alt="" class="w-[55px]">
+                        </a>
+                    </div>
+
+                    <!-- Right Info -->
+                    <div class="flex flex-wrap items-center justify-center sm:justify-end gap-3">
+                        <!-- Date -->
+                        <div class="text-[#666] flex items-center space-x-1 text-sm sm:text-base md:text-lg">
+                            <span>জুলাই</span>
+                            <span>03, 2025</span>
+                        </div>
+
+                        <!-- Weather -->
+                        <div class="flex items-center space-x-2 text-gray-600 text-sm sm:text-base md:text-lg">
+                            <i class="fas fa-cloud-bolt text-base sm:text-xl text-yellow-500"></i>
+                            <div class="flex flex-col leading-none">
+                                <span>24<i class="font-sans">°</i></span>
+                                <span class="text-gray-400">16<i class="font-sans">°</i></span>
+                            </div>
+                        </div>
+
+                        <!-- Live -->
+                        <a href="live-video.html">
+                            <div
+                                class="flex items-center space-x-1 text-white bg-red px-4 py-2 rounded-full text-xs sm:text-sm font-semibold">
+                                <span class="h-4 w-4 bg-white rounded-full animate-pulse"></span>
+                                <span class="mb-0 text-white text-xs">লাইভ</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <div>
+            <div class="container mx-auto border-b">
+                <div class="grid grid-cols-12 items-center gap-4 py-4 justify-between">
+                    <!-- Left Side -->
+                    <div class="col-span-10 lg:col-span-10 flex gap-4 items-center">
+                        <!-- Toggle Button -->
+                        <div class="text-xl">
+                            <div class="relative inline-block">
+                                <button id="menuToggle" class="text-base sm:text-xl p-2">
+                                    <i id="toggleIcon" class="fa-solid fa-bars"></i>
+                                </button>
+
+                                <!-- Mega Menu -->
+                                <div id="megaMenu"
+                                    class="absolute left-0 mt-2 w-screen max-w-7xl bg-white p-4 sm:p-6 md:p-8 shadow-lg z-50 transition-all duration-500 transform scale-95 opacity-0 hidden origin-top">
+
+                                    <!-- Responsive Grid: 2 columns on mobile, 3 on md, 4 on lg -->
+                                    <div
+                                        class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-x-6 gap-y-8">
+
+                                        <!-- Column 1 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                <a href="index.html">হোম</a>
+                                            </h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="bangladesh.html" class="hover:text-blue-600">সমগ্র
+                                                        বাংলাদেশ</a></li>
+                                                <li><a href="world.html" class="hover:text-blue-600">বিশ্ব</a>
+                                                </li>
+                                                <li><a href="politics.html" class="hover:text-blue-600">রাজনীতি</a>
+                                                </li>
+                                                <li><a href="kids.html" class="hover:text-blue-600">কিডজ</a>
+                                                </li>
+                                                <li><a href="abroad.html" class="hover:text-blue-600">প্রবাস</a>
+                                                </li>
+                                                <li><a href="bangladesh.html" class="hover:text-blue-600">বাংলাদেশ</a>
+                                                </li>
+                                                <li><a href="technology.html" class="hover:text-blue-600">বিজ্ঞান</a>
+                                                </li>
+                                                <li><a href="health.html" class="hover:text-blue-600">স্বাস্থ্য</a></li>
+                                                <li><a href="campus.html" class="hover:text-blue-600">ক্যাম্পাস</a></li>
+                                                <li><a href="women.html" class="hover:text-blue-600">নারীপক্ষ</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 2 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                <a href="sports.html">খেলা</a>
+                                            </h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="cricket.html" class="hover:text-blue-600">ক্রিকেট</a>
+                                                </li>
+                                                <li><a href="sports.html" class="hover:text-blue-600">খেলা</a>
+                                                </li>
+                                                <li><a href="cricket.html" class="hover:text-blue-600">চ্যাম্পিয়ন্স
+                                                        ট্রফি</a></li>
+                                                <li><a href="cricket.html" class="hover:text-blue-600">কাতার
+                                                        বিশ্বকাপ ২০২২</a></li>
+                                                <li><a href="cricket.html" class="hover:text-blue-600">টি-টোয়েন্টি
+                                                        বিশ্বকাপ</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 3 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                <a href="opinion.html">মতামত</a>
+                                            </h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="opinion.html" class="hover:text-blue-600">মতামত</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 4 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                <a href="sub-category.html">অর্থ-বাণিজ্য</a>
+                                            </h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">বাণিজ্য</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">অর্থনীতি</a>
+                                                </li>
+                                                <li><a href="sub-category.html"
+                                                        class="hover:text-blue-600">পুঁজিবাজার</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 5 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                <a href="sub-category.html">মাল্টিমিডিয়া</a>
+                                            </h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">ছবিঘর</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">ছবির
+                                                        গল্প</a></li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">টিউব</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">ইনসাইড
+                                                        আউট</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 6 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                <a href="sub-category.html">আরও</a>
+                                            </h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">বিশেষ</a>
+                                                </li>
+                                                <li><a href="sub-category.html"
+                                                        class="hover:text-blue-600">প্রতিবেশী</a></li>
+                                                <li><a href="sub-category.html"
+                                                        class="hover:text-blue-600">করোনাভাইরাস</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Scrollable Nav -->
+                        <div class="flex-1 overflow-x-auto py-3">
+                            <nav>
+                                <ul
+                                    class="flex gap-6 text-sm sm:text-base md:text-lg xl:text-xl whitespace-nowrap min-w-[610px]">
+                                    <li><a href="world.html" class="hover-effect">বিশ্ব</a></li>
+                                    <li><a href="opinion.html" class="hover-effect">মতামত</a></li>
+                                    <li><a href="entertainment.html" class="hover-effect">বিনোদন</a></li>
+                                    <li><a href="lifestyle.html" class="hover-effect">জীবনধারা</a></li>
+                                    <li><a href="economy.html" class="hover-effect">অর্থনীতি</a></li>
+                                    <li><a href="business.html" class="hover-effect">ব্যবসা</a></li>
+                                    <li><a href="cricket.html" class="hover-effect">ক্রিকেট</a></li>
+                                    <li><a href="recent.html" class="hover-effect">সাম্প্রতিক</a></li>
+                                    <li><a href="videos.html" class="hover-effect">ভিডিও</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Right Icons -->
+                    <div class="col-span-2 lg:col-span-2 flex gap-4 items-center justify-end pl-2">
+                        <a href="search-page.html" class="text-base sm:text-xl xl:text-2xl"><i
+                                class="fa-solid fa-magnifying-glass"></i></a>
+                        <button class="text-base sm:text-xl xl:text-2xl"><i
+                                class="fa-solid fa-circle-user"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="bg-gray-50">
+        <!-- Hero Section -->
+        <section class="py-12 bg-gradient-to-r from-green-800 to-green-600 text-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">খেলাধুলা</h1>
+                    <p class="text-xl md:text-2xl opacity-90 text-white">সর্বশেষ খেলার সংবাদ, হাইলাইটস ও বিশ্লেষণ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Sports News -->
+        <section class="py-12">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="relative aspect-w-16 aspect-h-9">
+                            <img src="img/main/ply-03.jpg" alt="Featured Sports News"
+                                class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                                <button class="transform hover:scale-110 transition-transform duration-300">
+                                    <img src="img/vedio/Play.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <span
+                                    class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">ক্রিকেট</span>
+                                <span class="text-gray-500">১০ আগস্ট ২০২৫</span>
+                            </div>
+                            <h2 class="text-2xl md:text-3xl font-bold mb-4 hover:text-green-600 transition-colors">
+                                <a href="#">বাংলাদেশ বনাম অস্ট্রেলিয়া টি-২০ সিরিজের প্রথম ম্যাচের হাইলাইটস</a>
+                            </h2>
+                            <p class="text-gray-700 leading-relaxed">
+                                বাংলাদেশ ক্রিকেট দল অস্ট্রেলিয়ার বিপক্ষে টি-২০ সিরিজের প্রথম ম্যাচে ১৫ রানে জয়লাভ
+                                করেছে। ম্যাচের সেরা খেলোয়াড় নির্বাচিত হন লিটন দাস, যিনি ৪৬ বলে ৬২ রানের ইনিংস খেলেন।
+                                ঢাকার শের-ই-বাংলা স্টেডিয়ামে অনুষ্ঠিত এই ম্যাচে বাংলাদেশ ১৬৫ রান করে এবং অস্ট্রেলিয়া
+                                ১৫০ রানে অল-আউট হয়।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sports News Grid -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-3xl font-bold">সাম্প্রতিক খেলার সংবাদ</h2>
+                    <div class="flex space-x-2">
+                        <button
+                            class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">সকল</button>
+                        <button
+                            class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300 transition-colors">ক্রিকেট</button>
+                        <button
+                            class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300 transition-colors">ফুটবল</button>
+                        <button
+                            class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300 transition-colors">অন্যান্য</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Sports News 1 -->
+                    <div
+                        class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div class="relative aspect-video">
+                            <img src="./img/sports/cricket.jpg" alt="ক্রিকেট খেলা" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                                <button class="transform hover:scale-110 transition-transform duration-300">
+                                    <img src="img/vedio/Play.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <span
+                                    class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">ক্রিকেট</span>
+                                <span class="text-gray-500 text-sm">০৯ আগস্ট ২০২৫</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 hover:text-green-600 transition-colors">
+                                <a href="#">এশিয়া কাপের জন্য বাংলাদেশ দলের ঘোষণা</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm">১৫ সদস্যের বাংলাদেশ দলে ফিরেছেন তামিম ইকবাল, কিন্তু নেই
+                                মাহমুদুল্লাহ</p>
+                        </div>
+                    </div>
+
+                    <!-- Sports News 2 -->
+                    <div
+                        class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div class="relative aspect-video">
+                            <img src="./img/sports/football.jpg" alt="ফুটবল খেলা" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                                <button class="transform hover:scale-110 transition-transform duration-300">
+                                    <img src="img/vedio/Play.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <span
+                                    class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">ফুটবল</span>
+                                <span class="text-gray-500 text-sm">০৮ আগস্ট ২০২৫</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 hover:text-green-600 transition-colors">
+                                <a href="#">বাংলাদেশ প্রিমিয়ার লিগের নতুন মৌসুম শুরু ১৫ সেপ্টেম্বর</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm">৬ টি দল অংশ নেবে এবারের প্রিমিয়ার লিগে, নতুন দল হিসেবে যোগ
+                                দিচ্ছে চট্টগ্রাম ইউনাইটেড</p>
+                        </div>
+                    </div>
+
+                    <!-- Sports News 3 -->
+                    <div
+                        class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div class="relative aspect-video">
+                            <img src="./img/sports/olympics.jpg" alt="অলিম্পিক্স" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                                <button class="transform hover:scale-110 transition-transform duration-300">
+                                    <img src="img/vedio/Play.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <span
+                                    class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium">অলিম্পিক্স</span>
+                                <span class="text-gray-500 text-sm">০৭ আগস্ট ২০২৫</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 hover:text-green-600 transition-colors">
+                                <a href="#">লস অ্যাঞ্জেলেস অলিম্পিকের জন্য বাংলাদেশের ১২ ক্রীড়াবিদের কোটা নিশ্চিত</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm">শুটিং, আর্চারি ও সাঁতারে বাংলাদেশের প্রতিনিধিত্ব করবেন ১২
+                                ক্রীড়াবিদ</p>
+                        </div>
+                    </div>
+
+                    <!-- Sports News 4 -->
+                    <div
+                        class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div class="relative aspect-video">
+                            <img src="./img/sports/cricket2.jpg" alt="ক্রিকেট বিশ্বকাপ"
+                                class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                                <button class="transform hover:scale-110 transition-transform duration-300">
+                                    <img src="img/vedio/Play.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <span
+                                    class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">ক্রিকেট</span>
+                                <span class="text-gray-500 text-sm">০৬ আগস্ট ২০২৫</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 hover:text-green-600 transition-colors">
+                                <a href="#">২০২৬ টি-২০ বিশ্বকাপের জন্য বাংলাদেশের প্রস্তুতি শুরু</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm">ভারত ও শ্রীলঙ্কায় অনুষ্ঠিতব্য বিশ্বকাপের জন্য বিশেষ
+                                প্রস্তুতি পরিকল্পনা নিল বিসিবি</p>
+                        </div>
+                    </div>
+
+                    <!-- Sports News 5 -->
+                    <div
+                        class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div class="relative aspect-video">
+                            <img src="./img/sports/hockey.jpg" alt="হকি" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                                <button class="transform hover:scale-110 transition-transform duration-300">
+                                    <img src="img/vedio/Play.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <span
+                                    class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs font-medium">হকি</span>
+                                <span class="text-gray-500 text-sm">০৫ আগস্ট ২০২৫</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 hover:text-green-600 transition-colors">
+                                <a href="#">এশিয়ান হকি চ্যাম্পিয়নশিপে বাংলাদেশের জয়</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm">সিঙ্গাপুরকে ৩-১ গোলে হারিয়ে এশিয়ান হকি চ্যাম্পিয়নশিপে
+                                তৃতীয় স্থান অর্জন</p>
+                        </div>
+                    </div>
+
+                    <!-- Sports News 6 -->
+                    <div
+                        class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div class="relative aspect-video">
+                            <img src="./img/sports/tennis.jpg" alt="টেনিস" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                                <button class="transform hover:scale-110 transition-transform duration-300">
+                                    <img src="img/vedio/Play.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <span
+                                    class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">টেনিস</span>
+                                <span class="text-gray-500 text-sm">০৪ আগস্ট ২০২৫</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 hover:text-green-600 transition-colors">
+                                <a href="#">ডেভিস কাপে বাংলাদেশের পরবর্তী ম্যাচ নেপালের বিপক্ষে</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm">সেপ্টেম্বরে কাঠমান্ডুতে অনুষ্ঠিত হবে ডেভিস কাপের
+                                এশিয়া-ওশেনিয়া গ্রুপ-২ এর ম্যাচ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center mt-12">
+                    <button
+                        class="px-8 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors shadow-md hover:shadow-lg">
+                        আরও খবর দেখুন
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sports Categories -->
+        <section class="py-12 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-center">খেলার বিভাগসমূহ</h2>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <a href="#"
+                        class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow hover:bg-green-50">
+                        <div class="text-green-600 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                        <span class="font-medium">ক্রিকেট</span>
+                    </a>
+
+                    <a href="#"
+                        class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow hover:bg-green-50">
+                        <div class="text-blue-600 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 14v7m0-7v7m-6-7v7m0-7v7m6-10a2 2 0 100-4 2 2 0 000 4z" />
+                            </svg>
+                        </div>
+                        <span class="font-medium">ফুটবল</span>
+                    </a>
+
+                    <a href="#"
+                        class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow hover:bg-green-50">
+                        <div class="text-yellow-600 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                        </div>
+                        <span class="font-medium">অলিম্পিক্স</span>
+                    </a>
+
+                    <a href="#"
+                        class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow hover:bg-green-50">
+                        <div class="text-red-600 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <span class="font-medium">হকি</span>
+                    </a>
+
+                    <a href="#"
+                        class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow hover:bg-green-50">
+                        <div class="text-purple-600 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                            </svg>
+                        </div>
+                        <span class="font-medium">টেনিস</span>
+                    </a>
+
+                    <a href="#"
+                        class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow hover:bg-green-50">
+                        <div class="text-indigo-600 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                        </div>
+                        <span class="font-medium">অন্যান্য</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black pt-10 pb-10">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Logo & About -->
+                <div>
+                    <a href="index.html"><img src="./img/logo/logo.png" alt="logo" /></a>
+                    <p class="text-sm sm:text-base md:text-lg pt-3 text-[#DADADA]">
+                        লোরেম ইপসাম ডলর সিট অ্যামেট কনসেকটিচার. মালেসুয়াডা মরবি
+                        ইজেস্টাস ভিভেরার ভিটা ইরোস ভিটা কনসেকটুর এনআইএসএল এ {{ডট}}
+                    </p>
+                </div>
+
+                <!-- ফটো গ্যালারী -->
+                <div class="ml-0 lg:ml-5">
+                    <h3
+                        class="relative text-base sm:text-lg md:text-xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+                        ফটো গ্যালারী
+                    </h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <img src="img/main/ft-01.jpg" class="w-full max-h-[100px] object-cover" />
+                        <img src="img/main/ft-02.jpg" class="w-full max-h-[100px] object-cover" />
+                        <img src="img/main/ft-03.jpg" class="w-full max-h-[100px] object-cover" />
+                        <img src="img/main/ft-04.jpg" class="w-full max-h-[100px] object-cover" />
+                        <img src="img/main/ft-05.jpg" class="w-full max-h-[100px] object-cover" />
+                        <img src="img/main/ft-06.jpg" class="w-full max-h-[100px] object-cover" />
+                    </div>
+                </div>
+
+                <!-- লিংক তালিকা ও অন্যান্য খবর -->
+                <div class="ml-0 lg:ml-5">
+                    <h3
+                        class="relative text-base sm:text-lg md:text-xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+                        গুরুত্বপূর্ণ লিংক
+                    </h3>
+                    <ul class="flex flex-wrap gap-2 mb-4">
+                        <li><a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">পডকাস্ট</a>
+                        </li>
+                        <li><a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">সর্বশেষ
+                                সংবাদ</a></li>
+                        <li><a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">সম্পাদকের
+                                পছন্দ</a></li>
+                        <li><a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">খেলাধুলা</a>
+                        </li>
+                        <li><a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">বিজ্ঞান</a>
+                        </li>
+                        <li><a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr hover-effect">ফিচার</a>
+                        </li>
+                    </ul>
+                    <h3 class="white-clr text-sm sm:text-base md:text-lg mt-5">অন্যান্য খবর</h3>
+                    <ul class="flex flex-wrap gap-3 mt-2">
+                        <li><a href="#"
+                                class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                                    src="./img/main/n-01.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+                        </li>
+                        <li><a href="#"
+                                class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                                    src="./img/main/n-02.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+                        </li>
+                        <li><a href="#"
+                                class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                                    src="./img/main/n-03.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+                        </li>
+                        <li><a href="#"
+                                class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                                    src="./img/main/n-04.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- সাবস্ক্রিপশন -->
+                <div class="ml-0 lg:ml-5">
+                    <h3
+                        class="relative text-base sm:text-lg md:text-xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+                        সাবস্ক্রাইব
+                    </h3>
+                    <p class="white-clr text-xs sm:text-sm md:text-base pb-3">
+                        সমস্ত সর্বশেষ খবরের সাথে আপডেট হওয়ার জন্য এবং বিশেষ ঘোষণাগুলি জানার জন্য সাবস্ক্রাইব করুন
+                    </p>
+                    <div>
+                        <input type="text" placeholder="আপনার ইমেল ঠিকানা"
+                            class="w-full h-[48px] px-4 bg-white rounded-md border border-gray-300 placeholder:text-gray-500 text-sm sm:text-base" />
+                        <button
+                            class="w-full h-[48px] mt-2 yellow-bg text-white text-sm sm:text-base font-medium rounded-md hover:bg-blue-700 transition">
+                            সাবস্ক্রাইব করুন
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+<script>
+    window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+        preloader.classList.add("opacity-0", "pointer-events-none");
+        setTimeout(() => preloader.remove(), 50);
+    });
+</script>
+
+<script>
+    const toggleBtn = document.getElementById("menuToggle");
+    const toggleIcon = document.getElementById("toggleIcon");
+    const menu = document.getElementById("megaMenu");
+
+    let isOpen = false;
+
+    // Toggle Button Click
+    toggleBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent bubbling
+        if (!isOpen) {
+            // Show menu
+            menu.classList.remove("hidden");
+            setTimeout(() => {
+                menu.classList.remove("scale-95", "opacity-0");
+                menu.classList.add("scale-100", "opacity-100");
+            }, 10);
+
+            // Change icon to "X"
+            toggleIcon.classList.remove("fa-bars");
+            toggleIcon.classList.add("fa-xmark");
+            isOpen = true;
+        } else {
+            closeMenu();
+        }
+    });
+
+    // Close function
+    function closeMenu() {
+        menu.classList.remove("scale-100", "opacity-100");
+        menu.classList.add("scale-95", "opacity-0");
+        setTimeout(() => {
+            menu.classList.add("hidden");
+        }, 500);
+
+        // Change icon back to "Bars"
+        toggleIcon.classList.remove("fa-xmark");
+        toggleIcon.classList.add("fa-bars");
+        isOpen = false;
+    }
+
+    // Click outside menu => close
+    document.addEventListener("click", (e) => {
+        if (isOpen && !menu.contains(e.target) && !toggleBtn.contains(e.target)) {
+            closeMenu();
+        }
+    });
+</script>
+
+</html>

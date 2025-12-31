@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video Page - Online News Portal</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+
+  <!-- SwiperJS -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Your Tailwind Config Script -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            white: '#FFFFFF',
+            red: '#FF0000',
+            primary: {
+              DEFAULT: '#0068B5',
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+              950: '#082f49',
+            },
+            secondary: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              300: '#c4b5fd',
+              400: '#a78bfa',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              800: '#5b21b6',
+              900: '#4c1d95',
+              950: '#2e1065',
+            },
+            'yellow-bg': '#FAB115',
+            'yellow-clr': '#E29A01',
+            'text-title-clr': '#1F2937',
+          },
+          // fontFamily: {
+          //     kalpurush: ['Kalpurush', 'Noto Sans Bengali', 'sans-serif'],
+          //     noto: ['Noto Sans', 'sans-serif'],
+          // },
+          fontSize: {
+            xs: '0.75rem',
+            sm: '0.875rem',
+            base: '0.875rem',
+            lg: '1rem',
+            xl: '1rem',
+            '2xl': '1.125rem',
+            '3xl': '1.5rem',
+            h1: '35px',
+            h2: '30px',
+            h3: '26px',
+            h4: '22px',
+            h5: '20px',
+            h6: '16px',
+          },
+          lineHeight: {
+            normal: '1.6',
+            tight: '1.3',
+            relaxed: '1.7',
+            '1-5': '1.5',
+          },
+          borderColor: {
+            DEFAULT: '#E5E7EB',
+            glass: 'rgba(255, 255, 255, 0.3)',
+          },
+          backgroundColor: {
+            'yellow-bg': '#FAB115',
+          },
+          maxWidth: {
+            container: '1280px',
+          },
+          backdropBlur: {
+            xs: '2px',
+          }
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+
+<body class="bg-[#FFFFFF] font-kalpurush">
+
+  <!-- Header -->
+  <header>
+    <!-- Top Menu Section -->
+    <div class=" mb-3 bg-[#EAF2FF]">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between py-2 items-center gap-4 sm:gap-4">
+          <!-- Navigation Menu -->
+          <div class="w-full md:w-auto">
+            <ul class="flex flex-wrap justify-center md:justify-start items-center gap-3 sm:gap-5 text-[#1F2937]">
+              <li><a href="bangladesh.html" class="text-sm sm:text-base md:text-lg hover-effect">বাংলাদেশ</a></li>
+              <li><a href="cricket.html" class="text-sm sm:text-base md:text-lg hover-effect">খেলাধুলা</a>
+              </li>
+              <li><a href="technology.html" class="text-sm sm:text-base md:text-lg hover-effect">প্রযুক্তি</a></li>
+              <li><a href="opinion.html" class="text-sm sm:text-base md:text-lg hover-effect">মতামত</a>
+              </li>
+              <li><a href="politics.html" class="text-sm sm:text-base md:text-lg hover-effect">রাজনীতি</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Icons (Hidden on Mobile) -->
+          <div class="hidden sm:flex flex-wrap justify-center md:justify-end items-center gap-2">
+            <a href="#"
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-[#1877F2] text-white hover:scale-110 transition-transform">
+              <i class="fab fa-facebook-f text-xs sm:text-sm md:text-base"></i>
+            </a>
+            <a href="#"
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-[#FF0000] text-white hover:scale-110 transition-transform">
+              <i class="fab fa-youtube text-xs sm:text-sm md:text-base"></i>
+            </a>
+            <a href="#"
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white hover:scale-110 transition-transform">
+              <i class="fab fa-x-twitter text-xs sm:text-sm md:text-base"></i>
+            </a>
+            <a href="#"
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-[#C13584] text-white hover:scale-110 transition-transform">
+              <i class="fab fa-instagram text-xs sm:text-sm md:text-base"></i>
+            </a>
+            <a href="#"
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-[#25D366] text-white hover:scale-110 transition-transform">
+              <i class="fab fa-whatsapp text-xs sm:text-sm md:text-base"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Middle Logo/Date/Weather/Live -->
+    <div>
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center gap-3">
+          <!-- Logo -->
+          <div>
+            <a href="index.html">
+              <img src="img/logo/logo.png" alt="" class="w-[55px]">
+            </a>
+          </div>
+
+          <!-- Right Info -->
+          <div class="flex flex-wrap items-center justify-center sm:justify-end gap-3">
+            <!-- Date -->
+            <div class="text-[#666] flex items-center space-x-1 text-sm sm:text-base md:text-lg">
+              <span>জুলাই</span>
+              <span>03, 2025</span>
+            </div>
+
+            <!-- Weather -->
+            <div class="flex items-center space-x-2 text-gray-600 text-sm sm:text-base md:text-lg">
+              <i class="fas fa-cloud-bolt text-base sm:text-xl text-yellow-500"></i>
+              <div class="flex flex-col leading-none">
+                <span>24<i class="font-sans">°</i></span>
+                <span class="text-gray-400">16<i class="font-sans">°</i></span>
+              </div>
+            </div>
+
+            <!-- Live -->
+            <a href="live-video.html">
+              <div
+                class="flex items-center space-x-1 text-white bg-red px-4 py-2 rounded-full text-xs sm:text-sm font-semibold">
+                <span class="h-4 w-4 bg-white rounded-full animate-pulse"></span>
+                <span class="mb-0 text-white text-xs">লাইভ</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <div>
+      <div class="container mx-auto border-b">
+        <div class="grid grid-cols-12 items-center gap-4 py-4 justify-between">
+          <!-- Left Side -->
+          <div class="col-span-10 lg:col-span-10 flex gap-4 items-center">
+            <!-- Toggle Button -->
+            <div class="text-xl">
+              <div class="relative inline-block">
+                <button id="menuToggle" class="text-base sm:text-xl p-2">
+                  <i id="toggleIcon" class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Mega Menu -->
+                <div id="megaMenu"
+                  class="absolute left-0 mt-2 w-screen max-w-7xl bg-white p-4 sm:p-6 md:p-8 shadow-lg z-50 transition-all duration-500 transform scale-95 opacity-0 hidden origin-top">
+
+                  <!-- Responsive Grid: 2 columns on mobile, 3 on md, 4 on lg -->
+                  <div
+                    class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-x-6 gap-y-8">
+
+                    <!-- Column 1 -->
+                    <div class="col-span-1">
+                      <h2 class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                        <a href="index.html">হোম</a>
+                      </h2>
+                      <ul class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                        <li><a href="bangladesh.html" class="hover:text-blue-600">সমগ্র
+                            বাংলাদেশ</a></li>
+                        <li><a href="world.html" class="hover:text-blue-600">বিশ্ব</a>
+                        </li>
+                        <li><a href="politics.html" class="hover:text-blue-600">রাজনীতি</a>
+                        </li>
+                        <li><a href="kids.html" class="hover:text-blue-600">কিডজ</a>
+                        </li>
+                        <li><a href="abroad.html" class="hover:text-blue-600">প্রবাস</a>
+                        </li>
+                        <li><a href="bangladesh.html" class="hover:text-blue-600">বাংলাদেশ</a>
+                        </li>
+                        <li><a href="technology.html" class="hover:text-blue-600">বিজ্ঞান</a>
+                        </li>
+                        <li><a href="health.html" class="hover:text-blue-600">স্বাস্থ্য</a></li>
+                        <li><a href="campus.html" class="hover:text-blue-600">ক্যাম্পাস</a></li>
+                        <li><a href="women.html" class="hover:text-blue-600">নারীপক্ষ</a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="col-span-1">
+                      <h2 class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                        <a href="sports.html">খেলা</a>
+                      </h2>
+                      <ul class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                        <li><a href="cricket.html" class="hover:text-blue-600">ক্রিকেট</a>
+                        </li>
+                        <li><a href="sports.html" class="hover:text-blue-600">খেলা</a>
+                        </li>
+                        <li><a href="cricket.html" class="hover:text-blue-600">চ্যাম্পিয়ন্স
+                            ট্রফি</a></li>
+                        <li><a href="cricket.html" class="hover:text-blue-600">কাতার
+                            বিশ্বকাপ ২০২২</a></li>
+                        <li><a href="cricket.html" class="hover:text-blue-600">টি-টোয়েন্টি
+                            বিশ্বকাপ</a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="col-span-1">
+                      <h2 class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                        <a href="opinion.html">মতামত</a>
+                      </h2>
+                      <ul class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                        <li><a href="opinion.html" class="hover:text-blue-600">মতামত</a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 4 -->
+                    <div class="col-span-1">
+                      <h2 class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                        <a href="sub-category.html">অর্থ-বাণিজ্য</a>
+                      </h2>
+                      <ul class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                        <li><a href="sub-category.html" class="hover:text-blue-600">বাণিজ্য</a>
+                        </li>
+                        <li><a href="sub-category.html" class="hover:text-blue-600">অর্থনীতি</a>
+                        </li>
+                        <li><a href="sub-category.html" class="hover:text-blue-600">পুঁজিবাজার</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 5 -->
+                    <div class="col-span-1">
+                      <h2 class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                        <a href="sub-category.html">মাল্টিমিডিয়া</a>
+                      </h2>
+                      <ul class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                        <li><a href="sub-category.html" class="hover:text-blue-600">ছবিঘর</a>
+                        </li>
+                        <li><a href="sub-category.html" class="hover:text-blue-600">ছবির
+                            গল্প</a></li>
+                        <li><a href="sub-category.html" class="hover:text-blue-600">টিউব</a>
+                        </li>
+                        <li><a href="sub-category.html" class="hover:text-blue-600">ইনসাইড
+                            আউট</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 6 -->
+                    <div class="col-span-1">
+                      <h2 class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                        <a href="sub-category.html">আরও</a>
+                      </h2>
+                      <ul class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                        <li><a href="sub-category.html" class="hover:text-blue-600">বিশেষ</a>
+                        </li>
+                        <li><a href="sub-category.html" class="hover:text-blue-600">প্রতিবেশী</a></li>
+                        <li><a href="sub-category.html" class="hover:text-blue-600">করোনাভাইরাস</a></li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Scrollable Nav -->
+            <div class="flex-1 overflow-x-auto py-3">
+              <nav>
+                <ul class="flex gap-6 text-sm sm:text-base md:text-lg xl:text-xl whitespace-nowrap min-w-[610px]">
+                  <li><a href="world.html" class="hover-effect">বিশ্ব</a></li>
+                  <li><a href="opinion.html" class="hover-effect">মতামত</a></li>
+                  <li><a href="entertainment.html" class="hover-effect">বিনোদন</a></li>
+                  <li><a href="lifestyle.html" class="hover-effect">জীবনধারা</a></li>
+                  <li><a href="economy.html" class="hover-effect">অর্থনীতি</a></li>
+                  <li><a href="business.html" class="hover-effect">ব্যবসা</a></li>
+                  <li><a href="cricket.html" class="hover-effect">ক্রিকেট</a></li>
+                  <li><a href="recent.html" class="hover-effect">সাম্প্রতিক</a></li>
+                  <li><a href="videos.html" class="hover-effect">ভিডিও</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Right Icons -->
+          <div class="col-span-2 lg:col-span-2 flex gap-4 items-center justify-end pl-2">
+            <a href="search-page.html" class="text-base sm:text-xl xl:text-2xl"><i
+                class="fa-solid fa-magnifying-glass"></i></a>
+            <button class="text-base sm:text-xl xl:text-2xl"><i class="fa-solid fa-circle-user"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Main Content -->
+  <main class="bg-gray-50">
+    <!-- Hero Section -->
+    <section class="py-12 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">ভিডিও গ্যালারি</h1>
+          <p class="text-xl md:text-2xl opacity-90 text-white">সর্বশেষ ভিডিও সংবাদ ও বিশেষ প্রতিবেদন</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Video -->
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="relative aspect-w-16 aspect-h-9">
+              <img src="./img/main/p-01.jpg" alt="Featured Video Thumbnail" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                <button class="transform hover:scale-110 transition-transform duration-300">
+                  <img src="img/vedio/Play.png" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="p-6 md:p-8">
+              <div class="flex items-center space-x-4 mb-4">
+                <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">রাজনীতি</span>
+                <span class="text-gray-500">০৯ জুলাই ২০২৫</span>
+              </div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-4 hover:text-blue-600 transition-colors">
+                <a href="video-categroy.html">ডিসেম্বরের মধ্যে নির্বাচনের প্রস্তুতি শেষ করার নির্দেশ</a>
+              </h2>
+              <p class="text-gray-700 leading-relaxed">
+                বিজ্ঞানীরা একটি নতুন কৃত্রিম বুদ্ধিমত্তা ব্যবস্থা তৈরি করেছেন যা পূর্বে অসম্ভব বলে মনে করা জটিল
+                কোয়ান্টাম পদার্থবিদ্যার সমস্যাগুলি সমাধান করতে পারে। এই নতুন প্রযুক্তি ভবিষ্যতে চিকিৎসা, জ্বালানি এবং
+                যোগাযোগ ক্ষেত্রে বিপ্লব ঘটাতে পারে।
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Grid Section -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center md:text-left">সাম্প্রতিক ভিডিও</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <!-- Video Card 1 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="relative aspect-video">
+              <img src="./img/main/p-02.jpg" alt="Video Thumbnail" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                <button class="transform hover:scale-110 transition-transform duration-300">
+                  <img src="img/vedio/Play.png" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center space-x-3 mb-3">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">প্রযুক্তি</span>
+                <span class="text-gray-500 text-sm">০৮ জুলাই ২০২৫</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 hover:text-blue-600 transition-colors">
+                <a href="video-categroy.html">নতুন প্রযুক্তিতে পরিবর্তন আসছে মোবাইল ব্যাংকিংয়ে</a>
+              </h3>
+            </div>
+          </div>
+
+          <!-- Video Card 2 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="relative aspect-video">
+              <img src="./img/main/p-03.jpg" alt="Video Thumbnail" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                <button class="transform hover:scale-110 transition-transform duration-300">
+                  <img src="img/vedio/Play.png" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center space-x-3 mb-3">
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">স্বাস্থ্য</span>
+                <span class="text-gray-500 text-sm">০৭ জুলাই ২০২৫</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 hover:text-blue-600 transition-colors">
+                <a href="video-categroy.html">করোনা ভাইরাসের নতুন ভ্যারিয়েন্ট নিয়ে বিশেষজ্ঞদের সতর্কতা</a>
+              </h3>
+            </div>
+          </div>
+
+          <!-- Video Card 3 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="relative aspect-video">
+              <img src="./img/main/p-04.jpg" alt="Video Thumbnail" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                <button class="transform hover:scale-110 transition-transform duration-300">
+                  <img src="img/vedio/Play.png" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center space-x-3 mb-3">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">শিক্ষা</span>
+                <span class="text-gray-500 text-sm">০৬ জুলাই ২০২৫</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 hover:text-blue-600 transition-colors">
+                <a href="video-categroy.html">জাতীয় শিক্ষাক্রমে আসছে বড় পরিবর্তন</a>
+              </h3>
+            </div>
+          </div>
+
+          <!-- Video Card 4 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="relative aspect-video">
+              <img src="./img/main/p-01.jpg" alt="Video Thumbnail" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                <button class="transform hover:scale-110 transition-transform duration-300">
+                  <img src="img/vedio/Play.png" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center space-x-3 mb-3">
+                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium">খেলাধুলা</span>
+                <span class="text-gray-500 text-sm">০৫ জুলাই ২০২৫</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 hover:text-blue-600 transition-colors">
+                <a href="video-categroy.html">আসন্ন বিশ্বকাপ ক্রিকেটের প্রস্তুতি নিয়ে বিশেষ প্রতিবেদন</a>
+              </h3>
+            </div>
+          </div>
+
+          <!-- Video Card 5 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="relative aspect-video">
+              <img src="./img/main/p-02.jpg" alt="Video Thumbnail" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                <button class="transform hover:scale-110 transition-transform duration-300">
+                  <img src="img/vedio/Play.png" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center space-x-3 mb-3">
+                <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs font-medium">অর্থনীতি</span>
+                <span class="text-gray-500 text-sm">০৪ জুলাই ২০২৫</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 hover:text-blue-600 transition-colors">
+                <a href="video-categroy.html">বৈশ্বিক মন্দার প্রভাব বাংলাদেশের অর্থনীতিতে</a>
+              </h3>
+            </div>
+          </div>
+
+          <!-- Video Card 6 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="relative aspect-video">
+              <img src="./img/main/p-03.jpg" alt="Video Thumbnail" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                <button class="transform hover:scale-110 transition-transform duration-300">
+                  <img src="img/vedio/Play.png" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center space-x-3 mb-3">
+                <span class="px-2 py-1 bg-pink-100 text-pink-800 rounded-full text-xs font-medium">বিনোদন</span>
+                <span class="text-gray-500 text-sm">০৩ জুলাই ২০২৫</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 hover:text-blue-600 transition-colors">
+                <a href="video-categroy.html">ঈদ উপলক্ষে নতুন চলচ্চিত্রের মুক্তির তালিকা</a>
+              </h3>
+            </div>
+          </div>
+
+          <!-- Video Card 7 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="relative aspect-video">
+              <img src="./img/main/p-04.jpg" alt="Video Thumbnail" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                <button class="transform hover:scale-110 transition-transform duration-300">
+                  <img src="img/vedio/Play.png" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center space-x-3 mb-3">
+                <span class="px-2 py-1 bg-teal-100 text-teal-800 rounded-full text-xs font-medium">পরিবেশ</span>
+                <span class="text-gray-500 text-sm">০২ জুলাই ২০২৫</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 hover:text-blue-600 transition-colors">
+                <a href="video-categroy.html">জলবায়ু পরিবর্তনের প্রভাব মোকাবেলায় বাংলাদেশের পদক্ষেপ</a>
+              </h3>
+            </div>
+          </div>
+
+          <!-- Video Card 8 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="relative aspect-video">
+              <img src="./img/main/p-01.jpg" alt="Video Thumbnail" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                <button class="transform hover:scale-110 transition-transform duration-300">
+                  <img src="img/vedio/Play.png" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center space-x-3 mb-3">
+                <span
+                  class="px-2 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-medium">আন্তর্জাতিক</span>
+                <span class="text-gray-500 text-sm">০১ জুলাই ২০২৫</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 hover:text-blue-600 transition-colors">
+                <a href="video-categroy.html">যুক্তরাষ্ট্র-চীন বাণিজ্য যুদ্ধের নতুন অধ্যায়</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12">
+          <button
+            class="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg">
+            আরও ভিডিও দেখুন
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Categories -->
+    <section class="py-12 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center">ভিডিও বিভাগ</h2>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <a href="#"
+            class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow hover:bg-blue-50">
+            <div class="text-blue-600 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+              </svg>
+            </div>
+            <span class="font-medium">রাজনীতি</span>
+          </a>
+
+          <a href="#"
+            class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow hover:bg-blue-50">
+            <div class="text-green-600 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <span class="font-medium">প্রযুক্তি</span>
+          </a>
+
+          <a href="#"
+            class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow hover:bg-blue-50">
+            <div class="text-red-600 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <span class="font-medium">স্বাস্থ্য</span>
+          </a>
+
+          <a href="#"
+            class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow hover:bg-blue-50">
+            <div class="text-yellow-600 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <span class="font-medium">শিক্ষা</span>
+          </a>
+
+          <a href="#"
+            class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow hover:bg-blue-50">
+            <div class="text-purple-600 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
+            <span class="font-medium">খেলাধুলা</span>
+          </a>
+
+          <a href="#"
+            class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow hover:bg-blue-50">
+            <div class="text-indigo-600 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+            </div>
+            <span class="font-medium">অর্থনীতি</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-black pt-10 pb-10">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Logo & About -->
+        <div>
+          <a href="index.html"><img src="./img/logo/logo.png" alt="logo" /></a>
+          <p class="text-sm sm:text-base md:text-lg pt-3 text-[#DADADA]">
+            লোরেম ইপসাম ডলর সিট অ্যামেট কনসেকটিচার. মালেসুয়াডা মরবি
+            ইজেস্টাস ভিভেরার ভিটা ইরোস ভিটা কনসেকটুর এনআইএসএল এ {{ডট}}
+          </p>
+        </div>
+
+        <!-- ফটো গ্যালারী -->
+        <div class="ml-0 lg:ml-5">
+          <h3
+            class="relative text-base sm:text-lg md:text-xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+            ফটো গ্যালারী
+          </h3>
+          <div class="grid grid-cols-3 gap-2">
+            <img src="img/main/ft-01.jpg" class="w-full max-h-[100px] object-cover" />
+            <img src="img/main/ft-02.jpg" class="w-full max-h-[100px] object-cover" />
+            <img src="img/main/ft-03.jpg" class="w-full max-h-[100px] object-cover" />
+            <img src="img/main/ft-04.jpg" class="w-full max-h-[100px] object-cover" />
+            <img src="img/main/ft-05.jpg" class="w-full max-h-[100px] object-cover" />
+            <img src="img/main/ft-06.jpg" class="w-full max-h-[100px] object-cover" />
+          </div>
+        </div>
+
+        <!-- লিংক তালিকা ও অন্যান্য খবর -->
+        <div class="ml-0 lg:ml-5">
+          <h3
+            class="relative text-base sm:text-lg md:text-xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+            গুরুত্বপূর্ণ লিংক
+          </h3>
+          <ul class="flex flex-wrap gap-2 mb-4">
+            <li><a href="#"
+                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">পডকাস্ট</a>
+            </li>
+            <li><a href="#"
+                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">সর্বশেষ
+                সংবাদ</a></li>
+            <li><a href="#"
+                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">সম্পাদকের
+                পছন্দ</a></li>
+            <li><a href="#"
+                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">খেলাধুলা</a>
+            </li>
+            <li><a href="#"
+                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">বিজ্ঞান</a>
+            </li>
+            <li><a href="#"
+                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr hover-effect">ফিচার</a>
+            </li>
+          </ul>
+          <h3 class="white-clr text-sm sm:text-base md:text-lg mt-5">অন্যান্য খবর</h3>
+          <ul class="flex flex-wrap gap-3 mt-2">
+            <li><a href="#" class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                  src="./img/main/n-01.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+            </li>
+            <li><a href="#" class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                  src="./img/main/n-02.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+            </li>
+            <li><a href="#" class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                  src="./img/main/n-03.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+            </li>
+            <li><a href="#" class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                  src="./img/main/n-04.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- সাবস্ক্রিপশন -->
+        <div class="ml-0 lg:ml-5">
+          <h3
+            class="relative text-base sm:text-lg md:text-xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+            সাবস্ক্রাইব
+          </h3>
+          <p class="white-clr text-xs sm:text-sm md:text-base pb-3">
+            সমস্ত সর্বশেষ খবরের সাথে আপডেট হওয়ার জন্য এবং বিশেষ ঘোষণাগুলি জানার জন্য সাবস্ক্রাইব করুন
+          </p>
+          <div>
+            <input type="text" placeholder="আপনার ইমেল ঠিকানা"
+              class="w-full h-[48px] px-4 bg-white rounded-md border border-gray-300 placeholder:text-gray-500 text-sm sm:text-base" />
+            <button
+              class="w-full h-[48px] mt-2 yellow-bg text-white text-sm sm:text-base font-medium rounded-md hover:bg-blue-700 transition">
+              সাবস্ক্রাইব করুন
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+<script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("opacity-0", "pointer-events-none");
+    setTimeout(() => preloader.remove(), 3000);
+  });
+</script>
+
+<script>
+  const toggleBtn = document.getElementById("menuToggle");
+  const toggleIcon = document.getElementById("toggleIcon");
+  const menu = document.getElementById("megaMenu");
+
+  let isOpen = false;
+
+  // Toggle Button Click
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent bubbling
+    if (!isOpen) {
+      // Show menu
+      menu.classList.remove("hidden");
+      setTimeout(() => {
+        menu.classList.remove("scale-95", "opacity-0");
+        menu.classList.add("scale-100", "opacity-100");
+      }, 10);
+
+      // Change icon to "X"
+      toggleIcon.classList.remove("fa-bars");
+      toggleIcon.classList.add("fa-xmark");
+      isOpen = true;
+    } else {
+      closeMenu();
+    }
+  });
+
+  // Close function
+  function closeMenu() {
+    menu.classList.remove("scale-100", "opacity-100");
+    menu.classList.add("scale-95", "opacity-0");
+    setTimeout(() => {
+      menu.classList.add("hidden");
+    }, 500);
+
+    // Change icon back to "Bars"
+    toggleIcon.classList.remove("fa-xmark");
+    toggleIcon.classList.add("fa-bars");
+    isOpen = false;
+  }
+
+  // Click outside menu => close
+  document.addEventListener("click", (e) => {
+    if (isOpen && !menu.contains(e.target) && !toggleBtn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+</script>
+
+</html>

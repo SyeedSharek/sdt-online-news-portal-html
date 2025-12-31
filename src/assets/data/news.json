@@ -1,0 +1,687 @@
+{
+  "metadata": {
+    "version": "2.1.0",
+    "lastUpdated": "2025-07-29T14:30:00Z",
+    "totalArticles": 8,
+    "source": "NewsAggregator API",
+    "timezone": "UTC"
+  },
+  "categories": [
+    {
+      "id": "breaking",
+      "name": "Breaking News",
+      "color": "#ff4444"
+    },
+    {
+      "id": "technology",
+      "name": "Technology",
+      "color": "#4285f4"
+    },
+    {
+      "id": "politics",
+      "name": "Politics",
+      "color": "#34a853"
+    },
+    {
+      "id": "business",
+      "name": "Business",
+      "color": "#ff6d01"
+    },
+    {
+      "id": "local",
+      "name": "Local News",
+      "color": "#9c27b0"
+    }
+  ],
+  "articles": [
+    {
+      "id": "news_001",
+      "headline": "Couple Slain While Hiking সাম্প্রতিক ভিডিও with Daughters in Arkansas State Park",
+      "slug": "arkansas-hiking-tragedy-state-park",
+      "summary": "A man and woman who recently moved to northwest Arkansas were killed while hiking in a state park with their school-age daughters, authorities confirmed Sunday.",
+      "content": "A tragic incident unfolded at an Arkansas state park where a couple was apparently killed while hiking with their young daughters. The victims, who had recently relocated to northwest Arkansas, were discovered by park rangers after being reported missing. The school-age daughters were found unharmed and are currently in protective custody. Local authorities have launched a full investigation into the circumstances surrounding the deaths. The state park has been temporarily closed to visitors as the investigation continues. This shocking incident has sent ripples through the local community and raised concerns about safety in state recreational areas.",
+      "author": {
+        "name": "Sarah Mitchell",
+        "email": "s.mitchell@nbcnews.com",
+        "bio": "Crime reporter with 8 years of experience covering breaking news",
+        "avatar": "https://cdn.nbcnews.com/authors/sarah-mitchell-150x150.jpg"
+      },
+      "publishedAt": "2025-07-29T12:00:00Z",
+      "updatedAt": "2025-07-29T14:15:00Z",
+      "category": "breaking",
+      "tags": ["crime", "arkansas", "hiking", "investigation", "breaking"],
+      "source": {
+        "name": "NBC News",
+        "url": "https://www.nbcnews.com",
+        "logo": "https://cdn.nbcnews.com/logo-nbcnews.png"
+      },
+      "multimedia": {
+        "featuredImage": {
+          "url": "https://media.nbcnews.com/news/arkansas-state-park-crime-scene-1200x675.jpg",
+          "alt": "Arkansas state park where the incident occurred",
+          "caption": "The state park where the tragic incident took place has been temporarily closed",
+          "width": 1200,
+          "height": 675
+        },
+        "gallery": [
+          {
+            "url": "https://media.nbcnews.com/news/arkansas-park-entrance-800x600.jpg",
+            "alt": "Park entrance with police tape",
+            "caption": "Police have cordoned off the hiking trail area"
+          },
+          {
+            "url": "https://media.nbcnews.com/news/search-rescue-team-800x600.jpg",
+            "alt": "Search and rescue team at the scene",
+            "caption": "Emergency responders worked through the night"
+          }
+        ],
+        "videos": [
+          {
+            "url": "https://media.nbcnews.com/video/arkansas-park-incident-report.mp4",
+            "thumbnail": "https://media.nbcnews.com/video/thumbs/arkansas-report-thumb.jpg",
+            "duration": 180,
+            "title": "Local Sheriff Provides Update on Arkansas Park Incident"
+          }
+        ]
+      },
+      "location": {
+        "city": "Bentonville",
+        "state": "Arkansas",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.3729,
+          "lng": -94.2088
+        }
+      },
+      "engagement": {
+        "views": 145289,
+        "shares": 2834,
+        "comments": 156
+      },
+      "seo": {
+        "metaTitle": "Arkansas Hiking Tragedy: Couple Killed in State Park",
+        "metaDescription": "Breaking news: A couple was tragically killed while hiking with their daughters in an Arkansas state park. Investigation ongoing.",
+        "keywords": ["Arkansas", "hiking", "crime", "state park", "investigation"]
+      },
+      "priority": "high",
+      "status": "published"
+    },
+    {
+      "id": "news_002",
+      "headline": "White House Unveils America's AI Action Plan to Counter China",
+      "slug": "white-house-ai-action-plan-2025",
+      "summary": "The Biden administration released a comprehensive AI strategy aimed at maintaining America's technological leadership amid growing competition from China.",
+      "content": "The White House today unveiled 'Winning the AI Race: America's AI Action Plan,' a sweeping initiative designed to cement the United States' position as the global leader in artificial intelligence development. The plan, released in accordance with recent executive orders, outlines strategic investments in AI research, infrastructure, and workforce development. Key components include increased federal funding for AI research institutions, new partnerships with private sector leaders, and enhanced cybersecurity measures to protect AI innovations. The timing is significant as China recently announced its own global AI action plan, intensifying the technological competition between the world's two largest economies. Industry experts view this as a critical moment in the AI race, with both nations vying for supremacy in what many consider the most important technology of the 21st century.",
+      "author": {
+        "name": "David Chen",
+        "email": "d.chen@washingtonpost.com",
+        "bio": "Technology policy correspondent covering AI and emerging tech",
+        "avatar": "https://cdn.washingtonpost.com/authors/david-chen-150x150.jpg"
+      },
+      "publishedAt": "2025-07-24T09:00:00Z",
+      "updatedAt": "2025-07-29T11:30:00Z",
+      "category": "technology",
+      "tags": ["AI", "artificial intelligence", "White House", "China", "technology policy"],
+      "source": {
+        "name": "The White House",
+        "url": "https://www.whitehouse.gov",
+        "logo": "https://cdn.whitehouse.gov/logo-whitehouse.png"
+      },
+      "multimedia": {
+        "featuredImage": {
+          "url": "https://media.whitehouse.gov/ai-action-plan-announcement-1200x675.jpg",
+          "alt": "White House AI Action Plan announcement",
+          "caption": "President announces comprehensive AI strategy at White House event",
+          "width": 1200,
+          "height": 675
+        },
+        "gallery": [
+          {
+            "url": "https://media.whitehouse.gov/ai-tech-leaders-meeting-800x600.jpg",
+            "alt": "Tech leaders meeting at White House",
+            "caption": "Industry leaders discuss AI strategy with administration officials"
+          },
+          {
+            "url": "https://media.whitehouse.gov/ai-research-facility-800x600.jpg",
+            "alt": "AI research facility",
+            "caption": "Federal investment will boost AI research capabilities"
+          }
+        ],
+        "videos": [
+          {
+            "url": "https://media.whitehouse.gov/video/ai-action-plan-full-announcement.mp4",
+            "thumbnail": "https://media.whitehouse.gov/video/thumbs/ai-plan-thumb.jpg",
+            "duration": 420,
+            "title": "Full AI Action Plan Announcement"
+          }
+        ],
+        "infographics": [
+          {
+            "url": "https://media.whitehouse.gov/infographics/ai-investment-breakdown.svg",
+            "alt": "AI investment breakdown infographic",
+            "title": "Federal AI Investment by Sector"
+          }
+        ]
+      },
+      "location": {
+        "city": "Washington",
+        "state": "DC",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.9072,
+          "lng": -77.0369
+        }
+      },
+      "engagement": {
+        "views": 89456,
+        "shares": 1923,
+        "comments": 245
+      },
+      "seo": {
+        "metaTitle": "White House AI Action Plan: America's Strategy to Lead AI Race",
+        "metaDescription": "The White House unveils comprehensive AI strategy to maintain U.S. technological leadership amid China competition.",
+        "keywords": ["AI", "White House", "artificial intelligence", "China", "technology policy"]
+      },
+      "priority": "high",
+      "status": "published"
+    },
+    {
+      "id": "news_003",
+      "headline": "China Releases AI Action Plan Days After U.S. as Global Tech Race Heats Up",
+      "slug": "china-ai-action-plan-global-competition",
+      "summary": "Chinese Premier Li Qiang announced a global AI action plan at the World Artificial Intelligence Conference in Shanghai, escalating tech competition with the United States.",
+      "content": "The technological rivalry between the world's two largest economies reached new heights as China unveiled its global artificial intelligence action plan just days after the United States released its own AI strategy. Speaking at the World Artificial Intelligence Conference in Shanghai, Chinese Premier Li Qiang outlined ambitious goals for China's AI development, including massive investments in research and development, international partnerships, and the creation of AI innovation hubs across major Chinese cities. The plan emphasizes China's commitment to becoming the world's leading AI superpower by 2030, with specific targets for AI integration across manufacturing, healthcare, education, and government services. Industry analysts note the timing is no coincidence, as both nations recognize AI as critical to future economic and strategic dominance. The announcement comes amid ongoing tensions over technology transfer, trade restrictions, and concerns about AI safety and governance.",
+      "author": {
+        "name": "Jennifer Liu",
+        "email": "j.liu@cnbc.com",
+        "bio": "Asia correspondent specializing in China tech and economic policy",
+        "avatar": "https://cdn.cnbc.com/authors/jennifer-liu-150x150.jpg"
+      },
+      "publishedAt": "2025-07-27T03:00:00Z",
+      "updatedAt": "2025-07-29T10:45:00Z",
+      "category": "technology",
+      "tags": ["China", "AI", "technology", "competition", "Premier Li Qiang"],
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com",
+        "logo": "https://cdn.cnbc.com/logo-cnbc.png"
+      },
+      "multimedia": {
+        "featuredImage": {
+          "url": "https://media.cnbc.com/china-ai-conference-shanghai-1200x675.jpg",
+          "alt": "World Artificial Intelligence Conference in Shanghai",
+          "caption": "Premier Li Qiang addresses delegates at the AI conference in Shanghai",
+          "width": 1200,
+          "height": 675
+        },
+        "gallery": [
+          {
+            "url": "https://media.cnbc.com/shanghai-ai-expo-800x600.jpg",
+            "alt": "AI technology exhibition in Shanghai",
+            "caption": "Latest AI innovations on display at Shanghai conference"
+          },
+          {
+            "url": "https://media.cnbc.com/china-tech-giants-meeting-800x600.jpg",
+            "alt": "Chinese tech executives meeting",
+            "caption": "Leaders from major Chinese tech companies discuss AI strategy"
+          }
+        ],
+        "videos": [
+          {
+            "url": "https://media.cnbc.com/video/china-ai-plan-announcement.mp4",
+            "thumbnail": "https://media.cnbc.com/video/thumbs/china-ai-thumb.jpg",
+            "duration": 240,
+            "title": "China's AI Action Plan: Key Highlights"
+          }
+        ]
+      },
+      "location": {
+        "city": "Shanghai",
+        "state": null,
+        "country": "China",
+        "coordinates": {
+          "lat": 31.2304,
+          "lng": 121.4737
+        }
+      },
+      "engagement": {
+        "views": 67823,
+        "shares": 1456,
+        "comments": 189
+      },
+      "seo": {
+        "metaTitle": "China Unveils AI Action Plan in Response to U.S. Strategy",
+        "metaDescription": "China announces global AI action plan at Shanghai conference, intensifying tech competition with the United States.",
+        "keywords": ["China", "AI", "Shanghai", "tech competition", "Li Qiang"]
+      },
+      "priority": "high",
+      "status": "published"
+    },
+    {
+      "id": "news_004",
+      "headline": "Texas Passes Sweeping AI Governance Law with Transparency Requirements",
+      "slug": "texas-ai-governance-law-transparency",
+      "summary": "Texas lawmakers have enacted comprehensive AI legislation governing both government and private sector use, including transparency requirements and bias mitigation protocols.",
+      "content": "Texas has become the latest state to enact comprehensive artificial intelligence legislation, passing a sweeping law that establishes governance frameworks for both government and private sector AI use. The new legislation, which takes effect immediately, includes mandatory transparency requirements for AI systems used in high-stakes decisions, bias mitigation protocols, and a comprehensive framework for AI audits. The law requires companies operating AI systems that affect Texas residents to provide clear explanations of how their algorithms work and what data they collect. Government agencies must also disclose their use of AI in public services and decision-making processes. The legislation includes provisions for regular audits of AI systems to ensure they meet fairness and accuracy standards. Privacy advocates have praised the law as a model for other states, while some tech companies have expressed concerns about compliance costs and implementation timelines.",
+      "author": {
+        "name": "Michael Rodriguez",
+        "email": "m.rodriguez@texastribune.org",
+        "bio": "State government reporter covering Texas legislature and policy",
+        "avatar": "https://cdn.texastribune.org/authors/michael-rodriguez-150x150.jpg"
+      },
+      "publishedAt": "2025-07-06T16:00:00Z",
+      "updatedAt": "2025-07-29T09:20:00Z",
+      "category": "politics",
+      "tags": ["Texas", "AI regulation", "legislation", "transparency", "governance"],
+      "source": {
+        "name": "The Texas Tribune",
+        "url": "https://www.texastribune.org",
+        "logo": "https://cdn.texastribune.org/logo-texas-tribune.png"
+      },
+      "multimedia": {
+        "featuredImage": {
+          "url": "https://media.texastribune.org/texas-capitol-ai-law-signing-1200x675.jpg",
+          "alt": "Texas Governor signing AI legislation",
+          "caption": "Texas Governor signs comprehensive AI governance legislation into law",
+          "width": 1200,
+          "height": 675
+        },
+        "gallery": [
+          {
+            "url": "https://media.texastribune.org/texas-legislature-ai-debate-800x600.jpg",
+            "alt": "Texas legislature debating AI bill",
+            "caption": "Lawmakers debate AI governance provisions in the Texas House"
+          }
+        ],
+        "videos": [
+          {
+            "url": "https://media.texastribune.org/video/texas-ai-law-explainer.mp4",
+            "thumbnail": "https://media.texastribune.org/video/thumbs/ai-law-thumb.jpg",
+            "duration": 300,
+            "title": "Understanding Texas's New AI Law"
+          }
+        ]
+      },
+      "location": {
+        "city": "Austin",
+        "state": "Texas",
+        "country": "United States",
+        "coordinates": {
+          "lat": 30.2672,
+          "lng": -97.7431
+        }
+      },
+      "engagement": {
+        "views": 34567,
+        "shares": 892,
+        "comments": 78
+      },
+      "seo": {
+        "metaTitle": "Texas Enacts Comprehensive AI Governance Legislation",
+        "metaDescription": "Texas passes sweeping AI law with transparency requirements and bias mitigation protocols for government and private sector use.",
+        "keywords": ["Texas", "AI law", "governance", "transparency", "legislation"]
+      },
+      "priority": "medium",
+      "status": "published"
+    },
+    {
+      "id": "news_005",
+      "headline": "James Brown Linear Park Construction Impacts Downtown Augusta Businesses",
+      "slug": "augusta-james-brown-park-construction",
+      "summary": "Construction on the James Brown Linear Park project begins on Broad Street in downtown Augusta, affecting local businesses with lane closures and parking restrictions.",
+      "content": "A major infrastructure project is underway in downtown Augusta as construction begins on the James Brown Linear Park between 8th and 9th streets on Broad Street. The project, which honors the legendary musician's connection to Augusta, will create a linear park space across from the Augusta Common. Construction crews have closed the inside lanes on both sides of Broad Street, and all street parking in the construction zone has been eliminated to accommodate the work. Local business owners are expressing mixed feelings about the project, with some concerned about the immediate impact on foot traffic and customer access, while others are optimistic about the long-term benefits the park will bring to the downtown area. The city has promised to minimize disruption and complete the project as quickly as possible. The James Brown Linear Park is part of Augusta's broader downtown revitalization efforts aimed at creating more green space and improving the urban environment.",
+      "author": {
+        "name": "Amanda Thompson",
+        "email": "a.thompson@wjbf.com",
+        "bio": "Local news reporter covering Augusta and Richmond County",
+        "avatar": "https://cdn.wjbf.com/authors/amanda-thompson-150x150.jpg"
+      },
+      "publishedAt": "2025-07-29T06:00:00Z",
+      "updatedAt": "2025-07-29T08:30:00Z",
+      "category": "local",
+      "tags": ["Augusta", "construction", "James Brown", "downtown", "business impact"],
+      "source": {
+        "name": "WJBF",
+        "url": "https://www.wjbf.com",
+        "logo": "https://cdn.wjbf.com/logo-wjbf.png"
+      },
+      "multimedia": {
+        "featuredImage": {
+          "url": "https://media.wjbf.com/augusta-broad-street-construction-1200x675.jpg",
+          "alt": "Construction on Broad Street in Augusta",
+          "caption": "Construction crews work on the James Brown Linear Park project",
+          "width": 1200,
+          "height": 675
+        },
+        "gallery": [
+          {
+            "url": "https://media.wjbf.com/augusta-downtown-businesses-800x600.jpg",
+            "alt": "Downtown Augusta businesses",
+            "caption": "Local businesses adapt to construction-related changes"
+          },
+          {
+            "url": "https://media.wjbf.com/james-brown-memorial-800x600.jpg",
+            "alt": "James Brown statue in Augusta",
+            "caption": "The existing James Brown statue near the construction site"
+          }
+        ],
+        "videos": [
+          {
+            "url": "https://media.wjbf.com/video/augusta-construction-impact.mp4",
+            "thumbnail": "https://media.wjbf.com/video/thumbs/construction-thumb.jpg",
+            "duration": 150,
+            "title": "How Construction Affects Augusta Businesses"
+          }
+        ]
+      },
+      "location": {
+        "city": "Augusta",
+        "state": "Georgia",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.4735,
+          "lng": -82.0105
+        }
+      },
+      "engagement": {
+        "views": 12456,
+        "shares": 234,
+        "comments": 45
+      },
+      "seo": {
+        "metaTitle": "Augusta's James Brown Linear Park Construction Begins",
+        "metaDescription": "Downtown Augusta businesses face impacts as James Brown Linear Park construction starts on Broad Street.",
+        "keywords": ["Augusta", "James Brown", "construction", "downtown", "linear park"]
+      },
+      "priority": "low",
+      "status": "published"
+    },
+    {
+      "id": "news_006",
+      "headline": "Global Stock Markets Show Mixed Results Amid Economic Uncertainty",
+      "slug": "global-stock-markets-mixed-results-july",
+      "summary": "International stock markets display varied performance as investors navigate ongoing economic uncertainties and await key policy decisions.",
+      "content": "Global financial markets presented a mixed picture today as investors grappled with economic uncertainty and awaited crucial policy announcements from major central banks. Asian markets opened with cautious optimism, with the Nikkei gaining 0.8% and the Hang Seng rising 0.3%, while Shanghai Composite remained relatively flat. European markets showed more volatility, with the FTSE 100 declining 0.4% and the DAX gaining 0.2%. U.S. futures indicated a neutral opening as traders positioned themselves ahead of the Federal Reserve's upcoming policy meeting. Key concerns driving market sentiment include inflation data, geopolitical tensions, and corporate earnings reports that have shown mixed results across sectors. Technology stocks continued to outperform traditional industries, while energy and commodity sectors faced headwinds from supply chain disruptions. Financial analysts suggest that market volatility may persist as economic indicators continue to send conflicting signals about the global economic recovery.",
+      "author": {
+        "name": "Robert Chang",
+        "email": "r.chang@businessstandard.com",
+        "bio": "Senior financial markets correspondent with 12 years experience",
+        "avatar": "https://cdn.businessstandard.com/authors/robert-chang-150x150.jpg"
+      },
+      "publishedAt": "2025-07-29T13:00:00Z",
+      "updatedAt": "2025-07-29T14:00:00Z",
+      "category": "business",
+      "tags": ["stock market", "global markets", "economy", "investing", "financial news"],
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com",
+        "logo": "https://cdn.business-standard.com/logo-bs.png"
+      },
+      "multimedia": {
+        "featuredImage": {
+          "url": "https://media.business-standard.com/global-markets-trading-floor-1200x675.jpg",
+          "alt": "Trading floor with market displays",
+          "caption": "Traders monitor global market movements amid economic uncertainty",
+          "width": 1200,
+          "height": 675
+        },
+        "gallery": [
+          {
+            "url": "https://media.business-standard.com/stock-charts-display-800x600.jpg",
+            "alt": "Stock market charts on displays",
+            "caption": "Market data shows mixed performance across global exchanges"
+          }
+        ],
+        "videos": [
+          {
+            "url": "https://media.business-standard.com/video/market-analysis-today.mp4",
+            "thumbnail": "https://media.business-standard.com/video/thumbs/market-thumb.jpg",
+            "duration": 210,
+            "title": "Daily Market Analysis and Outlook"
+          }
+        ],
+        "infographics": [
+          {
+            "url": "https://media.business-standard.com/infographics/global-market-performance.svg",
+            "alt": "Global market performance comparison",
+            "title": "Today's Global Market Performance"
+          }
+        ]
+      },
+      "location": {
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "country": "India",
+        "coordinates": {
+          "lat": 19.0760,
+          "lng": 72.8777
+        }
+      },
+      "engagement": {
+        "views": 45678,
+        "shares": 567,
+        "comments": 123
+      },
+      "seo": {
+        "metaTitle": "Global Stock Markets Mixed Amid Economic Uncertainty",
+        "metaDescription": "International stock markets show varied performance as investors navigate economic uncertainties and await policy decisions.",
+        "keywords": ["stock market", "global markets", "economy", "trading", "financial news"]
+      },
+      "priority": "medium",
+      "status": "published"
+    },
+    {
+      "id": "news_007",
+      "headline": "Edgefield County Planning Commission Rejects Controversial RV Park Proposal",
+      "slug": "edgefield-county-rv-park-rejection-appeal",
+      "summary": "The Edgefield County Planning Commission has rejected a controversial RV park proposal near Trenton, but developers may appeal the decision through the county's new appeals process.",
+      "content": "The Edgefield County Planning Commission delivered a decisive rejection to a controversial RV park proposal that would have been located in the Trenton area, but the decision may not be final. The proposed Bream Oak RV park faced significant opposition from local residents who raised concerns about environmental impact, traffic congestion, and potential strain on local infrastructure. However, developers still have recourse through the county's recently instituted appeals process, which was established following the Sweetwater lawsuit settlement. The appeals procedure allows developers to request a review of planning commission decisions by the county council, providing a second chance for controversial projects. Local residents who opposed the project expressed cautious optimism about the rejection while remaining vigilant about the possibility of an appeal. The controversy highlights ongoing tensions in Edgefield County between development interests and community preservation efforts. County officials emphasized that the appeals process ensures fair consideration of all development proposals while maintaining community input in the decision-making process.",
+      "author": {
+        "name": "Karen Williams",
+        "email": "k.williams@postandcourier.com",
+        "bio": "Regional government and development reporter for North Augusta area",
+        "avatar": "https://cdn.postandcourier.com/authors/karen-williams-150x150.jpg"
+      },
+      "publishedAt": "2025-07-28T20:00:00Z",
+      "updatedAt": "2025-07-29T07:15:00Z",
+      "category": "local",
+      "tags": ["Edgefield County", "RV park", "planning commission", "development", "Trenton"],
+      "source": {
+        "name": "The Post and Courier",
+        "url": "https://www.postandcourier.com",
+        "logo": "https://cdn.postandcourier.com/logo-pc.png"
+      },
+      "multimedia": {
+        "featuredImage": {
+          "url": "https://media.postandcourier.com/edgefield-planning-commission-meeting-1200x675.jpg",
+          "alt": "Edgefield County Planning Commission meeting",
+          "caption": "Planning commission members discuss the RV park proposal",
+          "width": 1200,
+          "height": 675
+        },
+        "gallery": [
+          {
+            "url": "https://media.postandcourier.com/proposed-rv-park-site-800x600.jpg",
+            "alt": "Proposed RV park location",
+            "caption": "The rural site where the RV park was proposed to be built"
+          },
+          {
+            "url": "https://media.postandcourier.com/community-meeting-opposition-800x600.jpg",
+            "alt": "Community members at meeting",
+            "caption": "Local residents voiced opposition to the development proposal"
+          }
+        ],
+        "videos": [
+          {
+            "url": "https://media.postandcourier.com/video/planning-commission-highlights.mp4",
+            "thumbnail": "https://media.postandcourier.com/video/thumbs/commission-thumb.jpg",
+            "duration": 180,
+            "title": "Planning Commission Meeting Highlights"
+          }
+        ]
+      },
+      "location": {
+        "city": "Edgefield",
+        "state": "South Carolina",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7890,
+          "lng": -82.0404
+        }
+      },
+      "engagement": {
+        "views": 8934,
+        "shares": 156,
+        "comments": 67
+      },
+      "seo": {
+        "metaTitle": "Edgefield County Rejects RV Park Proposal, Appeal Possible",
+        "metaDescription": "Planning commission rejects controversial RV park near Trenton, but developers may use new appeals process.",
+        "keywords": ["Edgefield County", "RV park", "planning", "development", "appeal"]
+      },
+      "priority": "low",
+      "status": "published"
+    },
+    {
+      "id": "news_008",
+      "headline": "MIT Study Reveals Breakthrough in Quantum Computing Error Correction",
+      "slug": "mit-quantum-computing-error-correction-breakthrough",
+      "summary": "Researchers at MIT have developed a new method for quantum error correction that could significantly improve the reliability of quantum computers.",
+      "content": "Scientists at the Massachusetts Institute of Technology have announced a major breakthrough in quantum computing that could accelerate the development of practical quantum computers. The research team, led by Dr. Elena Vasquez, has developed an innovative approach to quantum error correction that reduces computational errors by up to 90% compared to existing methods. The breakthrough involves a novel technique for detecting and correcting quantum bit errors in real-time without disrupting ongoing quantum calculations. This advancement addresses one of the most significant challenges in quantum computing: maintaining quantum coherence while performing complex calculations. The new error correction method uses machine learning algorithms to predict and prevent errors before they occur, rather than simply correcting them after detection. Industry experts believe this development could bring practical quantum computing applications significantly closer to reality, potentially revolutionizing fields such as drug discovery, financial modeling, and cryptography. The research has been peer-reviewed and published in the latest issue of Nature Quantum Information, with several major technology companies already expressing interest in licensing the technology.",
+      "author": {
+        "name": "Dr. James Patterson",
+        "email": "j.patterson@mit.edu",
+        "bio": "Science and technology reporter specializing in quantum computing and physics",
+        "avatar": "https://cdn.mit.edu/authors/james-patterson-150x150.jpg"
+      },
+      "publishedAt": "2025-07-29T10:00:00Z",
+      "updatedAt": "2025-07-29T13:45:00Z",
+      "category": "technology",
+      "tags": ["MIT", "quantum computing", "breakthrough", "error correction", "research"],
+      "source": {
+        "name": "MIT News",
+        "url": "https://news.mit.edu",
+        "logo": "https://cdn.mit.edu/logo-mit-news.png"
+      },
+      "multimedia": {
+        "featuredImage": {
+          "url": "https://media.mit.edu/quantum-computer-lab-1200x675.jpg",
+          "alt": "MIT quantum computing laboratory",
+          "caption": "Researchers work with quantum computing equipment at MIT",
+          "width": 1200,
+          "height": 675
+        },
+        "gallery": [
+          {
+            "url": "https://media.mit.edu/quantum-chip-closeup-800x600.jpg",
+            "alt": "Close-up of quantum computing chip",
+            "caption": "The quantum processor chip used in the error correction research"
+          },
+          {
+            "url": "https://media.mit.edu/research-team-lab-800x600.jpg",
+            "alt": "MIT research team in laboratory",
+            "caption": "Dr. Vasquez and her team demonstrate the new error correction method"
+          }
+        ],
+        "videos": [
+          {
+            "url": "https://media.mit.edu/video/quantum-breakthrough-explanation.mp4",
+            "thumbnail": "https://media.mit.edu/video/thumbs/quantum-thumb.jpg",
+            "duration": 360,
+            "title": "Understanding the Quantum Error Correction Breakthrough"
+          }
+        ],
+        "infographics": [
+          {
+            "url": "https://media.mit.edu/infographics/quantum-error-reduction.svg",
+            "alt": "Quantum error reduction comparison chart",
+            "title": "90% Error Reduction: Before vs After"
+          }
+        ]
+      },
+      "location": {
+        "city": "Cambridge",
+        "state": "Massachusetts",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.3601,
+          "lng": -71.0589
+        }
+      },
+      "engagement": {
+        "views": 67234,
+        "shares": 1456,
+        "comments": 234
+      },
+      "seo": {
+        "metaTitle": "MIT Breakthrough: 90% Improvement in Quantum Error Correction",
+        "metaDescription": "MIT researchers develop revolutionary quantum error correction method that could accelerate practical quantum computing applications.",
+        "keywords": ["MIT", "quantum computing", "error correction", "breakthrough", "quantum research"]
+      },
+      "priority": "high",
+      "status": "published"
+    }
+  ],
+  "pagination": {
+    "currentPage": 1,
+    "totalPages": 1,
+    "itemsPerPage": 10,
+    "totalItems": 8
+  },
+  "filters": {
+    "availableCategories": ["breaking", "technology", "politics", "business", "local"],
+    "dateRange": {
+      "earliest": "2025-07-06T16:00:00Z",
+      "latest": "2025-07-29T14:30:00Z"
+    },
+    "authors": [
+      "Sarah Mitchell",
+      "David Chen", 
+      "Jennifer Liu",
+      "Michael Rodriguez",
+      "Amanda Thompson",
+      "Robert Chang",
+      "Karen Williams",
+      "Dr. James Patterson"
+    ]
+  },
+  "relatedContent": {
+    "trending": [
+      "arkansas-hiking-tragedy-state-park",
+      "white-house-ai-action-plan-2025",
+      "china-ai-action-plan-global-competition"
+    ],
+    "recommended": [
+      "texas-ai-governance-law-transparency",
+      "mit-quantum-computing-error-correction-breakthrough"
+    ]
+  },
+  "advertisements": {
+    "banner": {
+      "url": "https://cdn.newsads.com/tech-summit-2025-banner.jpg",
+      "link": "https://techsummit2025.com",
+      "alt": "Tech Summit 2025 - Register Now"
+    },
+    "sidebar": [
+      {
+        "url": "https://cdn.newsads.com/investment-app-ad.jpg",
+        "link": "https://investmentapp.com",
+        "alt": "Smart Investment App - Download Free"
+      }
+    ]
+  },
+  "socialMedia": {
+    "shareUrls": {
+      "facebook": "https://facebook.com/sharer/sharer.php?u=",
+      "twitter": "https://twitter.com/intent/tweet?url=",
+      "linkedin": "https://linkedin.com/sharing/share-offsite/?url=",
+      "reddit": "https://reddit.com/submit?url="
+    }
+  },
+  "apiInfo": {
+    "version": "v2.1",
+    "rateLimit": "1000 requests per hour",
+    "supportEmail": "api-support@newsaggregator.com",
+    "documentation": "https://api.newsaggregator.com/docs"
+  }
+}

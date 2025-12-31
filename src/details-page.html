@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Details Page - Online News Portal</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+
+  <!-- SwiperJS -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Your Tailwind Config Script -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            white: '#FFFFFF',
+            red: '#FF0000',
+            primary: {
+              DEFAULT: '#0068B5',
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+              950: '#082f49',
+            },
+            secondary: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              300: '#c4b5fd',
+              400: '#a78bfa',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              800: '#5b21b6',
+              900: '#4c1d95',
+              950: '#2e1065',
+            },
+            'yellow-bg': '#FAB115',
+            'yellow-clr': '#E29A01',
+            'text-title-clr': '#1F2937',
+          },
+          // fontFamily: {
+          //     kalpurush: ['Kalpurush', 'Noto Sans Bengali', 'sans-serif'],
+          //     noto: ['Noto Sans', 'sans-serif'],
+          // },
+          fontSize: {
+            xs: '0.75rem',
+            sm: '0.875rem',
+            base: '0.875rem',
+            lg: '1rem',
+            xl: '1rem',
+            '2xl': '1.125rem',
+            '3xl': '1.5rem',
+            h1: '35px',
+            h2: '30px',
+            h3: '26px',
+            h4: '22px',
+            h5: '20px',
+            h6: '16px',
+          },
+          lineHeight: {
+            normal: '1.6',
+            tight: '1.3',
+            relaxed: '1.7',
+            '1-5': '1.5',
+          },
+          borderColor: {
+            DEFAULT: '#E5E7EB',
+            glass: 'rgba(255, 255, 255, 0.3)',
+          },
+          backgroundColor: {
+            'yellow-bg': '#FAB115',
+          },
+          maxWidth: {
+            container: '1280px',
+          },
+          backdropBlur: {
+            xs: '2px',
+          }
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+
+<body class="bg-[#FFFFFF] font-kalpurush">
+
+  <!-- Header -->
+  <header>
+    <!-- Top Menu Section -->
+    <div class=" mb-3 bg-[#EAF2FF]">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between py-2 items-center gap-4 sm:gap-4">
+          <!-- Navigation Menu -->
+          <div class="w-full md:w-auto">
+            <ul class="flex flex-wrap justify-center md:justify-start items-center gap-3 sm:gap-5 text-[#1F2937]">
+              <li><a href="bangladesh.html" class="text-sm sm:text-base md:text-lg hover-effect">বাংলাদেশ</a></li>
+              <li><a href="cricket.html" class="text-sm sm:text-base md:text-lg hover-effect">খেলাধুলা</a>
+              </li>
+              <li><a href="technology.html" class="text-sm sm:text-base md:text-lg hover-effect">প্রযুক্তি</a></li>
+              <li><a href="opinion.html" class="text-sm sm:text-base md:text-lg hover-effect">মতামত</a>
+              </li>
+              <li><a href="politics.html" class="text-sm sm:text-base md:text-lg hover-effect">রাজনীতি</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Icons (Hidden on Mobile) -->
+          <div class="hidden sm:flex flex-wrap justify-center md:justify-end items-center gap-2">
+            <a href="#"
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-[#1877F2] text-white hover:scale-110 transition-transform">
+              <i class="fab fa-facebook-f text-xs sm:text-sm md:text-base"></i>
+            </a>
+            <a href="#"
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-[#FF0000] text-white hover:scale-110 transition-transform">
+              <i class="fab fa-youtube text-xs sm:text-sm md:text-base"></i>
+            </a>
+            <a href="#"
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white hover:scale-110 transition-transform">
+              <i class="fab fa-x-twitter text-xs sm:text-sm md:text-base"></i>
+            </a>
+            <a href="#"
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-[#C13584] text-white hover:scale-110 transition-transform">
+              <i class="fab fa-instagram text-xs sm:text-sm md:text-base"></i>
+            </a>
+            <a href="#"
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-[#25D366] text-white hover:scale-110 transition-transform">
+              <i class="fab fa-whatsapp text-xs sm:text-sm md:text-base"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Middle Logo/Date/Weather/Live -->
+    <div>
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center gap-3">
+          <!-- Logo -->
+          <div>
+            <a href="index.html">
+              <img src="img/logo/logo.png" alt="" class="w-[55px]">
+            </a>
+          </div>
+
+          <!-- Right Info -->
+          <div class="flex flex-wrap items-center justify-center sm:justify-end gap-3">
+            <!-- Date -->
+            <div class="text-[#666] flex items-center space-x-1 text-sm sm:text-base md:text-lg">
+              <span>জুলাই</span>
+              <span>03, 2025</span>
+            </div>
+
+            <!-- Weather -->
+            <div class="flex items-center space-x-2 text-gray-600 text-sm sm:text-base md:text-lg">
+              <i class="fas fa-cloud-bolt text-base sm:text-xl text-yellow-500"></i>
+              <div class="flex flex-col leading-none">
+                <span>24<i class="font-sans">°</i></span>
+                <span class="text-gray-400">16<i class="font-sans">°</i></span>
+              </div>
+            </div>
+
+            <!-- Live -->
+            <a href="live-video.html">
+              <div
+                class="flex items-center space-x-1 text-white bg-red px-4 py-2 rounded-full text-xs sm:text-sm font-semibold">
+                <span class="h-4 w-4 bg-white rounded-full animate-pulse"></span>
+                <span class="mb-0 text-white text-xs">লাইভ</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <div>
+      <div class="container mx-auto border-b">
+        <div class="grid grid-cols-12 items-center gap-4 py-4 justify-between">
+          <!-- Left Side -->
+          <div class="col-span-10 lg:col-span-10 flex gap-4 items-center">
+            <!-- Toggle Button -->
+            <div class="text-xl">
+              <div class="relative inline-block">
+                <button id="menuToggle" class="text-base sm:text-xl p-2">
+                  <i id="toggleIcon" class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Mega Menu -->
+                <div id="megaMenu"
+                  class="absolute left-0 mt-2 w-screen max-w-7xl bg-white p-4 sm:p-6 md:p-8 shadow-lg z-50 transition-all duration-500 transform scale-95 opacity-0 hidden origin-top">
+
+                  <!-- Responsive Grid: 2 columns on mobile, 3 on md, 4 on lg -->
+                  <div
+                    class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-x-6 gap-y-8">
+
+                    <!-- Column 1 -->
+                    <div class="col-span-1">
+                      <h2 class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                        <a href="index.html">হোম</a>
+                      </h2>
+                      <ul class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                        <li><a href="bangladesh.html" class="hover:text-blue-600">সমগ্র
+                            বাংলাদেশ</a></li>
+                        <li><a href="world.html" class="hover:text-blue-600">বিশ্ব</a>
+                        </li>
+                        <li><a href="politics.html" class="hover:text-blue-600">রাজনীতি</a>
+                        </li>
+                        <li><a href="kids.html" class="hover:text-blue-600">কিডজ</a>
+                        </li>
+                        <li><a href="abroad.html" class="hover:text-blue-600">প্রবাস</a>
+                        </li>
+                        <li><a href="bangladesh.html" class="hover:text-blue-600">বাংলাদেশ</a>
+                        </li>
+                        <li><a href="technology.html" class="hover:text-blue-600">বিজ্ঞান</a>
+                        </li>
+                        <li><a href="health.html" class="hover:text-blue-600">স্বাস্থ্য</a></li>
+                        <li><a href="campus.html" class="hover:text-blue-600">ক্যাম্পাস</a></li>
+                        <li><a href="women.html" class="hover:text-blue-600">নারীপক্ষ</a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="col-span-1">
+                      <h2 class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                        <a href="sports.html">খেলা</a>
+                      </h2>
+                      <ul class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                        <li><a href="cricket.html" class="hover:text-blue-600">ক্রিকেট</a>
+                        </li>
+                        <li><a href="sports.html" class="hover:text-blue-600">খেলা</a>
+                        </li>
+                        <li><a href="cricket.html" class="hover:text-blue-600">চ্যাম্পিয়ন্স
+                            ট্রফি</a></li>
+                        <li><a href="cricket.html" class="hover:text-blue-600">কাতার
+                            বিশ্বকাপ ২০২২</a></li>
+                        <li><a href="cricket.html" class="hover:text-blue-600">টি-টোয়েন্টি
+                            বিশ্বকাপ</a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="col-span-1">
+                      <h2 class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                        <a href="opinion.html">মতামত</a>
+                      </h2>
+                      <ul class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                        <li><a href="opinion.html" class="hover:text-blue-600">মতামত</a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 4 -->
+                    <div class="col-span-1">
+                      <h2 class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                        <a href="sub-category.html">অর্থ-বাণিজ্য</a>
+                      </h2>
+                      <ul class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                        <li><a href="sub-category.html" class="hover:text-blue-600">বাণিজ্য</a>
+                        </li>
+                        <li><a href="sub-category.html" class="hover:text-blue-600">অর্থনীতি</a>
+                        </li>
+                        <li><a href="sub-category.html" class="hover:text-blue-600">পুঁজিবাজার</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 5 -->
+                    <div class="col-span-1">
+                      <h2 class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                        <a href="sub-category.html">মাল্টিমিডিয়া</a>
+                      </h2>
+                      <ul class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                        <li><a href="sub-category.html" class="hover:text-blue-600">ছবিঘর</a>
+                        </li>
+                        <li><a href="sub-category.html" class="hover:text-blue-600">ছবির
+                            গল্প</a></li>
+                        <li><a href="sub-category.html" class="hover:text-blue-600">টিউব</a>
+                        </li>
+                        <li><a href="sub-category.html" class="hover:text-blue-600">ইনসাইড
+                            আউট</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 6 -->
+                    <div class="col-span-1">
+                      <h2 class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                        <a href="sub-category.html">আরও</a>
+                      </h2>
+                      <ul class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                        <li><a href="sub-category.html" class="hover:text-blue-600">বিশেষ</a>
+                        </li>
+                        <li><a href="sub-category.html" class="hover:text-blue-600">প্রতিবেশী</a></li>
+                        <li><a href="sub-category.html" class="hover:text-blue-600">করোনাভাইরাস</a></li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Scrollable Nav -->
+            <div class="flex-1 overflow-x-auto py-3">
+              <nav>
+                <ul class="flex gap-6 text-sm sm:text-base md:text-lg xl:text-xl whitespace-nowrap min-w-[610px]">
+                  <li><a href="world.html" class="hover-effect">বিশ্ব</a></li>
+                  <li><a href="opinion.html" class="hover-effect">মতামত</a></li>
+                  <li><a href="entertainment.html" class="hover-effect">বিনোদন</a></li>
+                  <li><a href="lifestyle.html" class="hover-effect">জীবনধারা</a></li>
+                  <li><a href="economy.html" class="hover-effect">অর্থনীতি</a></li>
+                  <li><a href="business.html" class="hover-effect">ব্যবসা</a></li>
+                  <li><a href="cricket.html" class="hover-effect">ক্রিকেট</a></li>
+                  <li><a href="recent.html" class="hover-effect">সাম্প্রতিক</a></li>
+                  <li><a href="videos.html" class="hover-effect">ভিডিও</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Right Icons -->
+          <div class="col-span-2 lg:col-span-2 flex gap-4 items-center justify-end pl-2">
+            <a href="search-page.html" class="text-base sm:text-xl xl:text-2xl"><i
+                class="fa-solid fa-magnifying-glass"></i></a>
+            <button class="text-base sm:text-xl xl:text-2xl"><i class="fa-solid fa-circle-user"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="pt-10 pb-12">
+      <div class="container mx-auto">
+        <nav class="flex" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+            <li class="inline-flex items-center">
+              <a href="index.html"
+                class="inline-flex items-center text-sm md:text-base lg:text-lg font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                হোম
+              </a>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 9 4-4-4-4" />
+                </svg>
+                <a href="technology.html"
+                  class="ms-1 text-sm md:text-base lg:text-lg font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">
+                  প্রযুক্তি
+                </a>
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="flex items-center">
+                <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="ms-1 text-sm md:text-base lg:text-lg font-medium text-gray-500 md:ms-2 dark:text-gray-400">
+                  কৃত্রিম বুদ্ধিমত্তার অগ্রগতি
+                </span>
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section class="py-4">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-16">
+          <!-- Main Content Column -->
+          <div class="lg:col-span-7">
+            <h2 class="text-2xl sm:text-3xl font-extrabold mb-4">কোয়ান্টাম কম্পিউটিং গবেষণায় কৃত্রিম বুদ্ধিমত্তার
+              অগ্রগতি</h2>
+            <p class="text-base md:text-lg mb-4">বিজ্ঞানীরা একটি নতুন কৃত্রিম বুদ্ধিমত্তা ব্যবস্থা তৈরি করেছেন যা পূর্বে
+              অসম্ভব বলে মনে করা জটিল কোয়ান্টাম পদার্থবিদ্যার সমস্যাগুলি সমাধান করতে পারে।</p>
+
+            <img src="./img/details/d-01.jpg" alt="সংগৃহীত ছবি"
+              class="w-full object-cover aspect-[4/2.5] rounded-md mb-3">
+            <span class="text-base md:text-lg mb-2 block">সংগৃহীত ছবি</span>
+
+            <div class="flex flex-col md:flex-row justify-between items-center bg-[#EFF8FF] p-3 mb-8 gap-4">
+              <div class="flex flex-col gap-2">
+                <span class="text-base md:text-lg">নিজস্ব প্রতিবেদক</span>
+                <span class="text-base md:text-lg">১২ মে, ২০২৩ <span class="font-sans">•</span> আপডেট করা হয়েছে</span>
+              </div>
+              <div>
+                <ul class="flex items-center gap-4 text-base md:text-lg text-gray-700">
+                  <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                  <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="#" aria-label="Copy Link"><i class="fa-solid fa-link"></i></a></li>
+                  <li><a href="#" aria-label="Save"><i class="fa-regular fa-bookmark"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="text-base md:text-lg mb-6 text-black">আমাদের জানা মতে কম্পিউটিংয়ের ক্ষেত্রে বিপ্লব আনতে পারে এমন
+              এক যুগান্তকারী অগ্রগতিতে, এমআইটি-র গবেষকরা কোয়ান্টাম পদার্থবিদ্যার পূর্বে জটিল সমস্যাগুলি সমাধানের জন্য
+              কোয়ান্টাম কম্পিউটিং সিস্টেমের সাথে কৃত্রিম বুদ্ধিমত্তাকে সফলভাবে একীভূত করেছেন।</p>
+
+            <p class="text-base md:text-lg mb-6 text-black">আমাদের জানা মতে কম্পিউটিংয়ের ক্ষেত্রে বিপ্লব আনতে পারে এমন
+              এক যুগান্তকারী অগ্রগতিতে, এমআইটি-র গবেষকরা কোয়ান্টাম পদার্থবিদ্যার পূর্বে জটিল সমস্যাগুলি সমাধানের জন্য
+              কোয়ান্টাম কম্পিউটিং সিস্টেমের সাথে কৃত্রিম বুদ্ধিমত্তাকে সফলভাবে একীভূত করেছেন।</p>
+
+            <h3 class="text-xl md:text-2xl mb-4 text-black">কোয়ান্টাম চ্যালেঞ্জ</h3>
+            <p class="text-base md:text-lg mb-6 text-black">বিজ্ঞানীরা একটি নতুন কৃত্রিম বুদ্ধিমত্তা ব্যবস্থা তৈরি
+              করেছেন যা পূর্বে অসম্ভব বলে মনে করা জটিল কোয়ান্টাম পদার্থবিদ্যার সমস্যাগুলি সমাধান করতে পারে।</p>
+
+            <div class="border-l-4 border-r-4 border-[#3B82F6] max-w-[600px] pl-6 flex flex-col gap-2 mb-6">
+              <span class="text-base md:text-lg">"আমরা মূলত কোয়ান্টাম সিস্টেমের জন্য একটি এআই সুপারভাইজার তৈরি করেছি।
+                এটি ডিকোহেরেন্সের পূর্বাভাস দিতে পারে।"</span>
+              <span class="text-base md:text-lg">ডঃ সারা জনসন, প্রধান গবেষক</span>
+            </div>
+
+            <h3 class="text-xl md:text-2xl mb-4 text-black">কোয়ান্টাম চ্যালেঞ্জ</h3>
+            <p class="text-base md:text-lg mb-5 text-black">বিজ্ঞানীরা একটি নতুন কৃত্রিম বুদ্ধিমত্তা ব্যবস্থা তৈরি
+              করেছেন যা পূর্বে অসম্ভব বলে মনে করা জটিল কোয়ান্টাম পদার্থবিদ্যার সমস্যাগুলি সমাধান করতে পারে।</p>
+
+            <div class="pl-4">
+              <p class="text-sm md:text-base mb-2 text-black">কোয়ান্টাম কম্পিউটিং গবেষণায় কৃত্রিম বুদ্ধিমত্তার অগ্রগতি
+              </p>
+              <p class="text-sm md:text-base mb-2 text-black">কোয়ান্টাম কম্পিউটিং গবেষণায় কৃত্রিম বুদ্ধিমত্তার অগ্রগতি
+              </p>
+              <p class="text-sm md:text-base mb-2 text-black">কোয়ান্টাম কম্পিউটিং গবেষণায় কৃত্রিম বুদ্ধিমত্তার অগ্রগতি
+              </p>
+              <p class="text-sm md:text-base mb-2 text-black">কোয়ান্টাম কম্পিউটিং গবেষণায় কৃত্রিম বুদ্ধিমত্তার অগ্রগতি
+              </p>
+              <p class="text-sm md:text-base mb-2 text-black">কোয়ান্টাম কম্পিউটিং গবেষণায় কৃত্রিম বুদ্ধিমত্তার অগ্রগতি
+              </p>
+            </div>
+
+            <p class="text-base md:text-lg mb-6 pt-3 text-black">আমাদের জানা মতে কম্পিউটিংয়ের ক্ষেত্রে বিপ্লব আনতে পারে
+              এমন এক যুগান্তকারী অগ্রগতিতে, এমআইটি-র গবেষকরা কোয়ান্টাম পদার্থবিদ্যার পূর্বে জটিল সমস্যাগুলি সমাধানের
+              জন্য কোয়ান্টাম কম্পিউটিং সিস্টেমের সাথে কৃত্রিম বুদ্ধিমত্তাকে সফলভাবে একীভূত করেছেন।</p>
+
+            <h3 class="text-xl md:text-2xl mb-4 text-black">কোয়ান্টাম চ্যালেঞ্জ</h3>
+            <p class="text-base md:text-lg mb-6 text-black">বিজ্ঞানীরা একটি নতুন কৃত্রিম বুদ্ধিমত্তা ব্যবস্থা তৈরি
+              করেছেন যা পূর্বে অসম্ভব বলে মনে করা জটিল কোয়ান্টাম পদার্থবিদ্যার সমস্যাগুলি সমাধান করতে পারে।</p>
+
+            <p class="text-base md:text-lg mb-6 text-black">বিজ্ঞানীরা একটি নতুন কৃত্রিম বুদ্ধিমত্তা ব্যবস্থা তৈরি
+              করেছেন যা পূর্বে অসম্ভব বলে মনে করা জটিল কোয়ান্টাম পদার্থবিদ্যার সমস্যাগুলি সমাধান করতে পারে।</p>
+
+            <!-- Social Icons -->
+            <div class="flex flex-wrap items-center gap-2 mb-6">
+              <a href="#"
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-[#1877F2] text-white hover:scale-110 transition-transform">
+                <i class="fab fa-facebook-f text-xs sm:text-sm"></i>
+              </a>
+              <a href="#"
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-[#FF0000] text-white hover:scale-110 transition-transform">
+                <i class="fab fa-youtube text-xs sm:text-sm"></i>
+              </a>
+              <a href="#"
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white hover:scale-110 transition-transform">
+                <i class="fab fa-x-twitter text-xs sm:text-sm"></i>
+              </a>
+              <a href="#"
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-[#C13584] text-white hover:scale-110 transition-transform">
+                <i class="fab fa-instagram text-xs sm:text-sm"></i>
+              </a>
+              <a href="#"
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-[#25D366] text-white hover:scale-110 transition-transform">
+                <i class="fab fa-whatsapp text-xs sm:text-sm"></i>
+              </a>
+            </div>
+
+            <div>
+              <ul class="flex flex-wrap items-center gap-2 pb-12 pt-6 justify-between">
+                <li><a href="#"
+                    class="text-xs sm:text-sm border border-[#E5E7EB] px-3 py-1 sm:px-5 sm:py-2 rounded-full bg-[#EFF8FF]">#
+                    কৃত্রিম বুদ্ধিমত্তা</a></li>
+                <li><a href="#"
+                    class="text-xs sm:text-sm border border-[#E5E7EB] px-3 py-1 sm:px-5 sm:py-2 rounded-full bg-[#EFF8FF]">#
+                    কৃত্রিম বুদ্ধিমত্তা</a></li>
+                <li><a href="#"
+                    class="text-xs sm:text-sm border border-[#E5E7EB] px-3 py-1 sm:px-5 sm:py-2 rounded-full bg-[#EFF8FF]">#
+                    কৃত্রিম বুদ্ধিমত্তা</a></li>
+                <li><a href="#"
+                    class="text-xs sm:text-sm border border-[#E5E7EB] px-3 py-1 sm:px-5 sm:py-2 rounded-full bg-[#EFF8FF]">#
+                    কৃত্রিম বুদ্ধিমত্তা</a></li>
+              </ul>
+            </div>
+
+            <div class="flex items-center justify-between py-5 border-t border-b border-gray-200 mb-6">
+              <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-1 text-gray-600">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333V17a1 1 0 001 1h8a1 1 0 001-1v-6.667C16 8.448 14.552 7 12.667 7H10V4.5a1.5 1.5 0 00-3 0V7H6z">
+                    </path>
+                  </svg>
+                  <span>৪.২ কে</span>
+                </div>
+                <div class="flex items-center space-x-1 text-gray-600">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                    </path>
+                  </svg>
+                  <span>১২৮</span>
+                </div>
+              </div>
+              <button class="flex items-center space-x-1 text-blue-600">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z">
+                  </path>
+                </svg>
+                <span>শেয়ার করুন</span>
+              </button>
+            </div>
+
+            <h3 class="text-xl md:text-2xl font-bold mb-6">তুমিও পছন্দ করতে পার</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+              <div class="mb-3">
+                <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                  <div class="overflow-hidden mb-4 rounded-md">
+                    <img src="./img/main/wd-01.jpg" alt=""
+                      class="aspect-[4/2.5] w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                  </div>
+                  <div class="mb-3">
+                    <a href="details-page.html" class="text-base md:text-lg hover-effect-underline">ডিসেম্বরের মধ্যে
+                      নির্বাচনের
+                      প্রস্তুতি শেষ করার নির্দেশ</a>
+                  </div>
+                  <div class="flex gap-5 text-xs sm:text-sm text-gray-500">
+                    <span>রাজনীতি</span>
+                    <span>০৯ জুলাই ২০২৫</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                  <div class="overflow-hidden mb-4 rounded-md">
+                    <img src="./img/main/wd-01.jpg" alt=""
+                      class="aspect-[4/2.5] w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                  </div>
+                  <div class="mb-3">
+                    <a href="details-page.html" class="text-base md:text-lg hover-effect-underline">ডিসেম্বরের মধ্যে
+                      নির্বাচনের
+                      প্রস্তুতি শেষ করার নির্দেশ</a>
+                  </div>
+                  <div class="flex gap-5 text-xs sm:text-sm text-gray-500">
+                    <span>রাজনীতি</span>
+                    <span>০৯ জুলাই ২০২৫</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="max-w-2xl p-4 space-y-6 text-sm text-gray-800">
+              <!-- Header -->
+              <div class="flex justify-between items-center">
+                <h2 class="font-semibold text-lg">মন্তব্য (২৮৮)</h2>
+                <a href="#" class="text-blue-600 hover:underline">সর্বশেষ প্রাসঙ্গিক</a>
+              </div>
+
+              <!-- Input box -->
+              <div class="flex space-x-2 items-start">
+                <img src="https://i.pravatar.cc/40" alt="user" class="w-8 h-8 rounded-full mt-1" />
+                <textarea placeholder="একটি মন্তব্য যোগ করুন..."
+                  class="w-full p-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-200 resize-none"></textarea>
+              </div>
+              <div class="text-right">
+                <button class="bg-[#0068B5] text-white px-8 py-2 rounded hover:bg-blue-700">পোস্ট</button>
+              </div>
+
+              <!-- Comment -->
+              <div class="space-y-4">
+                <!-- Comment 1 -->
+                <div class="bg-gray-100 p-4 rounded-md">
+                  <div class="flex items-center space-x-2 mb-1">
+                    <img src="https://i.pravatar.cc/40?img=3" alt="avatar" class="w-8 h-8 rounded-full" />
+                    <div>
+                      <p class="font-semibold">হার্বার্ট জনসন</p>
+                      <span class="text-xs text-gray-500">২ দিন আগে</span>
+                    </div>
+                  </div>
+                  <p class="text-gray-700">
+                    এটাই অধিকারসম্পন্ন প্রোগ্রামিং! আমি বছরের পর বছর ধরে কেবলমাত্র কোম্পানির উৎপাদন অনুমোদন করে যাচ্ছি,
+                    এবং এই AI ইউটিলিটিগুলো হঠাৎ আমাদের অগ্রগতি করা সম্ভব করছে বন্ধু।
+                  </p>
+                  <button class="text-blue-600 text-sm mt-2 hover:underline">উত্তর দিন</button>
+                </div>
+
+                <!-- Comment 2 -->
+                <div class="bg-gray-100 p-4 rounded-md">
+                  <div class="flex items-center space-x-2 mb-1">
+                    <img src="https://i.pravatar.cc/40?img=4" alt="avatar" class="w-8 h-8 rounded-full" />
+                    <div>
+                      <p class="font-semibold">এমা ডেভিস</p>
+                      <span class="text-xs text-gray-500">২ দিন আগে</span>
+                    </div>
+                  </div>
+                  <p class="text-gray-700">
+                    এই সিটিউয়েশনটা সত্যি শক্তির প্রয়োগবিধির সম্পর্কে ভাবিয়ে তুলছে। ঐতিহাসিক কোম্পানির কন্ট্রোলিং
+                    চরিত্র ছিলো কীভাবে প্রোগ্রাম – AI ইউটিলিটি কি এখানে একে সরাবে নাকি?
+                  </p>
+                  <button class="text-blue-600 text-sm mt-2 hover:underline">উত্তর দিন</button>
+                </div>
+
+                <!-- Reply -->
+                <div class="ml-8 bg-gray-50 p-3 rounded-md border border-gray-200">
+                  <div class="flex items-center space-x-2 mb-1">
+                    <img src="https://i.pravatar.cc/40?img=5" alt="avatar" class="w-7 h-7 rounded-full" />
+                    <div>
+                      <p class="font-semibold text-sm">মাইকেল চেন <span class="text-blue-600">(লেখক)</span></p>
+                      <span class="text-xs text-gray-500">১২ ঘন্টা আগে</span>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 text-sm">
+                    সম্মান প্রিয়, এমা। ইতিহাসপ্রসূত প্রেক্ষাপটে এটা মনে হতে পারে, কিন্তু এখনকার সিস্টেম এবং আমাদের আগের
+                    প্রতিষ্ঠানগুলোর মধ্যে ব্যবধান ব্যাপক। ক্রমাগতক্রিয়াশীল ইউটিলিটিসই ভবিষ্যতের সম্ভাবনা তৈরি করছে।
+                  </p>
+                  <button class="text-blue-600 text-sm mt-2 hover:underline">উত্তর দিন</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <button
+                class="bg-[#0068B5] text-white px-8 py-2 rounded hover:bg-blue-700 items-center justify-center text-center">আরও
+                দেখুন</button>
+            </div>
+          </div>
+
+          <!-- Sidebar Column -->
+          <div class="lg:col-span-5 lg:pl-8">
+            <!-- Live Updates Card -->
+            <div class="bg-white p-4 sm:p-6 rounded-lg border w-full mb-5">
+              <!-- Header Section -->
+              <div class="flex justify-between items-center mb-6">
+                <h2 class="text-lg sm:text-xl font-bold text-gray-800">লাইভ আপডেট</h2>
+                <span class="text-red font-bold">লাইভ</span>
+              </div>
+
+              <!-- Updates List -->
+              <div class="space-y-6">
+                <!-- Update Item 1 -->
+                <div class="flex">
+                  <div class="w-1 bg-blue-500 mr-4 shrink-0"></div>
+                  <div>
+                    <p class="text-xs sm:text-sm text-gray-500 mb-1">সকাল ১০:৪৫</p>
+                    <p class="text-sm sm:text-base text-gray-900 leading-relaxed">নতুন G7অংশীদারিত্বে পুরানো সদস্য
+                      দেশগুলিকে সহায়তা করার জন্য ইইউ €50 বিলিয়ন তহবিল ঘোষণা</p>
+                  </div>
+                </div>
+
+                <!-- Update Item 2 -->
+                <div class="flex">
+                  <div class="w-1 bg-blue-500 mr-4 shrink-0"></div>
+                  <div>
+                    <p class="text-xs sm:text-sm text-gray-500 mb-1">সকাল ৯:৩০</p>
+                    <p class="text-sm sm:text-base text-gray-900 leading-relaxed">G7এ চুক্তি ঘোষণার পর তেল কোম্পানির
+                      শেয়ারের পতন</p>
+                  </div>
+                </div>
+
+                <!-- Update Item 3 -->
+                <div class="flex">
+                  <div class="w-1 bg-blue-500 mr-4 shrink-0"></div>
+                  <div>
+                    <p class="text-xs sm:text-sm text-gray-500 mb-1">সকাল ৮:১৫</p>
+                    <p class="text-sm sm:text-base text-gray-900 leading-relaxed">চুক্তি চূড়ান্ত হওয়ার সাথে সাথে G7এর
+                      কর্মীরা দীর্ঘ সম্মেলনের বাইরে উদযাপন করছেন</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer Link -->
+              <div class="text-center mt-6">
+                <a href="#" class="text-blue-600 font-semibold text-sm sm:text-base">সকল আপডেট দেখুন</a>
+              </div>
+            </div>
+
+            <!-- Trending Card -->
+            <div class="bg-white p-4 sm:p-6 rounded-lg border w-full mb-5">
+              <!-- Header Section -->
+              <div class="flex items-center gap-2 mb-4 sm:mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+                  <g clip-path="url(#clip0_911_4360)">
+                    <path
+                      d="M6.22266 0.210948C6.52734 -0.0742087 7 -0.0703025 7.30469 0.214854C8.38281 1.22657 9.39453 2.31642 10.3398 3.4961C10.7695 2.9336 11.2578 2.32032 11.7852 1.82032C12.0938 1.53126 12.5703 1.53126 12.8789 1.82423C14.2305 3.11329 15.375 4.81642 16.1797 6.4336C16.9727 8.02735 17.5 9.65626 17.5 10.8047C17.5 15.7891 13.6016 20 8.75 20C3.84375 20 0 15.7852 0 10.8008C0 9.30079 0.695313 7.46876 1.77344 5.65626C2.86328 3.81642 4.40234 1.89845 6.22266 0.210948ZM8.81641 16.25C9.80469 16.25 10.6797 15.9766 11.5039 15.4297C13.1484 14.2813 13.5898 11.9844 12.6016 10.1797C12.4258 9.82814 11.9766 9.8047 11.7227 10.1016L10.7383 11.2461C10.4805 11.543 10.0156 11.5352 9.77344 11.2266C9.12891 10.4063 7.97656 8.94142 7.32031 8.10939C7.07422 7.79689 6.60547 7.79298 6.35547 8.10548C5.03516 9.76563 4.37109 10.8125 4.37109 11.9883C4.375 14.6641 6.35156 16.25 8.81641 16.25Z"
+                      fill="#F97316" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_911_4360">
+                      <path d="M0 0H17.5V20H0V0Z" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h2 class="text-base sm:text-lg font-bold text-gray-800">এখন ট্রেন্ডিং</h2>
+              </div>
+
+              <!-- Trending Items List -->
+              <div class="space-y-4 sm:space-y-6">
+                <!-- Item 1 -->
+                <div class="flex items-start gap-4">
+                  <span class="font-bold text-gray-300 text-xl sm:text-2xl">০১</span>
+                  <div>
+                    <a href="details-page.html"
+                      class="text-base sm:text-lg md:text-xl text-gray-800 hover:text-blue-600">সাইবার
+                      নিরাপত্তায় বড় ধরনের লঙ্ঘন লক্ষ লক্ষ ব্যবহারকারীকে প্রভাবিত করছে</a>
+                    <p class="text-xs sm:text-sm text-gray-500 mt-1">৩ দিন আগে</p>
+                  </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="flex items-start gap-4">
+                  <span class="font-bold text-gray-300 text-xl sm:text-2xl">০২</span>
+                  <div>
+                    <a href="details-page.html"
+                      class="text-base sm:text-lg md:text-xl text-gray-800 hover:text-blue-600">সাইবার
+                      নিরাপত্তায় বড় ধরনের লঙ্ঘন লক্ষ লক্ষ ব্যবহারকারীকে প্রভাবিত করছে</a>
+                    <p class="text-xs sm:text-sm text-gray-500 mt-1">৩ দিন আগে</p>
+                  </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="flex items-start gap-4">
+                  <span class="font-bold text-gray-300 text-xl sm:text-2xl">০৩</span>
+                  <div>
+                    <a href="details-page.html"
+                      class="text-base sm:text-lg md:text-xl text-gray-800 hover:text-blue-600">সাইবার
+                      নিরাপত্তায় বড় ধরনের লঙ্ঘন লক্ষ লক্ষ ব্যবহারকারীকে প্রভাবিত করছে</a>
+                    <p class="text-xs sm:text-sm text-gray-500 mt-1">৩ দিন আগে</p>
+                  </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="flex items-start gap-4">
+                  <span class="font-bold text-gray-300 text-xl sm:text-2xl">০৪</span>
+                  <div>
+                    <a href="details-page.html"
+                      class="text-base sm:text-lg md:text-xl text-gray-800 hover:text-blue-600">সাইবার
+                      নিরাপত্তায় বড় ধরনের লঙ্ঘন লক্ষ লক্ষ ব্যবহারকারীকে প্রভাবিত করছে</a>
+                    <p class="text-xs sm:text-sm text-gray-500 mt-1">৩ দিন আগে</p>
+                  </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="flex items-start gap-4">
+                  <span class="font-bold text-gray-300 text-xl sm:text-2xl">০৫</span>
+                  <div>
+                    <a href="details-page.html"
+                      class="text-base sm:text-lg md:text-xl text-gray-800 hover:text-blue-600">নতুন গবেষণায়
+                      সামাজিক যোগাযোগ মাধ্যমের ব্যবহার মনোযোগের সময় হ্রাসের সাথে যুক্ত হয়েছে</a>
+                    <p class="text-xs sm:text-sm text-gray-500 mt-1">৪ দিন আগে</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Newsletter Card -->
+            <div class="bg-[#EFF6FF] p-6 rounded-lg w-full mb-5">
+              <!-- Heading -->
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-800">অবগত থাকুন</h2>
+
+              <!-- Subheading -->
+              <p class="mt-2 text-sm sm:text-base text-slate-600">
+                প্রতি সপ্তাহে আপনার ইনবক্সে সর্বশেষ প্রযুক্তির খবর পান।
+              </p>
+
+              <!-- Form Section -->
+              <div class="mt-4 sm:mt-6">
+                <!-- Email Input -->
+                <input type="email" placeholder="তোমার ইমেল ঠিকানা"
+                  class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+                <!-- Subscribe Button -->
+                <button
+                  class="w-full mt-3 sm:mt-4 bg-[#0068B5] text-white py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors text-sm sm:text-base">
+                  সাবস্ক্রাইব
+                </button>
+              </div>
+
+              <!-- Disclaimer Text -->
+              <p class="mt-3 text-xs text-slate-500 text-center">
+                সাবস্ক্রাইব করে, আপনি আমাদের গোপনীয়তা নীতি এবং পরিষেবার শর্তাবলীতে সম্মত হন।
+              </p>
+            </div>
+
+            <!-- Ad -->
+            <div class="mb-5">
+              <img src="./img/details/add-01.jpg" alt="add image" class="w-full aspect-[4/2.5] rounded-md">
+            </div>
+
+            <!-- Poll Card -->
+            <div class="bg-[#F3F4F6] rounded-xl p-4 sm:p-6 shadow-md w-full mb-6">
+              <h2 class="text-base sm:text-lg md:text-xl font-bold mb-3">দ্রুত জরিপ</h2>
+              <p class="text-xs sm:text-sm md:text-base text-gray-800 mb-4">
+                কত তাড়াতাড়ি কোয়ান্টাম কম্পিউটার বাণিজ্যিকভাবে কার্যকর হবে বলে আপনি মনে করেন?
+              </p>
+              <form class="space-y-2">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="vote" class="accent-black" />
+                  <span class="text-xs sm:text-sm md:text-base text-gray-800">৫ বছরের মধ্যে</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="vote" class="accent-black" />
+                  <span class="text-xs sm:text-sm md:text-base text-gray-800">৫ থেকে ১০ বছর</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="vote" class="accent-black" />
+                  <span class="text-xs sm:text-sm md:text-base text-gray-800">১০ থেকে ২০ বছর</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="vote" class="accent-black" />
+                  <span class="text-xs sm:text-sm md:text-base text-gray-800">২০ বছরেরও বেশি সময় ধরে</span>
+                </label>
+                <button type="submit"
+                  class="w-full bg-gray-900 text-white py-2 px-4 rounded-md mt-4 hover:bg-gray-800 transition duration-200 text-sm sm:text-base">
+                  ভোট দিন
+                </button>
+              </form>
+              <p class="text-xs text-gray-500 mt-3 sm:mt-4">ফলাফল আগামী সপ্তাহে প্রকাশিত হবে</p>
+            </div>
+
+            <!-- Editor's Choice -->
+            <div class="pt-4 sm:pt-6 pb-8 sm:pb-12">
+              <h3 class="text-xl sm:text-2xl text-black text-center font-bold">সম্পাদকের পছন্দ</h3>
+            </div>
+
+            <!-- News List -->
+            <div class="flex flex-col gap-5">
+              <!-- Each item -->
+              <div class="flex gap-4 items-start overflow-hidden group pb-5 border-bottom">
+                <div>
+                  <div class="mb-3">
+                    <a href="details-page.html" class="hover-effect-underline text-sm sm:text-base md:text-lg">
+                      নোয়াখালীতে বৃষ্টি কমেছে, জলাবদ্ধতায় এখনো ভোগান্তি
+                    </a>
+                  </div>
+                  <div class="flex items-center gap-5">
+                    <h6 class="text-xs sm:text-sm md:text-base">নিজস্ব প্রতিবেদক</h6>
+                    <h6 class="text-xs sm:text-sm md:text-base">০৯ জুলাই ২০২৫</h6>
+                  </div>
+                </div>
+                <div class="overflow-hidden rounded-md">
+                  <img src="./img/main/home-img-02.jpg" alt=""
+                    class="rounded-md w-full aspect-[4/2.5] transition-transform duration-300 group-hover:scale-105">
+                </div>
+              </div>
+              <!-- Each item -->
+              <div class="flex gap-4 items-start overflow-hidden group pb-5 border-bottom">
+                <div>
+                  <div class="mb-3">
+                    <a href="details-page.html" class="hover-effect-underline text-sm sm:text-base md:text-lg">
+                      নোয়াখালীতে বৃষ্টি কমেছে, জলাবদ্ধতায় এখনো ভোগান্তি
+                    </a>
+                  </div>
+                  <div class="flex items-center gap-5">
+                    <h6 class="text-xs sm:text-sm md:text-base">নিজস্ব প্রতিবেদক</h6>
+                    <h6 class="text-xs sm:text-sm md:text-base">০৯ জুলাই ২০২৫</h6>
+                  </div>
+                </div>
+                <div class="overflow-hidden rounded-md">
+                  <img src="./img/main/home-img-03.jpg" alt=""
+                    class="rounded-md w-full aspect-[4/2.5] transition-transform duration-300 group-hover:scale-105">
+                </div>
+              </div>
+              <!-- Each item -->
+              <div class="flex gap-4 items-start overflow-hidden group pb-5 border-bottom">
+                <div>
+                  <div class="mb-3">
+                    <a href="details-page.html" class="hover-effect-underline text-sm sm:text-base md:text-lg">
+                      নোয়াখালীতে বৃষ্টি কমেছে, জলাবদ্ধতায় এখনো ভোগান্তি
+                    </a>
+                  </div>
+                  <div class="flex items-center gap-5">
+                    <h6 class="text-xs sm:text-sm md:text-base">নিজস্ব প্রতিবেদক</h6>
+                    <h6 class="text-xs sm:text-sm md:text-base">০৯ জুলাই ২০২৫</h6>
+                  </div>
+                </div>
+                <div class="overflow-hidden rounded-md">
+                  <img src="./img/main/home-img-04.jpg" alt=""
+                    class="rounded-md w-full aspect-[4/2.5] transition-transform duration-300 group-hover:scale-105">
+                </div>
+              </div>
+              <!-- Each item -->
+              <div class="flex gap-4 items-start overflow-hidden group pb-5 border-bottom">
+                <div>
+                  <div class="mb-3">
+                    <a href="details-page.html" class="hover-effect-underline text-sm sm:text-base md:text-lg">
+                      নোয়াখালীতে বৃষ্টি কমেছে, জলাবদ্ধতায় এখনো ভোগান্তি
+                    </a>
+                  </div>
+                  <div class="flex items-center gap-5">
+                    <h6 class="text-xs sm:text-sm md:text-base">নিজস্ব প্রতিবেদক</h6>
+                    <h6 class="text-xs sm:text-sm md:text-base">০৯ জুলাই ২০২৫</h6>
+                  </div>
+                </div>
+                <div class="overflow-hidden rounded-md">
+                  <img src="./img/main/home-img-05.jpg" alt=""
+                    class="rounded-md w-full aspect-[4/2.5] transition-transform duration-300 group-hover:scale-105">
+                </div>
+              </div>
+
+              <!-- Repeat more items as needed -->
+
+              <!-- Banner Ad -->
+              <div class="">
+                <img src="./img/main/bd-ad-NWC 1.jpg" alt="" class="max-h-[135px] aspect-[4/2.5] w-full rounded-md">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-black pt-10 pb-10">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Logo & About -->
+        <div>
+          <a href="index.html"><img src="./img/logo/logo.png" alt="logo" /></a>
+          <p class="text-sm sm:text-base md:text-lg pt-3 text-[#DADADA]">
+            লোরেম ইপসাম ডলর সিট অ্যামেট কনসেকটিচার. মালেসুয়াডা মরবি
+            ইজেস্টাস ভিভেরার ভিটা ইরোস ভিটা কনসেকটুর এনআইএসএল এ {{ডট}}
+          </p>
+        </div>
+
+        <!-- ফটো গ্যালারী -->
+        <div class="ml-0 lg:ml-5">
+          <h3
+            class="relative text-base sm:text-lg md:text-xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+            ফটো গ্যালারী
+          </h3>
+          <div class="grid grid-cols-3 gap-2">
+            <img src="img/main/ft-01.jpg" class="w-full max-h-[100px] object-cover" />
+            <img src="img/main/ft-02.jpg" class="w-full max-h-[100px] object-cover" />
+            <img src="img/main/ft-03.jpg" class="w-full max-h-[100px] object-cover" />
+            <img src="img/main/ft-04.jpg" class="w-full max-h-[100px] object-cover" />
+            <img src="img/main/ft-05.jpg" class="w-full max-h-[100px] object-cover" />
+            <img src="img/main/ft-06.jpg" class="w-full max-h-[100px] object-cover" />
+          </div>
+        </div>
+
+        <!-- লিংক তালিকা ও অন্যান্য খবর -->
+        <div class="ml-0 lg:ml-5">
+          <h3
+            class="relative text-base sm:text-lg md:text-xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+            গুরুত্বপূর্ণ লিংক
+          </h3>
+          <ul class="flex flex-wrap gap-2 mb-4">
+            <li><a href="#"
+                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">পডকাস্ট</a>
+            </li>
+            <li><a href="#"
+                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">সর্বশেষ
+                সংবাদ</a></li>
+            <li><a href="#"
+                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">সম্পাদকের
+                পছন্দ</a></li>
+            <li><a href="#"
+                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">খেলাধুলা</a>
+            </li>
+            <li><a href="#"
+                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">বিজ্ঞান</a>
+            </li>
+            <li><a href="#"
+                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr hover-effect">ফিচার</a>
+            </li>
+          </ul>
+          <h3 class="white-clr text-sm sm:text-base md:text-lg mt-5">অন্যান্য খবর</h3>
+          <ul class="flex flex-wrap gap-3 mt-2">
+            <li><a href="#" class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                  src="./img/main/n-01.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+            </li>
+            <li><a href="#" class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                  src="./img/main/n-02.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+            </li>
+            <li><a href="#" class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                  src="./img/main/n-03.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+            </li>
+            <li><a href="#" class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                  src="./img/main/n-04.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- সাবস্ক্রিপশন -->
+        <div class="ml-0 lg:ml-5">
+          <h3
+            class="relative text-base sm:text-lg md:text-xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+            সাবস্ক্রাইব
+          </h3>
+          <p class="white-clr text-xs sm:text-sm md:text-base pb-3">
+            সমস্ত সর্বশেষ খবরের সাথে আপডেট হওয়ার জন্য এবং বিশেষ ঘোষণাগুলি জানার জন্য সাবস্ক্রাইব করুন
+          </p>
+          <div>
+            <input type="text" placeholder="আপনার ইমেল ঠিকানা"
+              class="w-full h-[48px] px-4 bg-white rounded-md border border-gray-300 placeholder:text-gray-500 text-sm sm:text-base" />
+            <button
+              class="w-full h-[48px] mt-2 yellow-bg text-white text-sm sm:text-base font-medium rounded-md hover:bg-blue-700 transition">
+              সাবস্ক্রাইব করুন
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+<script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("opacity-0", "pointer-events-none");
+    setTimeout(() => preloader.remove(), 50);
+  });
+</script>
+<script>
+  const videoSlider = new Swiper('.videoSlider', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    loop: true, // Already enables infinite loop
+    autoplay: {
+      delay: 3000, // 3 seconds between slides
+      disableOnInteraction: false, // Keep autoplay even after user interaction
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.custom-next',
+      prevEl: '.custom-prev',
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      640: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+      1280: { slidesPerView: 4 },
+    }
+  });
+</script>
+
+<script>
+  $(function () {
+    const $slider = $('.slider');
+    const itemWidth = 200; // item width
+    const animationDuration = 15000; // 15 seconds for full animation
+    let animationInterval;
+
+    // Initialize slider
+    function initSlider() {
+      // Calculate total width needed
+      const items = $slider.children().length;
+      const totalWidth = items * itemWidth;
+      $slider.css('width', totalWidth + 'px');
+
+      // Start animation
+      startAnimation();
+
+      // Pause on hover
+      $('.showcase').hover(
+        () => pauseAnimation(),
+        () => startAnimation()
+      );
+    }
+
+    function startAnimation() {
+      // Reset position if at end
+      if (parseInt($slider.css('margin-left')) <= -($slider.width() / 2)) {
+        $slider.css('margin-left', '0');
+      }
+
+      // Animate
+      animationInterval = setInterval(() => {
+        const currentMargin = parseInt($slider.css('margin-left')) || 0;
+        const newMargin = currentMargin - 1;
+
+        // Reset to start when we've scrolled all items
+        if (newMargin <= -($slider.width() / 2)) {
+          $slider.css('margin-left', '0');
+        } else {
+          $slider.css('margin-left', newMargin + 'px');
+        }
+      }, 20);
+    }
+
+    function pauseAnimation() {
+      clearInterval(animationInterval);
+    }
+
+    // Initialize on load
+    initSlider();
+  });
+</script>
+<script>
+  const toggleBtn = document.getElementById("menuToggle");
+  const toggleIcon = document.getElementById("toggleIcon");
+  const menu = document.getElementById("megaMenu");
+
+  let isOpen = false;
+
+  // Toggle Button Click
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent bubbling
+    if (!isOpen) {
+      // Show menu
+      menu.classList.remove("hidden");
+      setTimeout(() => {
+        menu.classList.remove("scale-95", "opacity-0");
+        menu.classList.add("scale-100", "opacity-100");
+      }, 10);
+
+      // Change icon to "X"
+      toggleIcon.classList.remove("fa-bars");
+      toggleIcon.classList.add("fa-xmark");
+      isOpen = true;
+    } else {
+      closeMenu();
+    }
+  });
+
+  // Close function
+  function closeMenu() {
+    menu.classList.remove("scale-100", "opacity-100");
+    menu.classList.add("scale-95", "opacity-0");
+    setTimeout(() => {
+      menu.classList.add("hidden");
+    }, 500);
+
+    // Change icon back to "Bars"
+    toggleIcon.classList.remove("fa-xmark");
+    toggleIcon.classList.add("fa-bars");
+    isOpen = false;
+  }
+
+  // Click outside menu => close
+  document.addEventListener("click", (e) => {
+    if (isOpen && !menu.contains(e.target) && !toggleBtn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+</script>
+
+</html>

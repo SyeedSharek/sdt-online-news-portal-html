@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Page - Online News Portal</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+
+    <!-- SwiperJS -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Your Tailwind Config Script -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        white: '#FFFFFF',
+                        red: '#FF0000',
+                        primary: {
+                            DEFAULT: '#0068B5',
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        },
+                        secondary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                            950: '#2e1065',
+                        },
+                        'yellow-bg': '#FAB115',
+                        'yellow-clr': '#E29A01',
+                        'text-title-clr': '#1F2937',
+                    },
+                    // fontFamily: {
+                    //     kalpurush: ['Kalpurush', 'Noto Sans Bengali', 'sans-serif'],
+                    //     noto: ['Noto Sans', 'sans-serif'],
+                    // },
+                    fontSize: {
+                        xs: '0.75rem',
+                        sm: '0.875rem',
+                        base: '0.875rem',
+                        lg: '1rem',
+                        xl: '1rem',
+                        '2xl': '1.125rem',
+                        '3xl': '1.5rem',
+                        h1: '35px',
+                        h2: '30px',
+                        h3: '26px',
+                        h4: '22px',
+                        h5: '20px',
+                        h6: '16px',
+                    },
+                    lineHeight: {
+                        normal: '1.6',
+                        tight: '1.3',
+                        relaxed: '1.7',
+                        '1-5': '1.5',
+                    },
+                    borderColor: {
+                        DEFAULT: '#E5E7EB',
+                        glass: 'rgba(255, 255, 255, 0.3)',
+                    },
+                    backgroundColor: {
+                        'yellow-bg': '#FAB115',
+                    },
+                    maxWidth: {
+                        container: '1280px',
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    }
+                },
+            },
+        }
+    </script>
+    <link href="https://fonts.maateen.me/solaiman-lipi/font.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+
+<body class="bg-[#FFFFFF]">
+
+    <!-- Header -->
+    <header>
+        <!-- Top Menu Section -->
+        <div class=" mb-3 bg-[#EAF2FF]">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between py-2 items-center gap-4 sm:gap-4">
+                    <!-- Navigation Menu -->
+                    <div class="w-full md:w-auto">
+                        <ul
+                            class="flex flex-wrap justify-center md:justify-start items-center gap-3 sm:gap-5 text-[#1F2937]">
+                            <li><a href="bangladesh.html"
+                                    class="text-sm sm:text-base md:text-lg hover-effect">বাংলাদেশ</a></li>
+                            <li><a href="cricket.html" class="text-sm sm:text-base md:text-lg hover-effect">খেলাধুলা</a>
+                            </li>
+                            <li><a href="technology.html"
+                                    class="text-sm sm:text-base md:text-lg hover-effect">প্রযুক্তি</a></li>
+                            <li><a href="opinion.html" class="text-sm sm:text-base md:text-lg hover-effect">মতামত</a>
+                            </li>
+                            <li><a href="politics.html" class="text-sm sm:text-base md:text-lg hover-effect">রাজনীতি</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Icons (Hidden on Mobile) -->
+                    <div class="hidden sm:flex flex-wrap justify-center md:justify-end items-center gap-2">
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#1877F2] text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-facebook-f text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#FF0000] text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-youtube text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-x-twitter text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#C13584] text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-instagram text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                        <a href="#"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#25D366] text-white hover:scale-110 transition-transform">
+                            <i class="fab fa-whatsapp text-xs sm:text-sm md:text-base"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Middle Logo/Date/Weather/Live -->
+        <div>
+            <div class="container mx-auto">
+                <div class="flex justify-between items-center gap-3">
+                    <!-- Logo -->
+                    <div>
+                        <a href="index.html">
+                            <img src="img/logo/logo.png" alt="" class="w-[55px]">
+                        </a>
+                    </div>
+
+                    <!-- Right Info -->
+                    <div class="flex flex-wrap items-center justify-center sm:justify-end gap-3">
+                        <!-- Date -->
+                        <div class="text-[#666] flex items-center space-x-1 text-sm sm:text-base md:text-lg">
+                            <span>জুলাই</span>
+                            <span>03, 2025</span>
+                        </div>
+
+                        <!-- Weather -->
+                        <div class="flex items-center space-x-2 text-gray-600 text-sm sm:text-base md:text-lg">
+                            <i class="fas fa-cloud-bolt text-base sm:text-xl text-yellow-500"></i>
+                            <div class="flex flex-col leading-none">
+                                <span>24<i class="font-sans">°</i></span>
+                                <span class="text-gray-400">16<i class="font-sans">°</i></span>
+                            </div>
+                        </div>
+
+                        <!-- Live -->
+                        <a href="live-video.html">
+                            <div
+                                class="flex items-center space-x-1 text-white bg-red px-4 py-2 rounded-full text-xs sm:text-sm font-semibold">
+                                <span class="h-4 w-4 bg-white rounded-full animate-pulse"></span>
+                                <span class="mb-0 text-white text-xs">লাইভ</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <div>
+            <div class="container mx-auto border-b">
+                <div class="grid grid-cols-12 items-center gap-4 py-4 justify-between">
+                    <!-- Left Side -->
+                    <div class="col-span-10 lg:col-span-10 flex gap-4 items-center">
+                        <!-- Toggle Button -->
+                        <div class="text-xl">
+                            <div class="relative inline-block">
+                                <button id="menuToggle" class="text-base sm:text-xl p-2">
+                                    <i id="toggleIcon" class="fa-solid fa-bars"></i>
+                                </button>
+
+                                <!-- Mega Menu -->
+                                <div id="megaMenu"
+                                    class="absolute left-0 mt-2 w-screen max-w-7xl bg-white p-4 sm:p-6 md:p-8 shadow-lg z-50 transition-all duration-500 transform scale-95 opacity-0 hidden origin-top">
+
+                                    <!-- Responsive Grid: 2 columns on mobile, 3 on md, 4 on lg -->
+                                    <div
+                                        class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-x-6 gap-y-8">
+
+                                        <!-- Column 1 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                <a href="index.html">হোম</a>
+                                            </h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">সমগ্র
+                                                        বাংলাদেশ</a></li>
+                                                <li><a href="world.html" class="hover:text-blue-600">বিশ্ব</a>
+                                                </li>
+                                                <li><a href="politics.html" class="hover:text-blue-600">রাজনীতি</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">কিডজ</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">প্রবাস</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">বাংলাদেশ</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">বিজ্ঞান</a>
+                                                </li>
+                                                <li><a href="sub-category.html"
+                                                        class="hover:text-blue-600">স্বাস্থ্য</a></li>
+                                                <li><a href="sub-category.html"
+                                                        class="hover:text-blue-600">ক্যাম্পাস</a></li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">নারীপক্ষ</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 2 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                <a href="sports.html">খেলা</a>
+                                            </h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">ক্রিকেট</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">খেলা</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">চ্যাম্পিয়ন্স
+                                                        ট্রফি</a></li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">কাতার
+                                                        বিশ্বকাপ ২০২২</a></li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">টি-টোয়েন্টি
+                                                        বিশ্বকাপ</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 3 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                মতামত</h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">মতামত</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 4 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                অর্থ-বাণিজ্য</h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">বাণিজ্য</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">অর্থনীতি</a>
+                                                </li>
+                                                <li><a href="sub-category.html"
+                                                        class="hover:text-blue-600">পুঁজিবাজার</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 5 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                মাল্টিমিডিয়া</h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">ছবিঘর</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">ছবির
+                                                        গল্প</a></li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">টিউব</a>
+                                                </li>
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">ইনসাইড
+                                                        আউট</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 6 -->
+                                        <div class="col-span-1">
+                                            <h2
+                                                class="font-bold text-base sm:text-[15px] md:text-[16px] lg:text-[17px] mb-3 sm:mb-5">
+                                                আরও</h2>
+                                            <ul
+                                                class="space-y-2 text-gray-700 text-sm sm:text-[14px] md:text-[15px] lg:text-[16px]">
+                                                <li><a href="sub-category.html" class="hover:text-blue-600">বিশেষ</a>
+                                                </li>
+                                                <li><a href="sub-category.html"
+                                                        class="hover:text-blue-600">প্রতিবেশী</a></li>
+                                                <li><a href="sub-category.html"
+                                                        class="hover:text-blue-600">করোনাভাইরাস</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Scrollable Nav -->
+                        <div class="flex-1 overflow-x-auto py-3">
+                            <nav>
+                                <ul
+                                    class="flex gap-6 text-sm sm:text-base md:text-lg xl:text-xl whitespace-nowrap min-w-[610px]">
+                                    <li><a href="world.html" class="hover-effect">বিশ্ব</a></li>
+                                    <li><a href="opinion.html" class="hover-effect">মতামত</a></li>
+                                    <li><a href="entertainment.html" class="hover-effect">বিনোদন</a></li>
+                                    <li><a href="lifestyle.html" class="hover-effect">জীবনধারা</a></li>
+                                    <li><a href="economy.html" class="hover-effect">অর্থনীতি</a></li>
+                                    <li><a href="business.html" class="hover-effect">ব্যবসা</a></li>
+                                    <li><a href="cricket.html" class="hover-effect">ক্রিকেট</a></li>
+                                    <li><a href="recent.html" class="hover-effect">সাম্প্রতিক</a></li>
+                                    <li><a href="videos.html" class="hover-effect">ভিডিও</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Right Icons -->
+                    <div class="col-span-2 lg:col-span-2 flex gap-4 items-center justify-end pl-2">
+                        <a href="search-page.html" class="text-base sm:text-xl xl:text-2xl"><i
+                                class="fa-solid fa-magnifying-glass"></i></a>
+                        <button class="text-base sm:text-xl xl:text-2xl"><i
+                                class="fa-solid fa-circle-user"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <section>
+            <div class="container mx-auto">
+                <div class="border-bottom pt-10 pb-7 mb-7 flex gap-4">
+                    <div>
+                        <h1 class="text-2xl sm:text-3xl font-extrabold">ব্যবসা</h1>
+                        <div class="mt-2 w-16 h-1 rounded bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
+                    </div>
+                </div>
+                <div class="max-w-[900px] px-4 pb-10">
+                    <ul class="flex flex-wrap justify-between items-center gap-2">
+                        <li class="flex gap-2 items-center">
+                            <a href="#" class="flex items-center gap-2 text-base sm:text-lg md:text-xl hover-effect">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none" class="flex items-center">
+                                    <circle cx="8" cy="8" r="8" fill="#0068B5" />
+                                </svg>
+                                উদ্যোগ
+                            </a>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <a href="#" class="flex items-center gap-2 text-base sm:text-lg md:text-xl hover-effect">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none" class="flex items-center">
+                                    <circle cx="8" cy="8" r="8" fill="#0068B5" />
+                                </svg>
+                                ই-কমার্স
+                            </a>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <a href="#" class="flex items-center gap-2 text-base sm:text-lg md:text-xl hover-effect">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none" class="flex items-center">
+                                    <circle cx="8" cy="8" r="8" fill="#0068B5" />
+                                </svg>
+                                আন্তর্জাতিক ব্যবসা
+                            </a>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <a href="#" class="flex items-center gap-2 text-base sm:text-lg md:text-xl hover-effect">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none" class="flex items-center">
+                                    <circle cx="8" cy="8" r="8" fill="#0068B5" />
+                                </svg>
+                                বিনিয়োগ ও অর্থায়ন
+                            </a>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <a href="#" class="flex items-center gap-2 text-base sm:text-lg md:text-xl hover-effect">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none" class="flex items-center">
+                                    <circle cx="8" cy="8" r="8" fill="#0068B5" />
+                                </svg>
+                                রিয়েল এস্টেট
+                            </a>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <a href="#" class="flex items-center gap-2 text-base sm:text-lg md:text-xl hover-effect">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none" class="flex items-center">
+                                    <circle cx="8" cy="8" r="8" fill="#0068B5" />
+                                </svg>
+                                শিল্প ও উৎপাদন
+                            </a>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <a href="#" class="flex items-center gap-2 text-base sm:text-lg md:text-xl hover-effect">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none" class="flex items-center">
+                                    <circle cx="8" cy="8" r="8" fill="#0068B5" />
+                                </svg>
+                                মার্কেটিং
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="grid grid-cols-12 lg:gap-10 mb-12">
+                    <!-- Left Side -->
+                    <div class="col-span-12 md:col-span-12 lg:col-span-8">
+                        <div class="flex flex-col group overflow-hidden border-bottom pb-5 h-fit mb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="img/bangladesh/bb.jpg" alt=""
+                                    class="w-full aspect-[4/2.5] overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3 mt-2">
+                                <a href="details-page.html"
+                                    class="text-xl sm:text-2xl md:text-3xl lg:text-4xl hover-effect-underline font-semibold text-gray-800">
+                                    কিংসের বিরুদ্ধে ফিফার তদন্ত শুরু, অভিযোগ প্রমাণিত হলে কী হবে
+                                </a>
+                            </div>
+                            <span class="text-sm sm:text-base md:text-lg lg:text-xl mb-6">
+                                বিজ্ঞানীরা একটি নতুন কৃত্রিম বুদ্ধিমত্তা ব্যবস্থা তৈরি করেছেন যা পূর্বে অসম্ভব বলে মনে
+                                করা জটিল কোয়ান্টাম পদার্থবিদ্যার সমস্যাগুলি সমাধান করতে পারে।বিজ্ঞানীরা একটি নতুন
+                                কৃত্রিম বুদ্ধিমত্তা ব্যবস্থা তৈরি করেছেন যা পূর্বে অসম্ভব বলে মনে করা জটিল কোয়ান্টাম
+                                পদার্থবিদ্যার সমস্যাগুলি সমাধান করতে পারে।
+                            </span>
+                            <div class="flex gap-5 text-xs sm:text-sm md:text-base lg:text-lg">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side -->
+                    <div class="col-span-12 md:col-span-12 lg:col-span-4 pb-8">
+                        <!-- News List -->
+                        <div class="flex flex-col gap-5">
+                            <!-- Each item -->
+                            <div
+                                class="flex gap-4 items-start justify-between overflow-hidden group pb-5 border-bottom">
+                                <div>
+                                    <div class="mb-3">
+                                        <a href="details-page.html"
+                                            class="hover-effect-underline text-sm sm:text-base md:text-lg font-semibold text-gray-800">
+                                            নোয়াখালীতে বৃষ্টি কমেছে, জলাবদ্ধতায় এখনো ভোগান্তি
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center gap-5">
+                                        <h6 class="text-xs sm:text-sm md:text-base">নিজস্ব প্রতিবেদক</h6>
+                                        <h6 class="text-xs sm:text-sm md:text-base">০৯ জুলাই ২০২৫</h6>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden rounded-md">
+                                    <img src="./img/main/home-img-02.jpg" alt=""
+                                        class="rounded-md w-full aspect-[4/2.5] transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                            </div>
+                            <!-- Each item -->
+                            <div
+                                class="flex gap-4 items-start justify-between overflow-hidden group pb-5 border-bottom">
+                                <div>
+                                    <div class="mb-3">
+                                        <a href="details-page.html"
+                                            class="hover-effect-underline text-sm sm:text-base md:text-lg font-semibold text-gray-800">
+                                            নোয়াখালীতে বৃষ্টি কমেছে, জলাবদ্ধতায় এখনো ভোগান্তি
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center gap-5">
+                                        <h6 class="text-xs sm:text-sm md:text-base">নিজস্ব প্রতিবেদক</h6>
+                                        <h6 class="text-xs sm:text-sm md:text-base">০৯ জুলাই ২০২৫</h6>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden rounded-md">
+                                    <img src="./img/main/home-img-03.jpg" alt=""
+                                        class="rounded-md w-full aspect-[4/2.5] transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                            </div>
+                            <!-- Each item -->
+                            <div
+                                class="flex gap-4 items-start justify-between overflow-hidden group pb-5 border-bottom">
+                                <div>
+                                    <div class="mb-3">
+                                        <a href="details-page.html"
+                                            class="hover-effect-underline text-sm sm:text-base md:text-lg font-semibold text-gray-800">
+                                            নোয়াখালীতে বৃষ্টি কমেছে, জলাবদ্ধতায় এখনো ভোগান্তি
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center gap-5">
+                                        <h6 class="text-xs sm:text-sm md:text-base">নিজস্ব প্রতিবেদক</h6>
+                                        <h6 class="text-xs sm:text-sm md:text-base">০৯ জুলাই ২০২৫</h6>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden rounded-md">
+                                    <img src="./img/main/home-img-04.jpg" alt=""
+                                        class="rounded-md w-full aspect-[4/2.5] transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                            </div>
+                            <!-- Each item -->
+                            <div
+                                class="flex gap-4 items-start justify-between overflow-hidden group pb-5 border-bottom">
+                                <div>
+                                    <div class="mb-3">
+                                        <a href="details-page.html"
+                                            class="hover-effect-underline text-sm sm:text-base md:text-lg font-semibold text-gray-800">
+                                            নোয়াখালীতে বৃষ্টি কমেছে, জলাবদ্ধতায় এখনো ভোগান্তি
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center gap-5">
+                                        <h6 class="text-xs sm:text-sm md:text-base">নিজস্ব প্রতিবেদক</h6>
+                                        <h6 class="text-xs sm:text-sm md:text-base">০৯ জুলাই ২০২৫</h6>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden rounded-md">
+                                    <img src="./img/main/home-img-05.jpg" alt=""
+                                        class="rounded-md w-full aspect-[4/2.5] transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                            </div>
+
+                            <!-- Repeat more items as needed -->
+
+                            <!-- Banner Ad -->
+                            <div class="">
+                                <img src="./img/main/bd-ad-NWC 1.jpg" alt=""
+                                    class="max-h-[135px] aspect-[4/2.5] w-full rounded-md">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section>
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="col-span-1">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/p-01.jpg" alt=""
+                                    class="w-full aspect-[4/2.5] overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="sub-category.html"
+                                    class="text-base sm:text-lg md:text-xl hover-effect-underline">
+                                    কিংসের বিরুদ্ধে ফিফার তদন্ত শুরু, অভিযোগ প্রমাণিত
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-sm sm:text-base md:text-lg">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/p-02.jpg" alt=""
+                                    class="w-full aspect-[4/2.5] overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="details-page.html"
+                                    class="text-base sm:text-lg md:text-xl hover-effect-underline">
+                                    হবিগঞ্জে বৈষম্যবিরোধী ছাত্র আন্দোলনের অব্যাহতিপ্রাপ্ত নেতা গ্রেপ্তার
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-sm sm:text-base md:text-lg">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/p-03.jpg" alt=""
+                                    class="w-full aspect-[4/2.5] overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="details-page.html"
+                                    class="text-base sm:text-lg md:text-xl hover-effect-underline">
+                                    পুলিশ বলছে, নওশেদ শ্রমিক লীগের নেতা, স্ত্রীর দাবি তিনি জামায়াত করেন
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-sm sm:text-base md:text-lg">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1">
+                        <div class="flex flex-col h-full group overflow-hidden border-bottom pb-5">
+                            <div class="overflow-hidden mb-4 rounded-md">
+                                <img src="./img/main/p-04.jpg" alt=""
+                                    class="max-h-[227px] w-full overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-3">
+                                <a href="details-page.html"
+                                    class="text-base sm:text-lg md:text-xl hover-effect-underline">
+                                    বিএনপি চেয়ারপারসনের উপদেষ্টা ফজলুর রহমানকে থামতে বললেন বিএনপি নেতা
+                                </a>
+                            </div>
+                            <div class="flex gap-5 text-sm sm:text-base md:text-lg">
+                                <span>রাজনীতি</span>
+                                <span>০৯ জুলাই ২০২৫</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-12">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-12">
+                    <!-- Content Area -->
+                    <div class="col-span-12 lg:col-span-9">
+                        <div class="col-span-12 lg:col-span-12 lg:pr-[120px] pr-0">
+                            <!-- Each item -->
+                            <div
+                                class="flex flex-col md:flex-row justify-between gap-4 items-start overflow-hidden group pb-5 mb-5 border-b">
+                                <!-- Text Content -->
+                                <div class="max-w-[650px] flex-1">
+                                    <div class="mb-3">
+                                        <a href="details-page.html"
+                                            class="hover-effect-underline text-lg sm:text-xl md:text-2xl font-semibold text-gray-800">
+                                            যে পাঁচ কোম্পানির শেয়ারের দাম সবচেয়ে বেশি কমল
+                                        </a>
+                                        <p class="text-sm sm:text-base md:text-lg text-gray-600 mt-2">
+                                            মূল্যহ্রাসের দিক থেকে আজ প্রথম স্থানে আছে মিডল্যান্ড ব্যাংক। আজ এই
+                                            কোম্পানির
+                                            শেয়ারের দাম কমেছে ৬ দশমিক ৭১ শতাংশ বা ১ দশমিক ৯ টাকা। গতকাল দিন শেষে
+                                            এর দাম
+                                            ছিল ২৮ দশমিক ৩ টাকা। আজ দাম কমে হয়েছে ২৬ দশমিক ৪ টাকা।
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-4 text-gray-500 text-xs sm:text-sm md:text-base">
+                                        <span>৪৪ মিনিট আগে</span>
+                                    </div>
+                                </div>
+
+                                <!-- Image -->
+                                <div class="w-full md:w-64 flex-shrink-0 overflow-hidden rounded-md">
+                                    <img src="./img/main/home-img-02.jpg" alt=""
+                                        class="w-full h-auto aspect-[4/2.5] object-cover rounded-md transition-transform duration-300 group-hover:scale-105" />
+                                </div>
+                            </div>
+                            <!-- Each item -->
+                            <div
+                                class="flex flex-col md:flex-row justify-between gap-4 items-start overflow-hidden group pb-5 mb-5 border-b">
+                                <!-- Text Content -->
+                                <div class="max-w-[650px] flex-1">
+                                    <div class="mb-3">
+                                        <a href="details-page.html"
+                                            class="hover-effect-underline text-lg sm:text-xl md:text-2xl font-semibold text-gray-800">
+                                            যে পাঁচ কোম্পানির শেয়ারের দাম সবচেয়ে বেশি কমল
+                                        </a>
+                                        <p class="text-sm sm:text-base md:text-lg text-gray-600 mt-2">
+                                            মূল্যহ্রাসের দিক থেকে আজ প্রথম স্থানে আছে মিডল্যান্ড ব্যাংক। আজ এই
+                                            কোম্পানির
+                                            শেয়ারের দাম কমেছে ৬ দশমিক ৭১ শতাংশ বা ১ দশমিক ৯ টাকা। গতকাল দিন শেষে
+                                            এর দাম
+                                            ছিল ২৮ দশমিক ৩ টাকা। আজ দাম কমে হয়েছে ২৬ দশমিক ৪ টাকা।
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-4 text-gray-500 text-xs sm:text-sm md:text-base">
+                                        <span>৪৪ মিনিট আগে</span>
+                                    </div>
+                                </div>
+
+                                <!-- Image -->
+                                <div class="w-full md:w-64 flex-shrink-0 overflow-hidden rounded-md">
+                                    <img src="./img/main/home-img-02.jpg" alt=""
+                                        class="w-full h-auto aspect-[4/2.5] object-cover rounded-md transition-transform duration-300 group-hover:scale-105" />
+                                </div>
+                            </div>
+                            <!-- Each item -->
+                            <div
+                                class="flex flex-col md:flex-row justify-between gap-4 items-start overflow-hidden group pb-5 mb-5 border-b">
+                                <!-- Text Content -->
+                                <div class="max-w-[650px] flex-1">
+                                    <div class="mb-3">
+                                        <a href="details-page.html"
+                                            class="hover-effect-underline text-lg sm:text-xl md:text-2xl font-semibold text-gray-800">
+                                            যে পাঁচ কোম্পানির শেয়ারের দাম সবচেয়ে বেশি কমল
+                                        </a>
+                                        <p class="text-sm sm:text-base md:text-lg text-gray-600 mt-2">
+                                            মূল্যহ্রাসের দিক থেকে আজ প্রথম স্থানে আছে মিডল্যান্ড ব্যাংক। আজ এই
+                                            কোম্পানির
+                                            শেয়ারের দাম কমেছে ৬ দশমিক ৭১ শতাংশ বা ১ দশমিক ৯ টাকা। গতকাল দিন শেষে
+                                            এর দাম
+                                            ছিল ২৮ দশমিক ৩ টাকা। আজ দাম কমে হয়েছে ২৬ দশমিক ৪ টাকা।
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-4 text-gray-500 text-xs sm:text-sm md:text-base">
+                                        <span>৪৪ মিনিট আগে</span>
+                                    </div>
+                                </div>
+
+                                <!-- Image -->
+                                <div class="w-full md:w-64 flex-shrink-0 overflow-hidden rounded-md">
+                                    <img src="./img/main/home-img-02.jpg" alt=""
+                                        class="w-full h-auto aspect-[4/2.5] object-cover rounded-md transition-transform duration-300 group-hover:scale-105" />
+                                </div>
+                            </div>
+                            <!-- Each item -->
+                            <div
+                                class="flex flex-col md:flex-row justify-between gap-4 items-start overflow-hidden group pb-5 mb-5 border-b">
+                                <!-- Text Content -->
+                                <div class="max-w-[650px] flex-1">
+                                    <div class="mb-3">
+                                        <a href="details-page.html"
+                                            class="hover-effect-underline text-lg sm:text-xl md:text-2xl font-semibold text-gray-800">
+                                            যে পাঁচ কোম্পানির শেয়ারের দাম সবচেয়ে বেশি কমল
+                                        </a>
+                                        <p class="text-sm sm:text-base md:text-lg text-gray-600 mt-2">
+                                            মূল্যহ্রাসের দিক থেকে আজ প্রথম স্থানে আছে মিডল্যান্ড ব্যাংক। আজ এই
+                                            কোম্পানির
+                                            শেয়ারের দাম কমেছে ৬ দশমিক ৭১ শতাংশ বা ১ দশমিক ৯ টাকা। গতকাল দিন শেষে
+                                            এর দাম
+                                            ছিল ২৮ দশমিক ৩ টাকা। আজ দাম কমে হয়েছে ২৬ দশমিক ৪ টাকা।
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-4 text-gray-500 text-xs sm:text-sm md:text-base">
+                                        <span>৪৪ মিনিট আগে</span>
+                                    </div>
+                                </div>
+
+                                <!-- Image -->
+                                <div class="w-full md:w-64 flex-shrink-0 overflow-hidden rounded-md">
+                                    <img src="./img/main/home-img-02.jpg" alt=""
+                                        class="w-full h-auto aspect-[4/2.5] object-cover rounded-md transition-transform duration-300 group-hover:scale-105" />
+                                </div>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="text-center">
+                                <a href="#"
+                                    class="relative inline-block px-8 py-2 rounded text-white font-semibold bg-[#0068B5] overflow-hidden group">
+                                    <span class="relative z-10 text-white">আরও দেখুন</span>
+                                    <span
+                                        class="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-500 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></span>
+                                </a>
+                            </div>
+
+                            <!-- Banner Ad -->
+                            <div class="mb-12 mt-6">
+                                <img src="./img/main/bd-ad-NWC 1.jpg" alt=""
+                                    class="max-h-[135px] aspect-[4/2.5] w-full rounded-md">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black pt-10 pb-10">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Logo & About -->
+                <div>
+                    <a href="index.html"><img src="./img/logo/logo.png" alt="logo" /></a>
+                    <p class="text-sm sm:text-base md:text-lg pt-3 text-[#DADADA]">
+                        লোরেম ইপসাম ডলর সিট অ্যামেট কনসেকটিচার. মালেসুয়াডা মরবি
+                        ইজেস্টাস ভিভেরার ভিটা ইরোস ভিটা কনসেকটুর এনআইএসএল এ {{ডট}}
+                    </p>
+                </div>
+
+                <!-- ফটো গ্যালারী -->
+                <div class="ml-0 lg:ml-5">
+                    <h3
+                        class="relative text-base sm:text-lg md:text-xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+                        ফটো গ্যালারী
+                    </h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <img src="img/main/ft-01.jpg" class="w-full max-h-[100px] object-cover" />
+                        <img src="img/main/ft-02.jpg" class="w-full max-h-[100px] object-cover" />
+                        <img src="img/main/ft-03.jpg" class="w-full max-h-[100px] object-cover" />
+                        <img src="img/main/ft-04.jpg" class="w-full max-h-[100px] object-cover" />
+                        <img src="img/main/ft-05.jpg" class="w-full max-h-[100px] object-cover" />
+                        <img src="img/main/ft-06.jpg" class="w-full max-h-[100px] object-cover" />
+                    </div>
+                </div>
+
+                <!-- লিংক তালিকা ও অন্যান্য খবর -->
+                <div class="ml-0 lg:ml-5">
+                    <h3
+                        class="relative text-base sm:text-lg md:text-xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+                        গুরুত্বপূর্ণ লিংক
+                    </h3>
+                    <ul class="flex flex-wrap gap-2 mb-4">
+                        <li><a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">পডকাস্ট</a>
+                        </li>
+                        <li><a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">সর্বশেষ
+                                সংবাদ</a></li>
+                        <li><a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">সম্পাদকের
+                                পছন্দ</a></li>
+                        <li><a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">খেলাধুলা</a>
+                        </li>
+                        <li><a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr">বিজ্ঞান</a>
+                        </li>
+                        <li><a href="#"
+                                class="inline-flex border border-white px-2 py-2 text-xs sm:text-sm md:text-base rounded-[10px] white-clr hover-effect">ফিচার</a>
+                        </li>
+                    </ul>
+                    <h3 class="white-clr text-sm sm:text-base md:text-lg mt-5">অন্যান্য খবর</h3>
+                    <ul class="flex flex-wrap gap-3 mt-2">
+                        <li><a href="#"
+                                class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                                    src="./img/main/n-01.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+                        </li>
+                        <li><a href="#"
+                                class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                                    src="./img/main/n-02.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+                        </li>
+                        <li><a href="#"
+                                class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                                    src="./img/main/n-03.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+                        </li>
+                        <li><a href="#"
+                                class="px-4 py-2 bg-white inline-flex rounded-lg shadow-sm hover:shadow-md transition"><img
+                                    src="./img/main/n-04.png" alt="" class="w-[80px] h-[18px] object-contain" /></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- সাবস্ক্রিপশন -->
+                <div class="ml-0 lg:ml-5">
+                    <h3
+                        class="relative text-base sm:text-lg md:text-xl pb-3 mb-6 white-clr border-b-4 after:w-[100px] after:h-1 after:absolute after:bg-[#FAB115] after:-bottom-[4px] after:left-0">
+                        সাবস্ক্রাইব
+                    </h3>
+                    <p class="white-clr text-xs sm:text-sm md:text-base pb-3">
+                        সমস্ত সর্বশেষ খবরের সাথে আপডেট হওয়ার জন্য এবং বিশেষ ঘোষণাগুলি জানার জন্য সাবস্ক্রাইব করুন
+                    </p>
+                    <div>
+                        <input type="text" placeholder="আপনার ইমেল ঠিকানা"
+                            class="w-full h-[48px] px-4 bg-white rounded-md border border-gray-300 placeholder:text-gray-500 text-sm sm:text-base" />
+                        <button
+                            class="w-full h-[48px] mt-2 yellow-bg text-white text-sm sm:text-base font-medium rounded-md hover:bg-blue-700 transition">
+                            সাবস্ক্রাইব করুন
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+<script>
+    window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+        preloader.classList.add("opacity-0", "pointer-events-none");
+        setTimeout(() => preloader.remove(), 50);
+    });
+</script>
+<script>
+    const videoSlider = new Swiper('.videoSlider', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        loop: true, // Already enables infinite loop
+        autoplay: {
+            delay: 3000, // 3 seconds between slides
+            disableOnInteraction: false, // Keep autoplay even after user interaction
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.custom-next',
+            prevEl: '.custom-prev',
+        },
+        breakpoints: {
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+        }
+    });
+</script>
+
+<script>
+    $(function () {
+        const $slider = $('.slider');
+        const itemWidth = 200; // item width
+        const animationDuration = 15000; // 15 seconds for full animation
+        let animationInterval;
+
+        // Initialize slider
+        function initSlider() {
+            // Calculate total width needed
+            const items = $slider.children().length;
+            const totalWidth = items * itemWidth;
+            $slider.css('width', totalWidth + 'px');
+
+            // Start animation
+            startAnimation();
+
+            // Pause on hover
+            $('.showcase').hover(
+                () => pauseAnimation(),
+                () => startAnimation()
+            );
+        }
+
+        function startAnimation() {
+            // Reset position if at end
+            if (parseInt($slider.css('margin-left')) <= -($slider.width() / 2)) {
+                $slider.css('margin-left', '0');
+            }
+
+            // Animate
+            animationInterval = setInterval(() => {
+                const currentMargin = parseInt($slider.css('margin-left')) || 0;
+                const newMargin = currentMargin - 1;
+
+                // Reset to start when we've scrolled all items
+                if (newMargin <= -($slider.width() / 2)) {
+                    $slider.css('margin-left', '0');
+                } else {
+                    $slider.css('margin-left', newMargin + 'px');
+                }
+            }, 20);
+        }
+
+        function pauseAnimation() {
+            clearInterval(animationInterval);
+        }
+
+        // Initialize on load
+        initSlider();
+    });
+</script>
+<script>
+    const toggleBtn = document.getElementById("menuToggle");
+    const toggleIcon = document.getElementById("toggleIcon");
+    const menu = document.getElementById("megaMenu");
+
+    let isOpen = false;
+
+    // Toggle Button Click
+    toggleBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent bubbling
+        if (!isOpen) {
+            // Show menu
+            menu.classList.remove("hidden");
+            setTimeout(() => {
+                menu.classList.remove("scale-95", "opacity-0");
+                menu.classList.add("scale-100", "opacity-100");
+            }, 10);
+
+            // Change icon to "X"
+            toggleIcon.classList.remove("fa-bars");
+            toggleIcon.classList.add("fa-xmark");
+            isOpen = true;
+        } else {
+            closeMenu();
+        }
+    });
+
+    // Close function
+    function closeMenu() {
+        menu.classList.remove("scale-100", "opacity-100");
+        menu.classList.add("scale-95", "opacity-0");
+        setTimeout(() => {
+            menu.classList.add("hidden");
+        }, 500);
+
+        // Change icon back to "Bars"
+        toggleIcon.classList.remove("fa-xmark");
+        toggleIcon.classList.add("fa-bars");
+        isOpen = false;
+    }
+
+    // Click outside menu => close
+    document.addEventListener("click", (e) => {
+        if (isOpen && !menu.contains(e.target) && !toggleBtn.contains(e.target)) {
+            closeMenu();
+        }
+    });
+</script>
+
+</html>

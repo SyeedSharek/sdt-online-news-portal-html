@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up - Channel 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 flex items-center justify-center min-h-screen py-10">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <div class="flex justify-center mb-6">
+            <div class="flex flex-col items-center">
+                <div class="bg-white inline-block">
+                    <img src="./img/logo/logo.png" alt="">
+                </div>
+            </div>
+        </div>
+        <h2 class="text-3xl font-bold text-center text-blue-800 mb-2">Login</h2>
+        <p class="text-center text-gray-600 mb-8">to continue to <a href="#"
+                class="text-blue-600 font-semibold">Channel1</a></p>
+        <form>
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 text-sm font-medium mb-2">Name</label>
+                <input type="text" id="name" placeholder="Enter Your Name"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-4">
+                <label for="mobile" class="block text-gray-700 text-sm font-medium mb-2">Mobile Number</label>
+                <input type="tel" id="mobile" placeholder="Enter Your Mobile Number"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 text-sm font-medium mb-2">Email</label>
+                <input type="email" id="email" placeholder="Enter Your Email here"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-gray-700 text-sm font-medium mb-2">Password</label>
+                <input type="password" id="password" placeholder="Please Enter Your Password"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="text-center text-sm text-gray-600 mb-6">
+                if you already have an account? <a href="#" class="text-blue-600 hover:underline">Login Now</a>
+            </div>
+            <button type="submit"
+                class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300 font-semibold text-lg">Sign-up</button>
+        </form>
+    </div>
+</body>
+
+</html>

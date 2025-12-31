@@ -1,0 +1,295 @@
+/*==================================================================
+    
+    Project: Sdt Online News Portal
+    Version: 1.0
+    Author: sdt.com.bd
+    License: MIT License
+    Date: 2025-06-30
+    Description: Custom styles for the news portal website.
+    
+====================================================================
+
+    ==============================================
+    TABLE OF CONTENTS
+    ==============================================
+    
+    1.  Tailwind Imports
+    2.  Font Definitions
+    3.  Base Styles
+        - Reset
+        - Typography
+        - Links & Buttons
+        - Forms
+    4.  Layout
+        - Container
+    5.  Utility Classes
+        - Colors
+        - Borders
+        - Effects
+    6.  Component Styles
+        - Header
+        - Slider
+        - Section Heading
+        - ... (add other components as needed)
+
+====================================================================*/
+
+/*==================================================================
+    1. Tailwind Imports
+====================================================================*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*==================================================================
+    2. Font Definitions
+====================================================================*/
+/**
+ * Kalpurush - Primary font for Bengali text.
+ * Noto Sans - Primary font for English text.
+ */
+/* @font-face {
+    font-family: 'Kalpurush';
+    src: url('../fonts/KalpurushANSI.woff2') format('woff2'),
+        url('../fonts/KalpurushANSI.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} */
+@font-face {
+    font-family: 'Siyam Rupali';
+    src: url('https://yourdomain.com/fonts/SiyamRupali.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Siyam Rupali', sans-serif;
+}
+
+/* body {
+    font-family: 'Noto Sans Bengali', sans-serif;
+} */
+
+/* .font-kalpurush {
+    font-family: 'Kalpurush', 'Noto Sans Bengali', sans-serif;
+} */
+
+.font-noto {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+/*==================================================================
+    3. Base Styles
+====================================================================*/
+@layer base {
+
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        /* font-family: 'Kalpurush', 'Noto Sans Bengali', 'Noto Sans', Arial, sans-serif; */
+        font-size: 17px;
+        font-weight: 400;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Typography */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        /* font-family: 'Kalpurush', 'Noto Sans Bengali', 'Noto Sans', Arial, sans-serif; */
+        font-weight: 600;
+        color: #111;
+        line-height: 1.3;
+        font-family: 'Siyam Rupali', sans-serif;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-size: 16px;
+        color: #666;
+    }
+
+    p {
+        color: #333;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* Links & Buttons */
+    a {
+        text-decoration: none;
+        color: #000000de;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        line-height: 1.5;
+        font-family: 'Siyam Rupali', sans-serif;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #0068B5;
+        /* Primary hover color */
+    }
+
+    button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    /* Forms */
+    input,
+    textarea {
+        outline: none;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #9CA3AF;
+    }
+
+    span {
+        color: #666;
+        font-size: 14px;
+    }
+
+}
+
+/*==================================================================
+    4. Layout
+====================================================================*/
+.container {
+    max-width: 1310px !important;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.custom-container {
+    max-width: 1180px !important;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*==================================================================
+    5. Utility Classes
+====================================================================*/
+@layer components {
+
+    /* Color Utilities */
+    .white-clr {
+        color: #FFFFFF !important;
+    }
+
+    .text-title-clr {
+        color: #1F2937 !important;
+    }
+
+    .yellow-bg {
+        background-color: #FAB115 !important;
+    }
+
+    .yellow-clr {
+        color: #E29A01 !important;
+    }
+
+    .primary-clr {
+        color: #0068B5 !important;
+    }
+
+    .red-clr {
+        color: #FF0000 !important;
+    }
+
+    /* Border Utility */
+    .border-bottom {
+        border-bottom: 1px solid #E5E7EB !important;
+    }
+
+    .line-height-1-5 {
+        line-height: 1.5 !important;
+    }
+
+    /* Hover Effects */
+    .hover-effect {
+        position: relative;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .hover-effect::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #E29A01;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+    }
+
+    .hover-effect:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .hover-effect-underline:hover {
+        text-decoration: underline !important;
+        color: #0068B5 !important;
+    }
+}
+
+/*==================================================================
+    6. Component Styles
+====================================================================*/
+/* Section Heading */
+.section-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* News Ticker Slider */
+.slider {
+    transition: margin-left 0.1s linear;
+}
+
+.item {
+    flex-shrink: 0;
+}
